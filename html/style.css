@@ -159,7 +159,7 @@ h5 {
   cursor: pointer;
   font-size: 42px;
   font-weight: bold;
-  background: black;
+  background: green;
   border-radius: 40px;
   letter-spacing: 6px;
   font-family: cursive;
@@ -175,7 +175,7 @@ h5 {
   cursor: pointer;
   font-size: 42px;
   font-weight: bold;
-  background: black;
+  background: green;
   border-radius: 40px;
   letter-spacing: 6px;
   margin-bottom: 150px;
@@ -200,7 +200,7 @@ h5 {
 #guess:focus {outline:0;}
 
 
-#answers {
+#options {
   display: none;
 }
 
@@ -233,9 +233,7 @@ h5 {
   display: none;
 }
 
-#sweetcorn, #apple, #peanuts, #aubergine, #orange, 
-#banana, #pumpkin, #cherries, #lemon, #blueberries,
-#pineapple, #grapes, #avacados, #tomato, #watermelon, #pepper {
+#fruit, #vegetable {
   color: black;
   padding: 25px;
   font-size: 3rem;
@@ -248,162 +246,23 @@ h5 {
   border-radius: 40px;
 }
 
-#apple:hover {
+#fruit:hover {
   transition: all 0.4s ease-in-out;
   border: solid white 10px;
-  background-color: black;
+  background-color: green;
   color: white;
 }
 
-#apple:focus {outline:0;}
+#fruit:focus {outline:0;}
 
-#peanuts:hover {
+#vegetable:hover {
   transition: all 0.4s ease-in-out;
   border: solid white 10px;
-  background-color: black;
+  background-color: green;
   color: white;
 }
 
-#peanuts:focus {outline:0;}
-
-#aubergine:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#aubergine:focus {outline:0;}
-
-
-#orange:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#orange:focus {outline:0;}
-
-
-#banana:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#banana:focus {outline:0;}
-
-
-#pumpkin:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#pumpkin:focus {outline:0;}
-
-
-#cherries:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#cherries:focus {outline:0;}
-
-
-#lemon:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#lemon:focus {outline:0;}
-
-
-#blueberries:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#blueberries:focus {outline:0;}
-
-
-#pineapple:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#pineapple:focus {outline:0;}
-
-
-#grapes:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#grapes:focus {outline:0;}
-
-
-#avacados:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#avacados:focus {outline:0;}
-
-
-#tomato:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#tomato:focus {outline:0;}
-
-
-#watermelon:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#watermelon:focus {outline:0;}
-
-
-#pepper:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#pepper:focus {outline:0;}
-
-
-#sweetcorn:hover {
-  transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: black;
-  color: white;
-}
-
-#sweetcorn:focus {outline:0;}
+#vegetable:focus {outline:0;}
 
 
 

@@ -73,7 +73,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage1.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
-      question.innerHTML = "..name ?";
+      question.innerHTML = "..fruit or veg ?";
             
    if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -83,7 +83,7 @@ let randFruit = Math.floor(Math.random() * count);
       if (box1.src === fruitImage1.src) {
       guessFruit();
       } else {
-      option[2].onclick = function() {
+      option[1].onclick = function() {
       groceries.style.marginTop = '0px';
       groceries.src = 'banana_man.gif';
       guessButton.style.display = 'none';
@@ -94,20 +94,12 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Apple').src = fruitImage1.src; 
       gameOver()
       }
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = "0px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      }
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = "0px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!</h4>';
       container.style.border = '180px groove #ff0000';
       }
      }
@@ -118,17 +110,17 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage2.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
-      question.innerHTML = "..name ?";
+      question.innerHTML = "..fruit or veg ?";
          
    if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_b');
-      guessButton.innerHTML = option_b.innerHTML;
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;
       
       if (box2.src === fruitImage2.src) {
         guessFruit();
       } else {
-      option[2].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -139,16 +131,8 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Orange').src = fruitImage2.src;
       gameOver();
       }
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      }
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
@@ -163,17 +147,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage3.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";
+    question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_c');
-      guessButton.innerHTML = option_c.innerHTML;
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;
         
       if (box3.src === fruitImage3.src) {
         guessFruit();
       } else {
-      option[3].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -184,16 +168,8 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Banana').src = fruitImage3.src;
       gameOver();
       }
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      }
       option[2].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
@@ -208,17 +184,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage4.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";
+    question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_d');
-      guessButton.innerHTML = option_d.innerHTML;  
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;  
         
       if (box4.src === fruitImage4.src) { 
         guessFruit();
       } else {
-      option[3].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -229,22 +205,14 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Pumpkin').src = fruitImage4.src;     
       gameOver();
       }
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
       container.style.border = '180px groove #ff0000';
       }
-      option[2].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      } 
     }
   }
     break;
@@ -253,17 +221,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage5.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";
+    question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_e');
-      guessButton.innerHTML = option_e.innerHTML;
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;
         
       if (box5.src === fruitImage5.src) {
         guessFruit();
       } else {
-      option[3].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -274,16 +242,8 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Cherries').src = fruitImage5.src;
       gameOver();
       }
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      }
       option[2].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
@@ -298,17 +258,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage6.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?"; 
+    question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_f');
-      guessButton.innerHTML = option_f.innerHTML;
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;
         
       if (box6.src === fruitImage6.src) {
         guessFruit();  
       } else {
-      option[2].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -319,22 +279,14 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Blueberries').src = fruitImage6.src;
       gameOver();
       }
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
       container.style.border = '180px groove #ff0000';
       }
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      } 
     }
   }
     break;
@@ -343,12 +295,12 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage7.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";
+    question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_g');
-      guessButton.innerHTML = option_g.innerHTML;  
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML; 
         
       if (box7.src === fruitImage7.src) {
         guessFruit();
@@ -365,15 +317,7 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      } 
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
@@ -388,17 +332,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage8.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";  
+    question.innerHTML = "..fruit or veg ?";  
         
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_h');
-      guessButton.innerHTML = option_h.innerHTML;  
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;  
           
       if (box8.src === fruitImage8.src) {
         guessFruit();
       } else {
-      option[3].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -409,16 +353,8 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Pineapple').src = fruitImage8.src;
       gameOver();
       } 
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      }
       option[2].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
@@ -433,17 +369,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage9.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";      
+    question.innerHTML = "..fruit or veg ?";      
           
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_i');
-      guessButton.innerHTML = option_i.innerHTML; 
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;
       
       if (box9.src === fruitImage9.src) {
         guessFruit();
       } else {
-      option[2].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -454,16 +390,8 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Grapes').src = fruitImage9.src;
       gameOver();
       }  
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      }
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
@@ -478,17 +406,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage10.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";
+    question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_j');
-      guessButton.innerHTML = option_j.innerHTML; 
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;
           
       if (box10.src === fruitImage10.src) {
         guessFruit();
       } else {
-      option[2].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -499,16 +427,8 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Avacados').src = fruitImage10.src;
       gameOver();
       }  
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      }
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
@@ -523,17 +443,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage11.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";
+    question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_k');
-      guessButton.innerHTML = option_k.innerHTML;     
-     
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;
+        
       if (box11.src === fruitImage11.src) {
         guessFruit();
       } else {
-      option[3].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -544,22 +464,14 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Tomato').src = fruitImage11.src;
       gameOver();
       }  
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
       container.style.border = '180px groove #ff0000';
       }
-      option[2].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      } 
      }
     }
     break;
@@ -568,17 +480,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage12.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";
+    question.innerHTML = "..fruit or veg ?";
            
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_l');
-      guessButton.innerHTML = option_l.innerHTML;         
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;        
       
       if (box12.src === fruitImage12.src) {
         guessFruit();
       } else {
-      option[2].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -589,22 +501,14 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Watermelon').src = fruitImage12.src;
       gameOver();
       }  
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
       container.style.border = '180px groove #ff0000';
       }
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      } 
      }
     }
     break;
@@ -613,12 +517,12 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage13.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?";  
+    question.innerHTML = "..fruit or veg ?";  
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_m');
-      guessButton.innerHTML = option_m.innerHTML;     
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;     
     
       if (box13.src === fruitImage13.src) {
         guessFruit();
@@ -635,15 +539,7 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      }
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
@@ -658,17 +554,17 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage14.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
-    question.innerHTML = "..name ?"; 
+    question.innerHTML = "..fruit or veg ?"; 
         
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
-      document.getElementById('option_n');
-      guessButton.innerHTML = option_n.innerHTML;     
+      document.getElementById('option_a');
+      guessButton.innerHTML = option_a.innerHTML;    
        
       if (box14.src === fruitImage14.src) {
         guessFruit();
       } else {
-      option[2].onclick = function() {
+      option[1].onclick = function() {
       groceries.src = 'banana_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -679,22 +575,14 @@ let randFruit = Math.floor(Math.random() * count);
       document.getElementById('_Aubergine').src = fruitImage14.src;
       gameOver();
       }  
-      option[1].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
+      option[2].onclick = function() {
+      groceries.src = 'tomato_man.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
       container.style.border = '180px groove #ff0000';
       }
-      option[3].onclick = function() {
-      groceries.src = 'pineapple_man.gif';
-      groceries.style.marginTop = '0px';
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '180px groove #ff0000';
-      } 
      }
     }       
     break;
@@ -703,17 +591,17 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage15.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
-      question.innerHTML = "..name ?"; 
+      question.innerHTML = "..fruit or veg ?";
           
       if (currentlyPlaying && isClicked(guessButton)) {
         guessButton.onclick = false;
-        document.getElementById('option_o');
-        guessButton.innerHTML = option_o.innerHTML;     
+        document.getElementById('option_a');
+        guessButton.innerHTML = option_a.innerHTML;    
           
         if (box15.src === fruitImage15.src) {
           guessFruit();
         } else {
-        option[3].onclick = function() {
+        option[1].onclick = function() {
         groceries.src = 'banana_man.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -724,22 +612,14 @@ let randFruit = Math.floor(Math.random() * count);
         document.getElementById('_Pepper').src = fruitImage15.src;
         gameOver();
         }
-        option[1].onclick = function() {
-        groceries.src = 'pineapple_man.gif';
+        option[2].onclick = function() {
+        groceries.src = 'tomato_man.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
         container.style.border = '180px groove #ff0000';
         }
-        option[2].onclick = function() {
-        groceries.src = 'pineapple_man.gif';
-        groceries.style.marginTop = '0px';
-        guessButton.style.display = 'none';
-        nextButton.style.display = 'inline';
-        question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '180px groove #ff0000';
-        } 
        }
       }
       break;
@@ -748,12 +628,12 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage16.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
-      question.innerHTML = "..name ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
           
       if (currentlyPlaying && isClicked(guessButton)) {
         guessButton.onclick = false;
-        document.getElementById('option_p');
-        guessButton.innerHTML = option_p.innerHTML;       
+        document.getElementById('option_a');
+        guessButton.innerHTML = option_a.innerHTML;
           
         if (box16.src === fruitImage16.src) {
           guessFruit();
@@ -770,21 +650,13 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         }
         option[2].onclick = function() {
-        groceries.src = 'pineapple_man.gif';
+        groceries.src = 'tomato_man.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
         container.style.border = '180px groove #ff0000';
         } 
-        option[3].onclick = function() {
-        groceries.src = 'pineapple_man.gif';
-        groceries.style.marginTop = '0px';
-        guessButton.style.display = 'none';
-        nextButton.style.display = 'inline';
-        question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '180px groove #ff0000';
-        }  
        }
       }
   }
@@ -805,7 +677,7 @@ let randFruit = Math.floor(Math.random() * count);
     container.style.border = "180px ridge yellow";  
     nextButton.style.display = 'none';
     guessButton.style.color = 'white';
-    guessButton.style.background = 'black';
+    guessButton.style.background = 'green';
     guessButton.style.display = 'inline';
     guessButton.innerHTML = 'guess';
     guessButton.style.border = 'solid white 10px';
