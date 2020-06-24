@@ -8,7 +8,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('https://rutharnoldoca.files.wordpress.com/2014/07/fruitveg4.png');
+  background-image: url('https://i.pinimg.com/originals/80/da/bd/80dabd8708b68e3c4c09502dd5ccca15.png');
 }
 
 #container {
@@ -23,7 +23,7 @@ body {
   margin-bottom: 145px;
   font-family: cursive;
   border: 55px ridge whitesmoke;
-  background-color: orange;
+  background-color: mediumseagreen;
   justify-content: space-around;
 }
 
@@ -130,6 +130,14 @@ h5 {
   display: inline;
   margin-top: -100px;
   visibility: visible;
+  margin-top: 150px;
+  margin-bottom: -60px;
+}
+
+#bird {
+  right: 1300px;
+  position: absolute;
+ 
 }
 
 #kids {
@@ -159,13 +167,14 @@ h5 {
   cursor: pointer;
   font-size: 42px;
   font-weight: bold;
-  background: green;
   border-radius: 40px;
   letter-spacing: 6px;
-  font-family: cursive;
-  border: 10px solid white;
   margin-bottom: 150px;
+  font-family: cursive;
+  border: 10px solid black;
   padding: 20px 40px 20px 40px;
+  background-color: lightseagreen;
+  box-shadow: 10px 10px 10px black;
 }
 
 
@@ -175,13 +184,14 @@ h5 {
   cursor: pointer;
   font-size: 42px;
   font-weight: bold;
-  background: green;
   border-radius: 40px;
   letter-spacing: 6px;
   margin-bottom: 150px;
   font-family: cursive;
-  border: solid white 10px;
-  padding: 20px 40px 20px 40px;    
+  border: 10px solid black;
+  padding: 20px 40px 20px 40px; 
+  background-color: lightseagreen;
+  box-shadow: 10px 10px 10px black;
 }
 
 #next:focus {outline:0;}
@@ -204,7 +214,7 @@ h5 {
   display: none;
 }
 
-.main-section {
+.fruits {
   height: auto; 
   padding: 50px; 
   display: flex;
@@ -214,7 +224,7 @@ h5 {
   justify-content: space-evenly;
 }
 
-.main-section img {
+.fruits img {
   width: 500px;
   height: 400px;
   margin: 50px;
@@ -222,7 +232,8 @@ h5 {
   text-align: center;
 }
 
-.flexBox {
+.fruit {
+  box-shadow: 15px 15px 5px black;
   visibility: visible;
   background-color: lightgray;
   border: 25px ridge white;
@@ -233,7 +244,7 @@ h5 {
   display: none;
 }
 
-#fruit, #vegetable {
+#fruit-btn, #vegetable-btn {
   color: black;
   padding: 25px;
   font-size: 3rem;
@@ -241,28 +252,52 @@ h5 {
   font-weight: bold;
   letter-spacing: 4px;
   font-family: cursive;
-  background-color: white;
   border: solid black 10px;
+  box-shadow: 10px 10px 10px black;
   border-radius: 40px;
 }
 
-#fruit:hover {
+#fruit-btn:hover {
+  box-shadow: 12px 12px 5px black;
   transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: green;
+  background-color: lightseagreen;
   color: white;
 }
 
-#fruit:focus {outline:0;}
+#fruit-btn:focus {outline:0;}
 
-#vegetable:hover {
+.vegetables {
+  height: auto; 
+  padding: 50px; 
+  display: flex;
+  flex-wrap: wrap;
+  font-family: cursive;
+  justify-content: space-evenly;
+}
+
+.vegetables img {
+  width: 500px;
+  height: 400px;
+  margin: 50px;
+  padding: 40px;
+  text-align: center;
+}
+
+.vegetable {
+  box-shadow: 15px 15px 5px black;
+  background-color: lightgray;
+  border: 25px ridge white;
+  margin: 20px;
+}
+
+#vegetable-btn:hover {
+  box-shadow: 12px 12px 5px black;
   transition: all 0.4s ease-in-out;
-  border: solid white 10px;
-  background-color: green;
+  background-color: lightseagreen;
   color: white;
 }
 
-#vegetable:focus {outline:0;}
+#vegetable-btn:focus {outline:0;}
 
 
 
