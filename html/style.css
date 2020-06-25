@@ -8,7 +8,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('https://i.pinimg.com/originals/80/da/bd/80dabd8708b68e3c4c09502dd5ccca15.png');
+  background-image: url('https://media1.tenor.com/images/fb411a95dd947038bdc15ee0e704af08/tenor.gif?itemid=8177804');
 }
 
 #container {
@@ -221,7 +221,11 @@ h5 {
   flex-wrap: wrap;
   visibility: visible;
   font-family: cursive;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   justify-content: space-evenly;
+  background-image: url('https://i.gifer.com/ZhkE.gif');
 }
 
 .fruits img {
@@ -269,7 +273,7 @@ h5 {
 .vegetables {
   height: auto; 
   padding: 50px; 
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   font-family: cursive;
   justify-content: space-evenly;
@@ -298,7 +302,6 @@ h5 {
 }
 
 #vegetable-btn:focus {outline:0;}
-
 
 
 /*
