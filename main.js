@@ -68,12 +68,14 @@ let groceries = document.getElementById('groceries');
 let container = document.getElementById('container');
 let navContainer = document.getElementById('nav-container');
 let fruitList = document.querySelectorAll('.fruit');
-let correct = document.getElementById('right');
+let right = document.getElementById('right');
 let wrong = document.getElementById('wrong');
 let sound = document.getElementById('music');
 let click = document.getElementById('click');
 let win = document.getElementById('win');
 let cheer = document.getElementById('crowd');
+let correct = document.getElementById('correct');
+
 
 
 
@@ -132,7 +134,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.style.marginTop = '0px';
       groceries.src = 'bee.gif';
       guessButton.style.display = 'none';
@@ -174,7 +176,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -216,7 +218,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -258,7 +260,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -300,7 +302,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -342,7 +344,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -384,7 +386,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -426,7 +428,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -468,7 +470,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -510,7 +512,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -552,7 +554,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -594,7 +596,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -636,7 +638,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -678,7 +680,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      correct.play();
+      right.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -719,7 +721,7 @@ let randFruit = Math.floor(Math.random() * count);
         } else {
         option[1].onclick = function() {
         click.play();
-        correct.play();
+        right.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -761,7 +763,7 @@ let randFruit = Math.floor(Math.random() * count);
         } else {
         option[1].onclick = function() {
         click.play();
-        correct.play();
+        right.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
