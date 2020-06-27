@@ -68,6 +68,16 @@ let groceries = document.getElementById('groceries');
 let container = document.getElementById('container');
 let navContainer = document.getElementById('nav-container');
 let fruitList = document.querySelectorAll('.fruit');
+let correct = document.getElementById('right');
+let wrong = document.getElementById('wrong');
+let sound = document.getElementById('music');
+let click = document.getElementById('click');
+let win = document.getElementById('win');
+let cheer = document.getElementById('crowd');
+
+
+
+
 
 let currentlyPlaying = true;
 
@@ -80,9 +90,21 @@ let isClicked = (button) => {
   }
 }
 
+function youWin() {
+  currentlyPlaying = false;
+  if (!currentlyPlaying) {
+    sound.pause();
+    cheer.play();
+    win.play();
+  }
+}
+
 guessButton.onclick = function() {
+  click.play();
+  sound.play();
   guessFruit();
 }
+
 
 //switch function for Fruits  
 function guessFruit() { 
@@ -109,6 +131,8 @@ let randFruit = Math.floor(Math.random() * count);
       guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.style.marginTop = '0px';
       groceries.src = 'bee.gif';
       guessButton.style.display = 'none';
@@ -120,6 +144,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver()
       }
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "0px";
       guessButton.style.display = 'none';
@@ -147,6 +173,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -158,6 +186,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -185,6 +215,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -196,6 +228,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
+      wrong.play();
+      click.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -223,6 +257,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -234,6 +270,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -261,6 +299,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -272,6 +312,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -299,6 +341,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();  
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -310,6 +354,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -337,6 +383,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -348,6 +396,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -375,6 +425,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -386,6 +438,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       } 
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -413,6 +467,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -424,6 +480,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }  
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -451,6 +509,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -462,6 +522,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }  
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -489,6 +551,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -500,6 +564,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }  
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -527,6 +593,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -538,6 +606,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }  
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -565,6 +635,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -576,6 +648,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -603,6 +677,8 @@ let randFruit = Math.floor(Math.random() * count);
         guessFruit();
       } else {
       option[1].onclick = function() {
+      click.play();
+      correct.play();
       groceries.src = 'bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -614,6 +690,8 @@ let randFruit = Math.floor(Math.random() * count);
       gameOver();
       }  
       option[2].onclick = function() {
+      click.play();
+      wrong.play();
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = '0px';
       guessButton.style.display = 'none';
@@ -640,6 +718,8 @@ let randFruit = Math.floor(Math.random() * count);
           guessFruit();
         } else {
         option[1].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -651,6 +731,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         }
         option[2].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -678,6 +760,8 @@ let randFruit = Math.floor(Math.random() * count);
           guessFruit();
         } else {
         option[1].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -689,6 +773,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         }
         option[2].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -716,6 +802,8 @@ let randFruit = Math.floor(Math.random() * count);
           guessFruit();
         } else {
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -726,6 +814,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -753,6 +843,8 @@ let randFruit = Math.floor(Math.random() * count);
           guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -763,6 +855,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -789,6 +883,8 @@ let randFruit = Math.floor(Math.random() * count);
          guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -799,6 +895,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        wrong.play();
+        click.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -825,6 +923,8 @@ let randFruit = Math.floor(Math.random() * count);
          guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -835,6 +935,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -861,6 +963,8 @@ let randFruit = Math.floor(Math.random() * count);
          guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -871,6 +975,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -897,6 +1003,8 @@ let randFruit = Math.floor(Math.random() * count);
          guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -907,6 +1015,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -933,6 +1043,8 @@ let randFruit = Math.floor(Math.random() * count);
          guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -943,6 +1055,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -969,6 +1083,8 @@ let randFruit = Math.floor(Math.random() * count);
          guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -979,6 +1095,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -1005,6 +1123,8 @@ let randFruit = Math.floor(Math.random() * count);
          guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -1015,6 +1135,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -1041,6 +1163,8 @@ let randFruit = Math.floor(Math.random() * count);
          guessFruit();
         } else {  
         option[2].onclick = function() {
+        click.play();
+        correct.play();
         groceries.src = 'bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -1051,6 +1175,8 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         } 
         option[1].onclick = function() {
+        click.play();
+        wrong.play();
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = '0px';
         guessButton.style.display = 'none';
@@ -1066,10 +1192,13 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = '100px';
         guessButton.style.boxShadow = 'none';
         guessButton.style.background = 'none';
+        currentlyPlaying = true;
   }
 
 
   nextButton.onclick = function() {
+    click.play();
+    currentlyPlaying = true;
     question.innerHTML = "Below are a mix of vegetables and fruits..<br> Can you name all of the fruits ?";
     groceries.src = 'bird.gif';
     groceries.style.width = '800px';
@@ -1089,15 +1218,18 @@ let randFruit = Math.floor(Math.random() * count);
       fruit.style.border = '25px ridge white';  
     })
   
-  guessButton.onclick = function() { 
+  guessButton.onclick = function() {
+    click.play();
     guessFruit();
   }
 }
 
   
 function gameOver() {
-  if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src && item1.src === fruitImage17.src && item2.src === fruitImage18.src && item3.src === fruitImage19.src && item4.src === fruitImage20.src && item5.src === fruitImage21.src && item6.src === fruitImage22.src && item7.src === fruitImage23.src && item8.src === fruitImage24.src && item9.src === fruitImage25.src && item10.src === fruitImage26.src) {
-      
+  if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+  
+  youWin();
+  currentlyPlaying = false;
   container.style.border = "180px ridge lime";  
   guessButton.style.display = 'none';
   nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
@@ -1114,6 +1246,7 @@ function gameOver() {
   document.querySelector('#site-name').innerHTML = 'AWESOME !!!'; 
   }
 }
+
 
 
 
