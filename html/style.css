@@ -273,7 +273,7 @@ h5 {
 .vegetables {
   height: auto; 
   padding: 50px; 
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   font-family: cursive;
   justify-content: space-evenly;
