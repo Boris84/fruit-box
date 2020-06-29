@@ -1315,7 +1315,7 @@ let randFruit = Math.floor(Math.random() * count);
 
   
 function gameOver() {
-  if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src && item1.src === fruitImage17.src && item2.src === fruitImage18.src && item3.src === fruitImage19.src && item4.src === fruitImage20.src && item5.src === fruitImage21.src && item6.src === fruitImage22.src && item7.src === fruitImage23.src && item8.src === fruitImage24.src && item9.src === fruitImage25.src && item10.src === fruitImage26.src && item11.src === fruitImage27.src && item12.src === fruitImage28.src) {
+  if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
   
   youWin();
   currentlyPlaying = false;
