@@ -10,7 +10,7 @@
   <title>FruitBox</title>
 </head>
   <body>
-        
+    
   <div id="container">
    <!--  nav-bar  -->
     <nav id="nav-container">
@@ -25,15 +25,21 @@
         <a id="myAccount" href="html/accounts.html">my account</a>
       </div>
     </nav>
-    
-             
+    <div id="life_icons">
+      <img id="life_a" src="life_icon2.png">
+      <img id="life_b" src="life_icon2.png">
+      <img id="life_c" src="life_icon2.png">
+    </div>
+            
     <center>
+      <div id="dead-text"></div>
       <p id="question">Below are a mix of fruits and Vegetables..<br> Can you sort the fruits from the vegetables ?</p>
     </center>
       
     <center>
       <img src="bird.gif" id="groceries" width="800px" height="750px"> 
     </center>
+      
       
     <div id="fruit-row">
       <img src="squash.png" id="Squash" class="image">
@@ -64,19 +70,16 @@
       <img src="radish.png" id="Radish" class="image">
       <img src="zucchini.png" id="Zucchini" class="image">
       <img src="turnip.png" id="Turnip" class="image">
-
-
-
     </div>
 
     <br>
       <br>
         <br>
           <br>
-            <center>
-              <button id="guess">guess</button>
-              <button id="next">next</button>
-            </center>
+          <center>
+            <button id="guess">guess</button>
+            <button id="next">next</button>
+          </center>
       <br>
         <br>
 
@@ -125,19 +128,19 @@
 
 
      </div>
-        <footer>
-        
-        
-        <audio src="gameTheme.mp3" id="music" type="audio/mp3"></audio>
-        <audio src="right.wav" id="right" type="audio/wav"></audio>
-        <audio src="wrong.wav" id="wrong" type="audio/wav"></audio>
-        <audio src="click.wav" id="click" type="audio/wav"></audio>
-        <audio src="you-win.mp3" id="win" type="audio/mp3"></audio>
-        <audio src="crowd.wav" id="crowd" type="audio/wav"></audio>
-        <audio src="correct.wav" id="correct" type="audio/wav"></audio>
+       <footer>
+         <audio src="gameTheme.mp3" id="music" type="audio/mp3"></audio>
+         <audio src="right.wav" id="right" type="audio/wav"></audio>
+         <audio src="wrong.wav" id="wrong" type="audio/wav"></audio>
+         <audio src="click.wav" id="click" type="audio/wav"></audio>
+         <audio src="you-win.mp3" id="win" type="audio/mp3"></audio>
+         <audio src="crowd.wav" id="crowd" type="audio/wav"></audio>
+         <audio src="correct.wav" id="correct" type="audio/wav"></audio>
+         <audio src="game_over.mp3" id="game_over" type="audio/mp3"></audio>
+         <audio src="you-loose.wav" id="you_loose" type="audio/wav"></audio>
 
         </footer>
-        </div>
+     </div>
      <script src="main.js"></script>
   </body> 
 </html>
