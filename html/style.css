@@ -124,12 +124,11 @@ h5 {
 
 #life_icons {
   display: flex;
-  
-  margin: 100px 0px 0px 100px;
+  margin: 100px 0px -150px 100px;
 }
 
 #life_a, #life_b, #life_c {
-  width: 140px;
+  width: 180px;
   margin: 20px;
 }
 
@@ -141,14 +140,9 @@ h5 {
   display: inline;
   visibility: visible;
   margin-top: 100px;
-  margin-bottom: -60px;
+  margin-bottom: -20px;
 }
 
-#bird {
-  right: 1300px;
-  position: absolute;
- 
-}
 
 #kids {
   font-size: 10rem;
@@ -176,7 +170,7 @@ h5 {
   font-weight: bold;
   border-radius: 40px;
   letter-spacing: 6px;
-  margin-bottom: 150px;
+  margin-bottom: 40px;
   font-family: cursive;
   border: 10px solid black;
   padding: 20px 40px 20px 40px;
@@ -188,13 +182,13 @@ h5 {
 #next {
   color: white;
   display: none;
-  visibility: visible;
   cursor: pointer;
   font-size: 42px;
   font-weight: bold;
+  visibility: visible;
   border-radius: 40px;
   letter-spacing: 6px;
-  margin-bottom: 150px;
+  margin-bottom: 40px;
   font-family: cursive;
   border: 10px solid black;
   padding: 20px 40px 20px 40px; 

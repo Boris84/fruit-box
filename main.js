@@ -97,31 +97,18 @@ let isClicked = (button) => {
   } else {
     return false;
   }
-} 
-
-
-
-//function checkLives(src) {
-//  life_icons[2].src = 'death_icon1.png';
-//    
-//  if (life_icons[2].src === 'death_icon1.png') {
-//    checkLives1();
-//  }   
-//}
-
-
-
+}
 
 function checkLives(src) {
     
   if (lives === 2) {
-    life_c.src = 'death_icon1.png';
+    life_c.src = 'death_icon.png';
   } 
   if (lives === 1) {
-    life_b.src = 'death_icon1.png';
+    life_b.src = 'death_icon.png';
   }
   if (lives === 0) {
-    life_a.src = 'death_icon1.png';
+    life_a.src = 'death_icon.png';
     yourDead();
     }
   }
@@ -132,7 +119,6 @@ function yourDead() {
   question.style.display = 'none';
   life_icons.style.display = 'none';
   nextButton.style.visibility = 'hidden';
-//  groceries.style.marginBottom = "-110px"  //
   deadText.innerHTML = '<h1>GAME OVER !!!</h1>';
   looser.play();
 }
@@ -156,6 +142,7 @@ guessButton.onclick = function() {
 
 //switch function for Fruits  
 function guessFruit() { 
+    
 const count = 28;
     
 let randFruit = Math.floor(Math.random() * count);    
@@ -166,6 +153,8 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage1.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
+      groceries.style.marginTop = "50px";
+      groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?";
             
    if (currentlyPlaying && isClicked(guessButton)) {
@@ -183,6 +172,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[0].style.border = '25px solid lime';
@@ -197,6 +187,7 @@ let randFruit = Math.floor(Math.random() * count);
           
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -211,6 +202,8 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage2.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
+      groceries.style.marginTop = "50px";
+      groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?";
          
    if (currentlyPlaying && isClicked(guessButton)) {
@@ -228,6 +221,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[1].style.border = '25px solid lime';
@@ -255,6 +249,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage3.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -272,6 +268,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[2].style.border = '25px solid lime';
@@ -299,6 +296,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage4.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -316,6 +315,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px groove lime';
       fruitList[3].style.border = '25px solid lime';
@@ -330,6 +330,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -343,6 +344,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage5.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -357,9 +360,10 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       right.play();
       groceries.src = 'bee.gif';
-      groceries.style.marginTop = "-50px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
+      groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px groove lime';
       fruitList[4].style.border = '25px solid lime';
@@ -374,6 +378,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -387,6 +392,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage6.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -404,6 +411,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[5].style.border = '25px solid lime';
@@ -418,6 +426,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -431,6 +440,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage7.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -445,9 +456,10 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       right.play();
       groceries.src = 'bee.gif';
-      groceries.style.marginTop = "-50px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
+      groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[6].style.border = '25px solid lime';
@@ -462,6 +474,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -475,6 +488,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage8.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";  
         
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -492,6 +507,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[7].style.border = '25px solid lime';
@@ -506,6 +522,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -519,6 +536,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage9.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";      
           
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -536,6 +555,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[8].style.border = '25px solid lime';
@@ -550,6 +570,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -563,6 +584,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage10.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -580,6 +603,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[9].style.border = '25px solid lime';
@@ -594,6 +618,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -607,6 +632,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage11.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -624,6 +651,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginTop = "-50px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[10].style.border = '25px solid lime';
@@ -638,6 +666,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -651,6 +680,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src= fruitImage12.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
            
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -669,6 +700,7 @@ let randFruit = Math.floor(Math.random() * count);
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
+      groceries.style.marginBottom = "-10px";
       container.style.border = '180px ridge lime';
       fruitList[11].style.border = '25px solid lime';
       box12.src = fruitImage12.src;
@@ -682,6 +714,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -695,6 +728,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage13.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";  
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -712,6 +747,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[12].style.border = '25px solid lime';
@@ -727,6 +763,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -740,6 +777,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage14.src;
     groceries.style.width = "800px";
     groceries.style.height = "750px";
+    groceries.style.marginTop = "50px";
+    groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?"; 
         
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -757,6 +796,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '180px ridge lime';
       fruitList[13].style.border = '25px solid lime';
@@ -771,6 +811,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
+      groceries.style.marginBottom = "-40px";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
@@ -783,6 +824,8 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage15.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
+      groceries.style.marginTop = "50px";
+      groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?";
           
       if (currentlyPlaying && isClicked(guessButton)) {
@@ -800,6 +843,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[14].style.border = '25px solid lime';
@@ -814,6 +858,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -827,6 +872,8 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage16.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
+      groceries.style.marginTop = "50px";
+      groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?"; 
           
       if (currentlyPlaying && isClicked(guessButton)) {
@@ -844,6 +891,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[15].style.border = '25px solid lime';
@@ -858,6 +906,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -871,6 +920,8 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage17.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
+      groceries.style.marginTop = "50px";
+      groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?"; 
           
       if (currentlyPlaying && isClicked(guessButton)) {
@@ -888,6 +939,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item1.src = fruitImage17.src;
@@ -901,6 +953,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -914,6 +967,8 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage18.src;
       groceries.style.width = "800px";
       groceries.style.height = "750px";
+      groceries.style.marginTop = "50px";
+      groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?"; 
           
       if (currentlyPlaying && isClicked(guessButton)) {
@@ -931,6 +986,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item2.src = fruitImage18.src;
@@ -944,6 +1000,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -956,6 +1013,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage19.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -973,6 +1032,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item3.src = fruitImage19.src;
@@ -986,6 +1046,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -998,7 +1059,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage20.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
-      groceries.style.marginTop = "-50px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1016,6 +1078,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item4.src = fruitImage20.src;
@@ -1029,6 +1092,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1041,7 +1105,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage21.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
-     groceries.style.marginTop = "-50px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1059,6 +1124,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item5.src = fruitImage21.src;
@@ -1072,6 +1138,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1084,6 +1151,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage22.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1101,6 +1170,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item6.src = fruitImage22.src;
@@ -1114,6 +1184,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1126,7 +1197,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage23.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
-     groceries.style.marginTop = "-50px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1144,6 +1216,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item7.src = fruitImage23.src;
@@ -1157,6 +1230,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1169,7 +1243,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage24.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
-     groceries.style.marginTop = "-50px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1187,6 +1262,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item8.src = fruitImage24.src;
@@ -1200,6 +1276,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1212,7 +1289,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage25.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
-     groceries.style.marginTop = "-50px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1230,6 +1308,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item9.src = fruitImage25.src;
@@ -1243,6 +1322,7 @@ let randFruit = Math.floor(Math.random() * count);
             
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px"; 
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1255,7 +1335,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage26.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
-     groceries.style.marginTop = "-50px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1273,6 +1354,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item10.src = fruitImage26.src;
@@ -1285,7 +1367,8 @@ let randFruit = Math.floor(Math.random() * count);
         lives--;
 
         groceries.src = 'angry_bee.gif';
-         groceries.style.marginTop = "-50px";
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1298,7 +1381,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage27.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
-     groceries.style.marginTop = "-50px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1316,6 +1400,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item11.src = fruitImage27.src;
@@ -1329,6 +1414,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1341,7 +1427,8 @@ let randFruit = Math.floor(Math.random() * count);
      groceries.src = fruitImage28.src;
      groceries.style.width = "800px";
      groceries.style.height = "750px";
-     groceries.style.marginTop = "-50px";
+     groceries.style.marginTop = "50px";
+     groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1359,6 +1446,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         item12.src = fruitImage28.src;
@@ -1372,6 +1460,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -1381,7 +1470,6 @@ let randFruit = Math.floor(Math.random() * count);
      }
       
   }
-     
         guessButton.style.border = 'none';
         groceries.style.marginTop = '100px';
         guessButton.style.boxShadow = 'none';
@@ -1397,8 +1485,8 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = 'bird.gif';
     groceries.style.width = '800px';
     groceries.style.height = '750px';
-//    groceries.style.marginTop = "150px";
-    groceries.style.marginBottom = '-70px';
+    groceries.style.marginTop = "100px";
+    groceries.style.marginBottom = "-30px";
     container.style.border = "180px ridge peachpuff";  
     nextButton.style.display = 'none';
     guessButton.style.background = 'lightseagreen';
