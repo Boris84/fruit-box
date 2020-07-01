@@ -8,7 +8,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(https://i.gifer.com/V9mg.gif);
+  background-image: url(https://media1.tenor.com/images/fb411a95dd947038bdc15ee0e704af08/tenor.gif?itemid=8177804);
+/*    background-image: url(https://i.gifer.com/V9mg.gif);*/
 }
 
 #container {
@@ -20,7 +21,6 @@ body {
 #nav-container {
   display: flex;
   flex-wrap: wrap;
-/*  margin-bottom: -80px;*/
   font-family: cursive;
   background-color: lightgray;
   border: 55px ridge whitesmoke;
@@ -216,8 +216,8 @@ h5 {
   display: none;
 }
 
+/* container */
 .fruits {
-  height: auto; 
   padding: 50px; 
   display: flex;
   flex-wrap: wrap;
@@ -230,6 +230,7 @@ h5 {
   background-image: url('https://i.gifer.com/ZhkE.gif');
 }
 
+/*lines inside gray boxes */
 .fruits img {
   width: 500px;
   height: 400px;
@@ -238,11 +239,12 @@ h5 {
   text-align: center;
 }
 
+/* gray boxes */
 .fruit {
   box-shadow: 15px 15px 5px black;
-  visibility: visible;
   background-color: lightgray;
   border: 25px ridge white;
+  visibility: visible;
   margin: 20px;
 }
 
@@ -329,14 +331,84 @@ h5 {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    #nav-container {
-        background-color: red;
-    }
+  #container {
+    border: 20px ridge peachpuff;
+  }
+    
+  #kids {
+    height: 40px;
+    font-size: 2rem;
+    background-color: white;
+    padding: 0px 20px 0px 20px;
+    border: 20px ridge whitesmoke;
+  }
+    
+  #computer {
+    width: 120px;
+    height: 70px;
+    margin-top: 35px;
+  }
+    
+  #nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: cursive;
+    background-color: lightgray;
+    border: 20px ridge whitesmoke;
+    justify-content: space-around;
+  }
+    
+  #home, #games, #help, #myAccount {
+    padding: 40px;
+    font-size: 1.7rem;
+    line-height: 9.9;
+    transition: top ease-in-out 0.3s;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    top: 0;
+  }
+    
+  #question {
+  color: black;
+  display: inline;
+  line-height: 1.4;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: cursive;
+  -webkit-text-stroke: 1px black;
 }
 
 
+#life_icons {
+  display: flex;
+  margin: 100px 0px -150px 100px;
+}
 
+#life_a, #life_b, #life_c {
+  width: 80px;
+  margin: 10px;
+}
 
+#death_icon {
+  width: 140px;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {...}*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...}*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...}*/
 
 
 
