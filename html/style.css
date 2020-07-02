@@ -320,16 +320,14 @@ h5 {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #container {
-    width: 100%; 
-    border: 20px ridge peachpuff;
+    
   }
     
   #kids {
     height: 40px;
     font-size: 2rem;
-    background-color: white;
     padding: 0px 20px 0px 20px;
-    border: 20px ridge whitesmoke;
+    border: 12px ridge whitesmoke;
   }
     
   #computer {
@@ -342,14 +340,12 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    background-color: lightgray;
-    border: 20px ridge whitesmoke;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
     
   #home, #games, #help, #myAccount {
     padding: 40px;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 9.9;
     transition: top ease-in-out 0.3s;
     text-decoration: none;
