@@ -5,18 +5,19 @@ html {
 body {
   padding: 0;
   margin: auto;
+  background-color: black;
+/*    background-image: url(https://i.gifer.com/V9mg.gif);*/
 }
 
 #container {
 /*  text-align: center;*/
   width: 80%;
-  margin: 0 auto;
+  margin: auto;
   background-size: cover;
+  border: 180px ridge yellow;
   background-position: center;
   background-repeat: no-repeat;
-  border: 180px ridge yellow;
   background-image: url(https://media1.tenor.com/images/fb411a95dd947038bdc15ee0e704af08/tenor.gif?itemid=8177804);
-/*    background-image: url(https://i.gifer.com/V9mg.gif);*/
 /*  border-image: url(../worm-border.png) 55 65 round;*/
 }
 
@@ -28,6 +29,8 @@ body {
   font-family: cursive;
   justify-content: space-evenly;
 }
+
+
 
 h1 {
   color: red;
@@ -68,27 +71,20 @@ h5 {
 
 }
 
-#computer {
- display: none;
-  width: 400px;
-  height: 350px;
-  margin-top: 110px;
-}
 
 .nav-items {
-    
+  line-height: 11.9;
 }
 
 #home, #games, #help, #myAccount {
-  padding: 40px;
-  font-size: 3.7rem;
-  line-height: 9.9;
   transition: top ease-in-out 0.3s;
   text-decoration: none;
   letter-spacing: 6px;
   position: relative;
+  font-size: 3.2rem;
   font-weight: bold;
   cursor: pointer;
+  padding: 50px;
   color: black;
   top: 0;
 }
@@ -136,6 +132,7 @@ h5 {
 }
 
 #groceries {
+  width: 18%; 
   display: inline;
   visibility: visible;
   margin-top: 100px;
@@ -144,16 +141,16 @@ h5 {
 
 
 #kids {
+  color: white;
   font-size: 10rem;
   line-height: 1.5;
   font-weight: bold;
   letter-spacing: 9px;
   border-radius: 90px;
-  color: white;
-  padding: 10px 60px 0px 60px;
+  background-color: yellow;
+  padding: 0px 60px 0px 60px;
   border: 35px ridge whitesmoke;
   -webkit-text-stroke: 1px black;  
-  background-color: yellow;
   font-family: 'Luckiest Guy', cursive;  
 }
 
@@ -171,11 +168,12 @@ h5 {
   letter-spacing: 6px;
   margin-bottom: 40px;
   font-family: cursive;
-  background-color: white;
   border: 10px solid black;
   padding: 20px 40px 20px 40px;
+  background-color: white;
   box-shadow: 10px 10px 10px black;
 }
+
 
 #next {
   color: black;
@@ -195,6 +193,8 @@ h5 {
 }
 
 #next:focus {outline:0;}
+
+
 
 /*gets rid of default button border */
 #guess:focus {outline:0;}
@@ -320,33 +320,29 @@ h5 {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #container {
-    margin: 0 auto;
-    border: 30px ridge yellow;
+    border: 20px ridge yellow;
   }
     
   #kids {
     height: 40px;
     font-size: 2rem;
+    background-color: white;
     padding: 0px 20px 0px 20px;
-    border: 12px ridge whitesmoke;
-  }
-    
-  #computer {
-    width: 120;
-    height: 70px;
-    margin-top: 35px;
+    border: 20px ridge whitesmoke;
   }
     
   #nav-container {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    justify-content: space-evenly;
+    background-color: lightgray;
+    border: 20px ridge whitesmoke;
+    justify-content: space-around;
   }
     
   #home, #games, #help, #myAccount {
     padding: 40px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     line-height: 9.9;
     transition: top ease-in-out 0.3s;
     text-decoration: none;
@@ -358,29 +354,65 @@ h5 {
   }
     
   #question {
-  color: black;
-  display: inline;
-  line-height: 1.4;
-  font-size: 1.7rem;
-  font-weight: bold;
-  font-family: cursive;
-  -webkit-text-stroke: 1px black;
+    color: black;
+    display: inline;
+    line-height: 1.4;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: cursive;
+    -webkit-text-stroke: 1px black;
 }
 
 
-#life_icons {
-  display: flex;
-  margin: 100px 0px -150px 100px;
+  #life_icons {
+    display: flex;
+/*    margin: 100px 0px -150px 100px;*/
 }
 
-#life_a, #life_b, #life_c {
-  width: 80px;
-  margin: 10px;
+  #life_a, #life_b, #life_c {
+    width: 80px;
+    margin: 10px;
 }
 
-#death_icon {
-  width: 140px;
+  #death_icon {
+    width: 140px;
 }
+    
+  #groceries {
+    display: inline;
+    visibility: visible;
+    margin-top: 30px;
+    margin-bottom: -70px;
+    width: 55%; 
+}
+    
+  #guess {
+    font-size: 11px;  
+    padding: 4px 15px 10px 15px;
+
+    }
+    /*container */
+  .fruits {
+        
+    }
+    /*lines inside gray boxes */
+  .fruits img {
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+   }
+
+  /* gray boxes */
+  .fruit {
+    box-shadow: 5px 5px 2px black;
+    background-color: lightgray;
+    border: 20px ridge white;
+    visibility: visible;
+    margin: 20px;
+  }
+
 
 }
 

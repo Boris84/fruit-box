@@ -1537,7 +1537,7 @@ let randFruit = Math.floor(Math.random() * count);
   nextButton.onclick = function() {
     click.play();
     currentlyPlaying = true;
-    question.innerHTML = "Below are a mix of vegetables and fruits..<br> Can you name all of the fruits ?";
+    question.innerHTML = "Below are a mix of vegetables and fruits..<br> Can you sort the fruits from the vegetables ?";
     groceries.src = 'bird.gif';
     groceries.style.width = '800px';
     groceries.style.height = '750px';
