@@ -142,7 +142,6 @@ guessButton.onclick = function() {
 
 //switch function for Fruits  
 function guessFruit() { 
-          guessButton.style.background = 'white';
 
 const count = 28;
     

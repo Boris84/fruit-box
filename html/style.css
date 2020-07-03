@@ -4,21 +4,20 @@ html {
 
 body {
   padding: 0;
-  margin: auto;
-  background-color: black;
-/*background-image: url(https://i.gifer.com/V9mg.gif);*/
-}
-
-#container {
-/*text-align: center;*/
-  width: 80%;
-  margin: auto;
+  margin: 0 auto;
+  width: 100%;
   background-size: cover;
-  border: 180px ridge yellow;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(https://media1.tenor.com/images/fb411a95dd947038bdc15ee0e704af08/tenor.gif?itemid=8177804);
-/*border-image: url(../worm-border.png) 55 65 round;*/
+  /*border-image: url(../worm-border.png) 55 65 round;*/
+  /*background-image: url(https://i.gifer.com/V9mg.gif);*/
+}
+
+#container {
+  margin: 0 auto;
+  text-align: center;
+  border: 180px ridge yellow;
 }
 
 #nav-container {
@@ -316,7 +315,12 @@ h5 {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    body {
+        justify-content: center;
+    }
+    
   #container {
+    margin: auto;
     border: 25px ridge yellow;
   }
     
@@ -394,21 +398,28 @@ h5 {
 }
     
   #guess {
-    font-size: 0.5rem;
-    border: 1em solid black;
-    padding: 0.1em 1.2em 0.9em 2em;
-
+    line-height: 1;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    border: 0.2 solid black;
+    border-radius: 20px;
+    padding: 0em 1em 0.4em 1.1em;
     }
+    
     /*container */
   .fruits {
-        
+    padding: 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('https://i.gifer.com/ZhkE.gif');
     }
-    /*lines inside gray boxes */
+    
+  /*lines inside gray boxes */
   .fruits img {
-    width: 20px;
-    height: 10px;
-    margin: 230px
-    padding: 10px;
+    width: 50px;
+    height: 35px;
+    margin: 10px;
     text-align: center;
    }
 
@@ -418,10 +429,22 @@ h5 {
     background-color: lightgray;
     border: 1em ridge white;
     visibility: visible;
-    margin: 20px;
+    margin: 10px;
+    width: 150px;
   }
 
-
+  #fruit-btn, #vegetable-btn {
+    color: black;
+    padding: 3em;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    font-family: cursive;
+    border: solid black 10px;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 40px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
