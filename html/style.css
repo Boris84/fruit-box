@@ -25,7 +25,6 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  font-family: cursive;
   justify-content: space-between;
 }
 
@@ -77,6 +76,7 @@ h5 {
 
 #home, #games, #help, #myAccount {
   transition: top ease-in-out 0.3s;
+  font-family: cursive;
   text-decoration: none;
   letter-spacing: 6px;
   position: relative;
@@ -401,7 +401,7 @@ h5 {
     line-height: 1;
     font-size: 0.6rem;
     letter-spacing: 2px;
-    border: 0.2 solid black;
+    border: 5px solid black;
     border-radius: 20px;
     padding: 0em 1em 0.4em 1.1em;
     }
