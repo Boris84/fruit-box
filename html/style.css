@@ -73,7 +73,7 @@ h5 {
 
 #home, #games, #help, #myAccount {
   transition: top ease-in-out 0.3s;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', cursive;  
   text-decoration: none;
   letter-spacing: 6px;
   border-radius: 30%;
@@ -82,7 +82,7 @@ h5 {
   font-weight: bold;
   cursor: pointer;
   margin: 50px;
-  color: black;
+  color: gold;
   top: 0;
 }
 
@@ -107,9 +107,9 @@ h5 {
   display: inline;
   line-height: 1.4;
   font-size: 3.7rem;
-  letter-spacing: 6px;
-  font-weight: bold;
-  font-family: 'PT Sans', sans-serif;
+  letter-spacing: 13px;
+  /*font-weight: bold;*/
+  font-family: 'Freckle Face', cursive;  
 }
 
 
@@ -157,15 +157,15 @@ h5 {
   display: inline;
   cursor: pointer;
   font-size: 42px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   border-radius: 40px;
   letter-spacing: 6px;
   margin-bottom: 40px;
-  background-color: white;
   border: 10px solid black;
   padding: 20px 40px 20px 40px;
-  font-family: 'PT Sans', sans-serif;
+  background-color: white;
   box-shadow: 10px 10px 10px black;
+  font-family: 'Freckle Face', cursive;  
 }
 
 
@@ -324,7 +324,7 @@ h5 {
     
   #kids {
     width: 65%;
-    line-height: 1.5;
+    line-height: 2;
     font-size: 1.9rem;
     text-align: center;
     letter-spacing: 4px; 
@@ -338,7 +338,7 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    margin-bottom: 20%;
+    margin-bottom: 50%;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
