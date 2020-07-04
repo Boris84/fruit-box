@@ -131,11 +131,11 @@ h5 {
   visibility: visible;
   margin-top: 100px;
   margin-bottom: -20px;
-/*  width: 15%;*/
+/*  width: 14%;*/
 }
 
 img {
-  width: 27.5%;
+  width: 13.5%;
 }
 
 #kids {
@@ -412,7 +412,7 @@ img {
 }
     
   img {
-    width: 27%;
+    width: 27.5%;
   }
     
   #guess {
@@ -439,7 +439,7 @@ img {
     width: 60px;
     height: 60px;
     margin: 2px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
    }
 
@@ -450,7 +450,7 @@ img {
     border: 0.6em ridge white;
     visibility: visible;
     margin: 10px;
-    width: 110px;
+    width: 90px;
   }
 
   #fruit-btn, #vegetable-btn {
