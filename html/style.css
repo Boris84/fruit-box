@@ -331,7 +331,7 @@ img {
      background-size: cover;
      background-position: center;
      background-repeat: no-repeat;
-     background-image: url(https://media1.tenor.com/images/fb411a95dd947038bdc15ee0e704af08/tenor.gif?itemid=8177804);
+     background-image: url(https://i.gifer.com/V9mg.gif);
     /*border-image: url(../worm-border.png) 55 65 round;*/
     /*background-image: url(https://i.gifer.com/V9mg.gif);*/
     } 
@@ -348,7 +348,7 @@ img {
     font-size: 2.5rem;
     text-align: center;
     letter-spacing: 3px; 
-    -webkit-text-stroke: 4px black;  
+    -webkit-text-stroke: 3px black;  
     background-color: transparent;
     padding: 0em 0.1em 0em 0.1em;
     color: yellow;
