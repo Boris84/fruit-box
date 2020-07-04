@@ -340,7 +340,7 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-/*    margin-bottom: 10%;*/
+    margin-bottom: 30%;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
@@ -349,15 +349,13 @@ h5 {
   }
     
   .nav-items {
-/*
     display: flex;
     flex-direction: column;
-*/
+    align-items: center;
   }
     
   #home, #games, #help, #myAccount {
-    padding: 0.5em;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.9;
     letter-spacing: 3px;
     font-family: 'Freckle Face', cursive;  
@@ -375,7 +373,7 @@ h5 {
     color: black;
     display: inline;
     line-height: 1.3;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     letter-spacing: 6px;
     font-family: 'Freckle Face', cursive;  
