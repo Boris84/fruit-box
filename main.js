@@ -73,6 +73,8 @@ let groceries = document.getElementById('groceries');
 let container = document.getElementById('container');
 let navContainer = document.getElementById('nav-container');
 let fruitList = document.querySelectorAll('.fruit');
+let ImageList = document.querySelectorAll('.image');
+
 let right = document.getElementById('right');
 let wrong = document.getElementById('wrong');
 let sound = document.getElementById('music');
@@ -140,7 +142,18 @@ guessButton.onclick = function() {
 }
 
 
-//switch function for Fruits  
+document.addEventListener('DOMContentLoaded', checkFruit);
+
+function checkFruit() {
+  let query = window.matchMedia("(max-width: 600px)");
+    if (query.matches) {
+  
+  }
+}
+
+
+
+//switch function for Fruits
 function guessFruit() { 
 
 const count = 28;
@@ -151,8 +164,6 @@ let randFruit = Math.floor(Math.random() * count);
              
     case 0:
       groceries.src = fruitImage1.src;
-      groceries.style.width = "800px";
-      groceries.style.height = "750px";
       groceries.style.marginTop = "50px";
       groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?";
@@ -178,8 +189,8 @@ let randFruit = Math.floor(Math.random() * count);
       container.style.border = '180px ridge lime';
       fruitList[0].style.border = '25px solid lime';
       box1.src = fruitImage1.src; 
-      gameOver()
-      }
+      gameOver();
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -194,15 +205,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-     }
+     };
     }
   }
     break;
             
     case 1:
       groceries.src = fruitImage2.src;
-      groceries.style.width = "800px";
-      groceries.style.height = "750px";
       groceries.style.marginTop = "50px";
       groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?";
@@ -229,7 +238,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[1].style.border = '25px solid lime';
       box2.src = fruitImage2.src;
       gameOver();
-      }
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -243,15 +252,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }
     break;
        
     case 2:
     groceries.src = fruitImage3.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
@@ -278,7 +285,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[2].style.border = '25px solid lime';
       box3.src = fruitImage3.src;
       gameOver();
-      }
+      };
       option[2].onclick = function() {
       wrong.play();
       click.play();
@@ -292,15 +299,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }
     break;
         
     case 3:
     groceries.src= fruitImage4.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
@@ -327,7 +332,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[3].style.border = '25px solid lime';
       box4.src = fruitImage4.src;     
       gameOver();
-      }
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -342,15 +347,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
     }
   }
     break;
             
     case 4:
     groceries.src = fruitImage5.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
@@ -377,7 +380,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[4].style.border = '25px solid lime';
       box5.src = fruitImage5.src;
       gameOver();
-      }
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -392,15 +395,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }
     break;
             
     case 5:
     groceries.src = fruitImage6.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
@@ -427,7 +428,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[5].style.border = '25px solid lime';
       box6.src = fruitImage6.src;
       gameOver();
-      }
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -442,15 +443,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
     }
   }
     break;
             
     case 6:
     groceries.src = fruitImage7.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
@@ -477,7 +476,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[6].style.border = '25px solid lime';
       box7.src = fruitImage7.src;
       gameOver();
-      }
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -492,15 +491,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      } 
+      };
      }
     }
     break;
       
     case 7:
     groceries.src = fruitImage8.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";  
@@ -527,7 +524,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[7].style.border = '25px solid lime';
       box8.src = fruitImage8.src;
       gameOver();
-      } 
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -542,15 +539,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }
     break;
          
     case 8:
     groceries.src= fruitImage9.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";      
@@ -577,7 +572,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[8].style.border = '25px solid lime';
       box9.src = fruitImage9.src;
       gameOver();
-      }  
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -592,15 +587,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      } 
+      };
      }
     }
     break;
         
     case 9:
     groceries.src= fruitImage10.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
@@ -627,7 +620,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[9].style.border = '25px solid lime';
       box10.src = fruitImage10.src;
       gameOver();
-      }  
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -642,15 +635,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }
     break;
          
     case 10:
     groceries.src= fruitImage11.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
@@ -677,7 +668,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[10].style.border = '25px solid lime';
       box11.src = fruitImage11.src;
       gameOver();
-      }  
+      }; 
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -692,15 +683,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }
     break;
         
     case 11:
     groceries.src= fruitImage12.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";
@@ -727,7 +716,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[11].style.border = '25px solid lime';
       box12.src = fruitImage12.src;
       gameOver();
-      }  
+      }; 
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -742,15 +731,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }
     break;
             
     case 12:
     groceries.src = fruitImage13.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?";  
@@ -777,7 +764,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[12].style.border = '25px solid lime';
       box13.src = fruitImage13.src;
       gameOver();
-      }
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -793,15 +780,13 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }
     break;
         
     case 13:
     groceries.src = fruitImage14.src;
-    groceries.style.width = "800px";
-    groceries.style.height = "750px";
     groceries.style.marginTop = "50px";
     groceries.style.marginBottom = "20px";
     question.innerHTML = "..fruit or veg ?"; 
@@ -828,7 +813,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[13].style.border = '25px solid lime';
       box14.src = fruitImage14.src;
       gameOver();
-      }  
+      };
       option[2].onclick = function() {
       click.play();
       wrong.play();
@@ -843,14 +828,12 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = '<h4>WRONG!!<h4>';
       kids.style.backgroundColor = "#ff0000";
       container.style.border = '180px groove #ff0000';
-      }
+      };
      }
     }       
     break;  
       case 14:
       groceries.src = fruitImage15.src;
-      groceries.style.width = "800px";
-      groceries.style.height = "750px";
       groceries.style.marginTop = "50px";
       groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?";
@@ -877,7 +860,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[14].style.border = '25px solid lime';
         box15.src = fruitImage15.src;
         gameOver();
-        }
+        };
         option[2].onclick = function() {
         click.play();
         wrong.play();
@@ -892,15 +875,13 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        }
+        };
        }
       }
       break;
      
       case 15:
       groceries.src = fruitImage16.src;
-      groceries.style.width = "800px";
-      groceries.style.height = "750px";
       groceries.style.marginTop = "50px";
       groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?"; 
@@ -927,7 +908,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[15].style.border = '25px solid lime';
         box16.src = fruitImage16.src;
         gameOver();
-        }
+        };
         option[2].onclick = function() {
         click.play();
         wrong.play();
@@ -942,15 +923,13 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        };
        }
       }
       break;
       
       case 16: 
       groceries.src = fruitImage17.src;
-      groceries.style.width = "800px";
-      groceries.style.height = "750px";
       groceries.style.marginTop = "50px";
       groceries.style.marginBottom = "20px";
       question.innerHTML = "..fruit or veg ?"; 
@@ -976,7 +955,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item1.src = fruitImage17.src;
         gameOver();
-        } 
+        }; 
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -991,17 +970,15 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        }
+        };
        }
       }
       break;
       
       case 17: 
       groceries.src = fruitImage18.src;
-      groceries.style.width = "800px";
-      groceries.style.height = "750px";
       groceries.style.marginTop = "50px";
-      groceries.style.marginBottom = "20px";
+      groceries.style.marginBottom = "20px"; 
       question.innerHTML = "..fruit or veg ?"; 
           
       if (currentlyPlaying && isClicked(guessButton)) {
@@ -1025,7 +1002,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item2.src = fruitImage18.src;
         gameOver();
-        } 
+        }; 
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1040,14 +1017,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        };
       }
      } 
      break;
      case 18: 
      groceries.src = fruitImage19.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1073,7 +1048,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item3.src = fruitImage19.src;
         gameOver();
-        } 
+        };
         option[1].onclick = function() {
         wrong.play();
         click.play();
@@ -1088,14 +1063,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        };
       }
      } 
      break;
      case 19: 
      groceries.src = fruitImage20.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1121,7 +1094,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item4.src = fruitImage20.src;
         gameOver();
-        } 
+        };
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1136,14 +1109,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        };
       }
      }
      break;
      case 20: 
      groceries.src = fruitImage21.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1169,7 +1140,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item5.src = fruitImage21.src;
         gameOver();
-        } 
+        };
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1184,14 +1155,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        }; 
       }
      }
      break;
      case 21: 
      groceries.src = fruitImage22.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1217,7 +1186,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item6.src = fruitImage22.src;
         gameOver();
-        } 
+        }; 
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1232,14 +1201,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        };
       }
      }
      break;
      case 22: 
      groceries.src = fruitImage23.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1265,7 +1232,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item7.src = fruitImage23.src;
         gameOver();
-        } 
+        }; 
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1280,14 +1247,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        };
       }
      }
      break;
      case 23: 
      groceries.src = fruitImage24.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1313,7 +1278,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item8.src = fruitImage24.src;
         gameOver();
-        } 
+        }; 
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1328,14 +1293,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        }; 
       }
      }
      break;
      case 24: 
      groceries.src = fruitImage25.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1361,7 +1324,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item9.src = fruitImage25.src;
         gameOver();
-        } 
+        };
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1376,14 +1339,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        }; 
       }
      }
      break;
      case 25: 
      groceries.src = fruitImage26.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1409,7 +1370,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item10.src = fruitImage26.src;
         gameOver();
-        } 
+        }; 
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1424,14 +1385,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        }; 
       }
      }
      break;
      case 26: 
      groceries.src = fruitImage27.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1457,7 +1416,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item11.src = fruitImage27.src;
         gameOver();
-        } 
+        }; 
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1472,14 +1431,12 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        }; 
       }
      }
      break;
      case 27: 
      groceries.src = fruitImage28.src;
-     groceries.style.width = "800px";
-     groceries.style.height = "750px";
      groceries.style.marginTop = "50px";
      groceries.style.marginBottom = "20px";
      question.innerHTML = "..fruit or veg ?"; 
@@ -1505,7 +1462,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         item12.src = fruitImage28.src;
         gameOver();
-        } 
+        }; 
         option[1].onclick = function() {
         click.play();
         wrong.play();
@@ -1520,7 +1477,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h4>WRONG!!<h4>';
         kids.style.backgroundColor = "#ff0000";
         container.style.border = '180px groove #ff0000';
-        } 
+        }; 
       }
      }
       
@@ -1533,13 +1490,12 @@ let randFruit = Math.floor(Math.random() * count);
   }
 
 
+
   nextButton.onclick = function() {
     click.play();
     currentlyPlaying = true;
     question.innerHTML = "Below are a mix of vegetables and fruits..<br> Can you sort the fruits from the vegetables ?";
     groceries.src = 'bird.gif';
-    groceries.style.width = '800px';
-    groceries.style.height = '750px';
     groceries.style.marginTop = "100px";
     groceries.style.marginBottom = "-30px";
     container.style.border = "180px ridge yellow";  
