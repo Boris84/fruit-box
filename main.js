@@ -1528,7 +1528,7 @@ let randFruit = Math.floor(Math.random() * count);
     guessButton.innerHTML = 'guess';
     guessButton.style.border = '10px solid black';
     guessButton.style.boxShadow = "12px 12px 7px black";
-    kids.style.backgroundColor = "yellow";
+    kids.style.backgroundColor = "coral";
 
 
       
