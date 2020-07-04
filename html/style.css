@@ -27,6 +27,42 @@ body {
   justify-content: space-between;
 }
 
+.nav-items {
+    display: flex;
+    align-items: flex-end;
+}
+
+#home, #games, #help, #myAccount {
+  transition: top ease-in-out 0.3s;
+  font-family: 'PT Sans', cursive;  
+  text-decoration: none;
+  letter-spacing: 6px;
+  border-radius: 30%;
+  position: relative;
+  font-size: 3.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 50px;
+  color: lightseagreen;
+  top: 0;
+}
+
+#home:hover {
+  top: -20px;
+}
+
+#games:hover {
+  top: -20px;
+}
+
+#help:hover {
+  top: -20px;
+}
+
+#myAccount:hover {
+  top: -20px;
+}
+
 h1 {
   color: red;
   font-size: 10rem;
@@ -64,42 +100,6 @@ h5 {
   margin-bottom: 300px;
   -webkit-text-stroke: 4px black;  
 
-}
-
-.nav-items {
-    display: flex;
-    align-items: flex-end;
-}
-
-#home, #games, #help, #myAccount {
-  transition: top ease-in-out 0.3s;
-  font-family: 'PT Sans', cursive;  
-  text-decoration: none;
-  letter-spacing: 6px;
-  border-radius: 30%;
-  position: relative;
-  font-size: 3.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 50px;
-  color: gold;
-  top: 0;
-}
-
-#home:hover {
-  top: -20px;
-}
-
-#games:hover {
-  top: -20px;
-}
-
-#help:hover {
-  top: -20px;
-}
-
-#myAccount:hover {
-  top: -20px;
 }
 
 #question {
@@ -183,7 +183,7 @@ img {
   display: none;
   cursor: pointer;
   font-size: 42px;
-  font-weight: bold;
+/*  font-weight: bold;*/
   visibility: visible;
   border-radius: 40px;
   letter-spacing: 6px;
@@ -197,7 +197,6 @@ img {
 }
 
 #next:focus {outline:0;}
-
 
 
 /*gets rid of default button border */
@@ -390,6 +389,14 @@ img {
 /*    top: 0;*/
   }
     
+
+h3 {
+  color: lime;
+  font-size: 2em;
+  letter-spacing: 4px;
+  -webkit-text-stroke: 3px black;
+}
+
   #question {
     color: black;
     display: inline;
@@ -419,7 +426,7 @@ img {
     display: inline;
     visibility: visible;
     margin-top: 30px;
-    margin-bottom: -70px;
+    margin-bottom: 20px;
 }
     
   img {
@@ -435,6 +442,19 @@ img {
     padding: 0.3em 1em 0.3em 1.1em;
     box-shadow: 2px 2px 2px black;
     }
+    
+  #next {
+    color: black;
+    display: none;
+    cursor: pointer;
+    font-size: 0.6rem;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    border: 10px solid black;
+    padding: 0.3em 1em 0.3em 1.1em;
+    background-color: white;
+    box-shadow: 2px 2px 2px black;
+  }
     
     /*container */
   .fruits {

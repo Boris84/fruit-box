@@ -142,15 +142,6 @@ guessButton.onclick = function() {
 }
 
 
-document.addEventListener('DOMContentLoaded', checkFruit);
-
-function checkFruit() {
-  let query = window.matchMedia("(max-width: 600px)");
-    if (query.matches) {
-  
-  }
-}
-
 
 
 //switch function for Fruits
@@ -179,6 +170,21 @@ let randFruit = Math.floor(Math.random() * count);
       option[1].onclick = function() {
       click.play();
       right.play();
+      let query = window.matchMedia("(max-width: 600px)");
+          
+      if (query.matches) {
+        container.style.border = '15px ridge lime';
+        groceries.src = 'bee.gif';
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        fruitList[0].style.border = '0.3em ridgelime';
+        box1.src = fruitImage1.src; 
+        gameOver();
+      } else {
+          
       groceries.src = 'bee.gif';
       kids.style.backgroundColor = "lime";
       guessButton.style.display = 'none';
@@ -190,6 +196,7 @@ let randFruit = Math.floor(Math.random() * count);
       fruitList[0].style.border = '25px solid lime';
       box1.src = fruitImage1.src; 
       gameOver();
+      }
       };
       option[2].onclick = function() {
       click.play();
