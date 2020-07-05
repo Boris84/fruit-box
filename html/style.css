@@ -117,10 +117,12 @@ h5 {
 
 #life_icons {
   display: flex;
+  margin-left: 5%;
 }
 
 #life_a, #life_b, #life_c {
   width: 180px;
+  padding: 1.5em;
 }
 
 #death_icon {
@@ -423,11 +425,12 @@ img {
   }
 
   #life_icons {
+    margin: 0;
     justify-content: center;
 }
 
   #life_a, #life_b, #life_c {
-    width: 60px;
+    width: 50px;
     margin-bottom: 3em;
     padding: 1em;
 }
