@@ -1546,7 +1546,7 @@ let randFruit = Math.floor(Math.random() * count);
     click.play();
     currentlyPlaying = true;
     question.innerHTML = "Below are a mix of vegetables and fruits..<br> Can you sort the fruits from the vegetables ?";
-    groceries.src = 'bird.gif';
+    groceries.src = 'bee.gif';
     groceries.style.marginTop = "100px";
     groceries.style.marginBottom = "-30px";
     container.style.border = "180px ridge whitesmoke";  
@@ -1556,7 +1556,7 @@ let randFruit = Math.floor(Math.random() * count);
     guessButton.innerHTML = 'guess';
     guessButton.style.border = '10px solid black';
     guessButton.style.boxShadow = "12px 12px 7px black";
-    kids.style.backgroundColor = "coral";
+    kids.style.backgroundColor = "lightseagreen";
 
 
       
