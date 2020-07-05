@@ -136,7 +136,7 @@ function youWin() {
 
 guessButton.onclick = function() {
   click.play();
-//  sound.play();
+  sound.play();
   guessFruit();
 }
 
