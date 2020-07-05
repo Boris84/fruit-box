@@ -164,12 +164,12 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.innerHTML = option_a.innerHTML;
        
       if (box1.src === fruitImage1.src) {
-      guessFruit();
+        guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      right.play();
-      let query = window.matchMedia("(max-width: 600px)");
+        option[1].onclick = function() {
+        click.play();
+        right.play();
+        let query = window.matchMedia("(max-width: 600px)");
           
       if (query.matches) {
         kids.style.color = "lime";
@@ -197,12 +197,12 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         }
       };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
-      let query = window.matchMedia("(max-width: 600px)");
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
 
       if (query.matches) {
         kids.style.color = "#ff0000";
@@ -247,10 +247,10 @@ let randFruit = Math.floor(Math.random() * count);
       if (box2.src === fruitImage2.src) {
         guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      right.play();
-      let query = window.matchMedia("(max-width: 600px)");
+        option[1].onclick = function() {
+        click.play();
+        right.play();
+        let query = window.matchMedia("(max-width: 600px)");
 
       if (query.matches) {
         groceries.src = 'bee.gif';
@@ -278,12 +278,12 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
         }
       };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
-      let query = window.matchMedia("(max-width: 600px)");
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
 
       if (query.matches) {
         kids.style.color = "#ff0000";
@@ -322,34 +322,61 @@ let randFruit = Math.floor(Math.random() * count);
       if (box3.src === fruitImage3.src) {
         guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px ridge lime';
-      fruitList[2].style.border = '25px solid lime';
-      box3.src = fruitImage3.src;
-      gameOver();
+        option[1].onclick = function() {
+        click.play();
+        right.play();
+        let query = window.matchMedia("(max-width: 600px)");
+
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[2].style.border = '0.3em ridge lime';
+        box3.src = fruitImage3.src;
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px ridge lime';
+        fruitList[2].style.border = '25px solid lime';
+        box3.src = fruitImage3.src;
+        gameOver();
+        }
       };
-      option[2].onclick = function() {
-      wrong.play();
-      click.play();
-      checkLives();
-      lives--;
-          
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+        option[2].onclick = function() {
+        wrong.play();
+        click.play();
+        checkLives();
+        lives--;
+      
+        let query = window.matchMedia("(max-width: 600px)");
+      if (query.matches) {
+        kids.style.color = "#ff0000";
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        container.style.border = '20px groove #ff0000';  
+      } else {
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-50px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        kids.style.backgroundColor = "#ff0000";
+        container.style.border = '180px groove #ff0000';
+        }
       };
      }
     }
@@ -369,38 +396,65 @@ let randFruit = Math.floor(Math.random() * count);
       if (box4.src === fruitImage4.src) { 
         guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-10px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px groove lime';
-      fruitList[3].style.border = '25px solid lime';
-      box4.src = fruitImage4.src;     
-      gameOver();
-      };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
+        option[1].onclick = function() {
+        click.play();
+        right.play();
+        let query = window.matchMedia("(max-width: 600px)");
 
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[3].style.border = '0.3em ridge lime';
+        box4.src = fruitImage4.src;
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px groove lime';
+        fruitList[3].style.border = '25px solid lime';
+        box4.src = fruitImage4.src;     
+        gameOver();
+        }
       };
-    }
-  }
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
+
+      if (query.matches) {
+        kids.style.color = "#ff0000";
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        container.style.border = '20px groove #ff0000';    
+      } else {
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        kids.style.backgroundColor = "#ff0000";
+        container.style.border = '180px groove #ff0000';
+        }
+       };
+      }
+     }
     break;
             
     case 4:
@@ -420,35 +474,62 @@ let randFruit = Math.floor(Math.random() * count);
       option[1].onclick = function() {
       click.play();
       right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-10px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px groove lime';
-      fruitList[4].style.border = '25px solid lime';
-      box5.src = fruitImage5.src;
-      gameOver();
-      };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
+      let query = window.matchMedia("(max-width: 600px)");
 
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[4].style.border = '0.3em ridge lime';
+        box5.src = fruitImage5.src; 
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px groove lime';
+        fruitList[4].style.border = '25px solid lime';
+        box5.src = fruitImage5.src;
+        gameOver();
+        }
       };
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
+
+      if (query.matches) {
+        kids.style.color = "#ff0000";
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        container.style.border = '20px groove #ff0000';  
+        } else {
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        kids.style.backgroundColor = "#ff0000";
+        container.style.border = '180px groove #ff0000';
+        }
+       };
+      }
      }
-    }
     break;
             
     case 5:
@@ -468,32 +549,59 @@ let randFruit = Math.floor(Math.random() * count);
       option[1].onclick = function() {
       click.play();
       right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-10px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px ridge lime';
-      fruitList[5].style.border = '25px solid lime';
-      box6.src = fruitImage6.src;
-      gameOver();
-      };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
+      let query = window.matchMedia("(max-width: 600px)");
 
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[5].style.border = '0.3em ridge lime';
+        box6.src = fruitImage6.src; 
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px ridge lime';
+        fruitList[5].style.border = '25px solid lime';
+        box6.src = fruitImage6.src;
+        gameOver();
+        }
+      };
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
+
+      if (query.matches) {
+        kids.style.color = "#ff0000";
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        container.style.border = '20px groove #ff0000';    
+        } else {
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        kids.style.backgroundColor = "#ff0000";
+        container.style.border = '180px groove #ff0000';
+        }
       };
     }
   }
@@ -516,32 +624,59 @@ let randFruit = Math.floor(Math.random() * count);
       option[1].onclick = function() {
       click.play();
       right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-10px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px ridge lime';
-      fruitList[6].style.border = '25px solid lime';
-      box7.src = fruitImage7.src;
-      gameOver();
-      };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
+      let query = window.matchMedia("(max-width: 600px)");
 
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[6].style.border = '0.3em ridge lime';
+        box7.src = fruitImage7.src;   
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px ridge lime';
+        fruitList[6].style.border = '25px solid lime';
+        box7.src = fruitImage7.src;
+        gameOver();
+        }
+      };
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
+
+        if (query.matches) {
+          kids.style.color = "#ff0000";
+          groceries.src = 'angry_bee.gif';
+          groceries.style.marginTop = "-10px";
+          groceries.style.marginBottom = "-40px";
+          guessButton.style.display = 'none';
+          nextButton.style.display = 'inline';
+          question.innerHTML = '<h4>WRONG!!<h4>';
+          container.style.border = '20px groove #ff0000';  
+        } else {
+          groceries.src = 'angry_bee.gif';
+          groceries.style.marginTop = "-50px";
+          groceries.style.marginBottom = "-40px";
+          guessButton.style.display = 'none';
+          nextButton.style.display = 'inline';
+          question.innerHTML = '<h4>WRONG!!<h4>';
+          kids.style.backgroundColor = "#ff0000";
+          container.style.border = '180px groove #ff0000';
+        }
       };
      }
     }
@@ -564,32 +699,59 @@ let randFruit = Math.floor(Math.random() * count);
       option[1].onclick = function() {
       click.play();
       right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-10px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px ridge lime';
-      fruitList[7].style.border = '25px solid lime';
-      box8.src = fruitImage8.src;
-      gameOver();
-      };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
+      let query = window.matchMedia("(max-width: 600px)");
 
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[7].style.border = '0.3em ridge lime';
+        box8.src = fruitImage8.src;     
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px ridge lime';
+        fruitList[7].style.border = '25px solid lime';
+        box8.src = fruitImage8.src;
+        gameOver();
+        }
+      };
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
+        
+      if (query.matches) {
+        kids.style.color = "#ff0000";
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        container.style.border = '20px groove #ff0000';
+      } else {
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        kids.style.backgroundColor = "#ff0000";
+        container.style.border = '180px groove #ff0000';
+       }
       };
      }
     }
@@ -612,32 +774,59 @@ let randFruit = Math.floor(Math.random() * count);
       option[1].onclick = function() {
       click.play();
       right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-10px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px ridge lime';
-      fruitList[8].style.border = '25px solid lime';
-      box9.src = fruitImage9.src;
-      gameOver();
-      };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
+      let query = window.matchMedia("(max-width: 600px)");
 
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[8].style.border = '0.3em ridge lime';
+        box9.src = fruitImage9.src;   
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px ridge lime';
+        fruitList[8].style.border = '25px solid lime';
+        box9.src = fruitImage9.src;
+        gameOver();
+        }
+      };
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
+      
+      if (query.matches) {
+        kids.style.color = "#ff0000";
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        container.style.border = '20px groove #ff0000'; 
+      } else {
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        kids.style.backgroundColor = "#ff0000";
+        container.style.border = '180px groove #ff0000';
+       }
       };
      }
     }
@@ -660,35 +849,62 @@ let randFruit = Math.floor(Math.random() * count);
       option[1].onclick = function() {
       click.play();
       right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-10px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px ridge lime';
-      fruitList[9].style.border = '25px solid lime';
-      box10.src = fruitImage10.src;
-      gameOver();
-      };
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;
+      let query = window.matchMedia("(max-width: 600px)");
 
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[9].style.border = '0.3em ridge lime';
+        box10.src = fruitImage10.src;   
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px ridge lime';
+        fruitList[9].style.border = '25px solid lime';
+        box10.src = fruitImage10.src;
+        gameOver();
+        }
       };
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;
+        let query = window.matchMedia("(max-width: 600px)");
+
+      if (query.matches) {
+        kids.style.color = "#ff0000";
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        container.style.border = '20px groove #ff0000';  
+      } else {
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        kids.style.backgroundColor = "#ff0000";
+        container.style.border = '180px groove #ff0000';
+        }
+       };
+      }
      }
-    }
     break;
          
     case 10:
@@ -708,37 +924,64 @@ let randFruit = Math.floor(Math.random() * count);
       option[1].onclick = function() {
       click.play();
       right.play();
-      groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
-      groceries.style.marginTop = "-50px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      groceries.style.marginBottom = "-10px";
-      question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '180px ridge lime';
-      fruitList[10].style.border = '25px solid lime';
-      box11.src = fruitImage11.src;
-      gameOver();
-      }; 
-      option[2].onclick = function() {
-      click.play();
-      wrong.play();
-      checkLives();
-      lives--;    
+      let query = window.matchMedia("(max-width: 600px)");
 
-      groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "-50px";
-      groceries.style.marginBottom = "-40px";
-      guessButton.style.display = 'none';
-      nextButton.style.display = 'inline';
-      question.innerHTML = '<h4>WRONG!!<h4>';
-      kids.style.backgroundColor = "#ff0000";
-      container.style.border = '180px groove #ff0000';
+      if (query.matches) {
+        groceries.src = 'bee.gif';
+        kids.style.color = "lime";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '20px ridge lime';
+        fruitList[10].style.border = '0.3em ridge lime';
+        box11.src = fruitImage11.src;   
+      } else {
+        groceries.src = 'bee.gif';
+        kids.style.backgroundColor = "lime";
+        groceries.style.marginTop = "-50px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        groceries.style.marginBottom = "-10px";
+        question.innerHTML = '<h3>RIGHT!!</h3>';
+        container.style.border = '180px ridge lime';
+        fruitList[10].style.border = '25px solid lime';
+        box11.src = fruitImage11.src;
+        gameOver();
+       }
+      }; 
+        option[2].onclick = function() {
+        click.play();
+        wrong.play();
+        checkLives();
+        lives--;    
+        let query = window.matchMedia("(max-width: 600px)");
+        
+      if (query.matches) {
+        kids.style.color = "#ff0000";
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-10px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        container.style.border = '20px groove #ff0000';  
+        } else {
+        groceries.src = 'angry_bee.gif';
+        groceries.style.marginTop = "-50px";
+        groceries.style.marginBottom = "-40px";
+        guessButton.style.display = 'none';
+        nextButton.style.display = 'inline';
+        question.innerHTML = '<h4>WRONG!!<h4>';
+        kids.style.backgroundColor = "#ff0000";
+        container.style.border = '180px groove #ff0000';
+       }
       };
      }
     }
     break;
-        
+//                                                          mobile continue here!!!
     case 11:
     groceries.src= fruitImage12.src;
     groceries.style.marginTop = "50px";
