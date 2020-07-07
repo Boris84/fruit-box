@@ -196,6 +196,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[0].style.border = '0.3em ridge lime';
         box1.src = fruitImage1.src; 
         gameOver();
+      
       } else { 
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -226,6 +227,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
         container.style.border = '25px groove #ff0000';  
+     
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -272,6 +274,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[1].style.border = '0.3em ridge lime';
         box2.src = fruitImage2.src;
         gameOver();  
+     
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -302,7 +305,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
         container.style.border = '25px groove #ff0000';
-        }else {
+      } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
         guessButton.style.display = 'none';
@@ -346,6 +349,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '25px ridge lime';
         fruitList[2].style.border = '0.3em ridge lime';
         box3.src = fruitImage3.src;
+        gameOver();
+     
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -420,6 +425,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '25px ridge lime';
         fruitList[3].style.border = '0.3em ridge lime';
         box4.src = fruitImage4.src;
+        gameOver();
+      
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -494,7 +501,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[4].style.border = '0.3em ridge lime';
-        box5.src = fruitImage5.src; 
+        box5.src = fruitImage5.src;
+        gameOver();
+     
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -525,7 +534,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
         container.style.border = '25px groove #ff0000';  
-        } else {
+      } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
         groceries.style.marginBottom = "-40px";
@@ -569,7 +578,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[5].style.border = '0.3em ridge lime';
-        box6.src = fruitImage6.src; 
+        box6.src = fruitImage6.src;
+        gameOver();
+     
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -600,7 +611,8 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
         container.style.border = '25px groove #ff0000';    
-        } else {
+        
+      } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
         groceries.style.marginBottom = "-40px";
@@ -644,7 +656,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[6].style.border = '0.3em ridge lime';
-        box7.src = fruitImage7.src;   
+        box7.src = fruitImage7.src;
+        gameOver();
+      
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -719,7 +733,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[7].style.border = '0.3em ridge lime';
-        box8.src = fruitImage8.src;     
+        box8.src = fruitImage8.src;  
+        gameOver();
+      
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -794,7 +810,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[8].style.border = '0.3em ridge lime';
-        box9.src = fruitImage9.src;   
+        box9.src = fruitImage9.src;
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -870,6 +888,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '25px ridge lime';
         fruitList[9].style.border = '0.3em ridge lime';
         box10.src = fruitImage10.src;   
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -944,7 +964,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[10].style.border = '0.3em ridge lime';
-        box11.src = fruitImage11.src;   
+        box11.src = fruitImage11.src;
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1019,7 +1041,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[11].style.border = '0.3em ridge lime';
-        box12.src = fruitImage12.src;     
+        box12.src = fruitImage12.src;  
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1094,7 +1118,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[12].style.border = '0.3em ridge lime';
-        box13.src = fruitImage13.src;     
+        box13.src = fruitImage13.src;  
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1171,6 +1197,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '25px ridge lime';
         fruitList[13].style.border = '0.3em ridge lime'; 
         box14.src = fruitImage14.src;
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1246,6 +1274,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '25px ridge lime';
         fruitList[14].style.border = '0.3em ridge lime';
         box15.src = fruitImage15.src;
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1321,6 +1351,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '25px ridge lime';
         fruitList[15].style.border = '0.3em ridge lime';
         box16.src = fruitImage16.src;
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1396,6 +1428,8 @@ let randFruit = Math.floor(Math.random() * count);
       container.style.border = '25px ridge lime';
       vegetableList[0].style.border = '0.3em ridge lime';
       item1.src = fruitImage17.src; 
+      gameOver();
+
     } else {
       groceries.src = 'bee.gif';
       kids.style.backgroundColor = "lime";
@@ -1470,7 +1504,9 @@ let randFruit = Math.floor(Math.random() * count);
        question.innerHTML = '<h3>RIGHT!!</h3>';
        container.style.border = '25px ridge lime';
        vegetableList[1].style.border = '0.3em ridge lime';
-       item2.src = fruitImage18.src;   
+       item2.src = fruitImage18.src;  
+       gameOver();
+
      } else {
        groceries.src = 'bee.gif';
        kids.style.backgroundColor = "lime";
@@ -1545,7 +1581,9 @@ let randFruit = Math.floor(Math.random() * count);
        question.innerHTML = '<h3>RIGHT!!</h3>';
        container.style.border = '25px ridge lime';
        vegetableList[2].style.border = '0.3em ridge lime';
-       item3.src = fruitImage19.src;      
+       item3.src = fruitImage19.src;  
+       gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1620,7 +1658,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[3].style.border = '0.3em ridge lime';
-        item4.src = fruitImage20.src;       
+        item4.src = fruitImage20.src; 
+        gameOver();
+
         } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1694,7 +1734,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[4].style.border = '0.3em ridge lime';
-        item5.src = fruitImage21.src;   
+        item5.src = fruitImage21.src; 
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1768,7 +1810,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[5].style.border = '0.3em ridge lime';
-        item6.src = fruitImage22.src;     
+        item6.src = fruitImage22.src;
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1842,7 +1886,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[6].style.border = '0.3em ridge lime';
-        item7.src = fruitImage23.src;  
+        item7.src = fruitImage23.src;
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1916,7 +1962,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[7].style.border = '0.3em ridge lime';
-        item8.src = fruitImage24.src;     
+        item8.src = fruitImage24.src; 
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1990,7 +2038,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[8].style.border = '0.3em ridge lime';
-        item9.src = fruitImage25.src;    
+        item9.src = fruitImage25.src;
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -2064,7 +2114,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[9].style.border = '0.3em ridge lime';
-        item10.src = fruitImage26.src;     
+        item10.src = fruitImage26.src;  
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -2138,7 +2190,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[10].style.border = '0.3em ridge lime';
-        item11.src = fruitImage27.src;       
+        item11.src = fruitImage27.src; 
+        gameOver();
+
         } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -2212,7 +2266,9 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         vegetableList[11].style.border = '0.3em ridge lime';
-        item12.src = fruitImage28.src;    
+        item12.src = fruitImage28.src; 
+        gameOver();
+
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -2321,27 +2377,50 @@ let randFruit = Math.floor(Math.random() * count);
 
   
 function gameOver() {
-  if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+    
+  let query = window.matchMedia("(max-width: 600px)");
+    
+  if (query.matches) {
+    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src ===           fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src ===               fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+    
+    youWin();
+    currentlyPlaying = false;
+    container.style.border = "25px ridge lime"; 
+    container.style.backgroundImage = 'url(test.gif)';    
+    guessButton.style.display = 'none';
+    nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+    nextButton.style.fontSize = "0.6rem";
+    nextButton.style.backgroundColor = 'khaki';
+    nextButton.style.border = '2px ridge whitesmoke';
+    nextButton.style.color = 'black';
+    //question.style.display = 'none';
+    groceries.style.marginTop = "10px";
+    groceries.src = 'aubergine_man.gif';
+    //groceries.style.visibility = 'hidden';
+    //navContainer.style.backgroundImage = 'url(.gif)';
+    question.innerHTML = '<h3>AWESOME !!!</h3>';    
+    } 
   
-  youWin();
-  currentlyPlaying = false;
-  container.style.border = "180px ridge lime";  
-  guessButton.style.display = 'none';
-  nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
-  nextButton.style.fontSize = "60px";
-  nextButton.style.backgroundColor = 'khaki';
-  nextButton.style.border = '20px ridge whitesmoke';
-  nextButton.style.color = 'black';
-//  question.style.display = 'none';
-  groceries.style.marginTop = "10px";
-  groceries.src = 'aubergine_man.gif';
-//groceries.style.visibility = 'hidden';
-//navContainer.style.backgroundImage = 'url(.gif)';
-  document.querySelector('body').style.backgroundImage = 'url(test.gif)';
-//  document.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
-  }
-}
-
+  } else if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===   fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src &&     box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src ===   fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {   
+      
+    youWin();
+    currentlyPlaying = false;
+    container.style.border = "180px ridge lime";  
+    guessButton.style.display = 'none';
+    nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+    nextButton.style.fontSize = "60px";
+    nextButton.style.backgroundColor = 'khaki';
+    nextButton.style.border = '20px ridge whitesmoke';
+    nextButton.style.color = 'black';
+    //question.style.display = 'none';
+    groceries.style.marginTop = "10px";
+    groceries.src = 'aubergine_man.gif';
+    //groceries.style.visibility = 'hidden';
+    //navContainer.style.backgroundImage = 'url(.gif)';
+    document.querySelector('body').style.backgroundImage = 'url(test.gif)';
+    //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
+    }
+};
 
 
 
