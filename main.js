@@ -116,13 +116,25 @@ function checkLives(src) {
   }
 
 function yourDead() {
-  sound.pause();
-  game_over_music.play();
-  question.style.display = 'none';
-  life_icons.style.display = 'none';
-  nextButton.style.visibility = 'hidden';
-  deadText.innerHTML = '<h1>GAME OVER !!!</h1>';
-  looser.play();
+  let query = window.matchMedia("(max-width: 600px)");
+
+  if (query.matches) {
+    sound.pause();
+    game_over_music.play();
+    question.style.display = 'none';
+    life_icons.style.display = 'none';
+    nextButton.style.visibility = 'hidden';
+    deadText.innerHTML = '<h1>GAME OVER !!!</h1>';
+    looser.play();  
+  } else {
+    sound.pause();
+    game_over_music.play();
+    question.style.display = 'none';
+    life_icons.style.display = 'none';
+    nextButton.style.visibility = 'hidden';
+    deadText.innerHTML = '<h1>GAME OVER !!!</h1>';
+    looser.play();
+  }
 }
 
 
