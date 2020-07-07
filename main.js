@@ -2391,8 +2391,9 @@ function gameOver() {
     nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
     nextButton.style.fontSize = "0.6rem";
     nextButton.style.backgroundColor = 'khaki';
-    nextButton.style.border = '2px ridge whitesmoke';
+    nextButton.style.border = '0.3em ridge whitesmoke';
     nextButton.style.color = 'black';
+    nextButton.style.margin = "30px";
     //question.style.display = 'none';
     groceries.style.marginTop = "10px";
     groceries.src = 'aubergine_man.gif';
