@@ -394,7 +394,7 @@ img {
     
    h1 {
     color: red;
-    font-size: 2.5em;
+    font-size: 2.3em;
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;
   }
@@ -460,7 +460,7 @@ img {
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
-    padding: 0.2em 1em 0.3em 1.1em;
+    padding: 0.3em 1em 0.3em 1.1em;
     box-shadow: 2px 2px 2px black;
     font-family: 'Bubblegum Sans', cursive;  
     }
@@ -472,7 +472,7 @@ img {
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
-    padding: 0.2em 1em 0.3em 1.1em;
+    padding: 0.2em 1em 0.2em 1.1em;
     box-shadow: 2px 2px 2px black;
     font-family: 'Bubblegum Sans', cursive;  
   }
@@ -512,7 +512,7 @@ img {
     font-size: 0.6rem;
     letter-spacing: 1px;
     font-family: 'Freckle Face', cursive; 
-    padding: 0.3em 1em 0.4em 1.1em;
+    padding: 0.4em 1em 0.4em 1.1em;
     border: 2px solid black;
     box-shadow: 2px 2px 2px black;
     border-radius: 40px;
