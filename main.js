@@ -193,7 +193,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
-        fruitList[0].style.border = '20px solid lime';
+        fruitList[0].style.border = '25px solid lime';
         box1.src = fruitImage1.src; 
         gameOver();
         }
@@ -256,7 +256,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[1].style.border = '0.3em ridge lime';
         box2.src = fruitImage2.src;
         gameOver();  
@@ -289,7 +289,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';
+        container.style.border = '25px groove #ff0000';
         }else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -331,7 +331,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[2].style.border = '0.3em ridge lime';
         box3.src = fruitImage3.src;
       } else {
@@ -363,7 +363,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';  
+        container.style.border = '25px groove #ff0000';  
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -405,7 +405,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[3].style.border = '0.3em ridge lime';
         box4.src = fruitImage4.src;
       } else {
@@ -437,7 +437,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';    
+        container.style.border = '25px groove #ff0000';    
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -480,7 +480,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[4].style.border = '0.3em ridge lime';
         box5.src = fruitImage5.src; 
       } else {
@@ -512,7 +512,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';  
+        container.style.border = '25px groove #ff0000';  
         } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -555,7 +555,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[5].style.border = '0.3em ridge lime';
         box6.src = fruitImage6.src; 
       } else {
@@ -587,7 +587,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';    
+        container.style.border = '25px groove #ff0000';    
         } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -630,7 +630,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[6].style.border = '0.3em ridge lime';
         box7.src = fruitImage7.src;   
       } else {
@@ -662,7 +662,7 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.display = 'none';
           nextButton.style.display = 'inline';
           question.innerHTML = '<h4>WRONG!!<h4>';
-          container.style.border = '20px groove #ff0000';  
+          container.style.border = '25px groove #ff0000';  
         } else {
           groceries.src = 'angry_bee.gif';
           groceries.style.marginTop = "-50px";
@@ -705,7 +705,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[7].style.border = '0.3em ridge lime';
         box8.src = fruitImage8.src;     
       } else {
@@ -737,7 +737,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';
+        container.style.border = '25px groove #ff0000';
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -780,7 +780,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[8].style.border = '0.3em ridge lime';
         box9.src = fruitImage9.src;   
       } else {
@@ -812,7 +812,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000'; 
+        container.style.border = '25px groove #ff0000'; 
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -855,7 +855,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[9].style.border = '0.3em ridge lime';
         box10.src = fruitImage10.src;   
       } else {
@@ -887,7 +887,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';  
+        container.style.border = '25px groove #ff0000';  
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -930,7 +930,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[10].style.border = '0.3em ridge lime';
         box11.src = fruitImage11.src;   
       } else {
@@ -962,7 +962,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';  
+        container.style.border = '25px groove #ff0000';  
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1005,7 +1005,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[11].style.border = '0.3em ridge lime';
         box12.src = fruitImage12.src;     
       } else {
@@ -1037,7 +1037,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000'; 
+        container.style.border = '25px groove #ff0000'; 
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1080,7 +1080,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[12].style.border = '0.3em ridge lime';
         box13.src = fruitImage13.src;     
       } else {
@@ -1113,7 +1113,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000'; 
+        container.style.border = '25px groove #ff0000'; 
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1156,7 +1156,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[13].style.border = '0.3em ridge lime'; 
         box14.src = fruitImage14.src;
       } else {
@@ -1188,7 +1188,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';  
+        container.style.border = '25px groove #ff0000';  
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1231,7 +1231,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[14].style.border = '0.3em ridge lime';
         box15.src = fruitImage15.src;
       } else {
@@ -1263,7 +1263,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';
+        container.style.border = '25px groove #ff0000';
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1306,7 +1306,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         fruitList[15].style.border = '0.3em ridge lime';
         box16.src = fruitImage16.src;
       } else {
@@ -1338,7 +1338,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';  
+        container.style.border = '25px groove #ff0000';  
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1381,7 +1381,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginTop = "-10px";
       groceries.style.marginBottom = "-10px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
-      container.style.border = '20px ridge lime';
+      container.style.border = '25px ridge lime';
       vegetableList[0].style.border = '0.3em ridge lime';
       item1.src = fruitImage17.src; 
     } else {
@@ -1413,7 +1413,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       question.innerHTML = '<h4>WRONG!!<h4>';
-      container.style.border = '20px groove #ff0000';   
+      container.style.border = '25px groove #ff0000';   
     } else {
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "-50px";
@@ -1456,7 +1456,7 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginTop = "-10px";
        groceries.style.marginBottom = "-10px";
        question.innerHTML = '<h3>RIGHT!!</h3>';
-       container.style.border = '20px ridge lime';
+       container.style.border = '25px ridge lime';
        vegetableList[1].style.border = '0.3em ridge lime';
        item2.src = fruitImage18.src;   
      } else {
@@ -1488,7 +1488,7 @@ let randFruit = Math.floor(Math.random() * count);
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
        question.innerHTML = '<h4>WRONG!!<h4>';
-       container.style.border = '20px groove #ff0000';  
+       container.style.border = '25px groove #ff0000';  
      } else {
        groceries.src = 'angry_bee.gif';
        groceries.style.marginTop = "-50px";
@@ -1531,7 +1531,7 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginTop = "-10px";
        groceries.style.marginBottom = "-10px";
        question.innerHTML = '<h3>RIGHT!!</h3>';
-       container.style.border = '20px ridge lime';
+       container.style.border = '25px ridge lime';
        vegetableList[2].style.border = '0.3em ridge lime';
        item3.src = fruitImage19.src;      
       } else {
@@ -1563,7 +1563,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';  
+        container.style.border = '25px groove #ff0000';  
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1606,7 +1606,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[3].style.border = '0.3em ridge lime';
         item4.src = fruitImage20.src;       
         } else {
@@ -1637,7 +1637,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';  
+        container.style.border = '25px groove #ff0000';  
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1680,7 +1680,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[4].style.border = '0.3em ridge lime';
         item5.src = fruitImage21.src;   
       } else {
@@ -1711,7 +1711,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';    
+        container.style.border = '25px groove #ff0000';    
         } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1754,7 +1754,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[5].style.border = '0.3em ridge lime';
         item6.src = fruitImage22.src;     
       } else {
@@ -1785,7 +1785,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';    
+        container.style.border = '25px groove #ff0000';    
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1828,7 +1828,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[6].style.border = '0.3em ridge lime';
         item7.src = fruitImage23.src;  
       } else {
@@ -1859,7 +1859,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';   
+        container.style.border = '25px groove #ff0000';   
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1902,7 +1902,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[7].style.border = '0.3em ridge lime';
         item8.src = fruitImage24.src;     
       } else {
@@ -1933,7 +1933,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000'; 
+        container.style.border = '25px groove #ff0000'; 
        } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -1976,7 +1976,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[8].style.border = '0.3em ridge lime';
         item9.src = fruitImage25.src;    
       } else {
@@ -2007,7 +2007,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';    
+        container.style.border = '24px groove #ff0000';    
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px"; 
@@ -2050,7 +2050,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[9].style.border = '0.3em ridge lime';
         item10.src = fruitImage26.src;     
       } else {
@@ -2081,7 +2081,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';     
+        container.style.border = '25px groove #ff0000';     
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -2124,7 +2124,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[10].style.border = '0.3em ridge lime';
         item11.src = fruitImage27.src;       
         } else {
@@ -2155,7 +2155,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';     
+        container.style.border = '25px groove #ff0000';     
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
@@ -2198,7 +2198,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginTop = "-10px";
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
-        container.style.border = '20px ridge lime';
+        container.style.border = '25px ridge lime';
         vegetableList[11].style.border = '0.3em ridge lime';
         item12.src = fruitImage28.src;    
       } else {
@@ -2229,7 +2229,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
-        container.style.border = '20px groove #ff0000';
+        container.style.border = '25px groove #ff0000';
       } else {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-50px";
