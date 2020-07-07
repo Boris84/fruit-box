@@ -1724,7 +1724,7 @@ let randFruit = Math.floor(Math.random() * count);
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
 
-      if (query.media) {
+      if (query.matches) {
         groceries.src = 'bee.gif';
         kids.style.color = "lime";
         guessButton.style.display = 'none';
@@ -1736,7 +1736,6 @@ let randFruit = Math.floor(Math.random() * count);
         vegetableList[4].style.border = '0.3em ridge lime';
         item5.src = fruitImage21.src; 
         gameOver();
-
       } else {
         groceries.src = 'bee.gif';
         kids.style.backgroundColor = "lime";
@@ -1757,7 +1756,7 @@ let randFruit = Math.floor(Math.random() * count);
         lives--;     
         let query = window.matchMedia("(max-width: 600px)");
 
-      if (query.media) {
+      if (query.matches) {
         kids.style.color = "#ff0000";
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "-10px";
@@ -2329,7 +2328,7 @@ let randFruit = Math.floor(Math.random() * count);
         
       click.play();
       currentlyPlaying = true;
-      question.innerHTML = "Below are a mix of vegetables and fruits..<br> Can you sort the fruits from the vegetables ?";
+      question.innerHTML = "Mr Bee is on a mission to find 16 of his favourite fruits..<br>help him to sort the fruits from the vegetables ?";
       groceries.src = 'bee.gif';
       groceries.style.marginTop = "30px";
       groceries.style.marginBottom = "-45px";
@@ -2345,7 +2344,7 @@ let randFruit = Math.floor(Math.random() * count);
     } else {
       click.play();
       currentlyPlaying = true;
-      question.innerHTML = "Below are a mix of vegetables and fruits..<br> Can you sort the fruits from the vegetables ?";
+      question.innerHTML = "Mr Bee is on a mission to find 16 of his favourite fruits..<br>help him to sort the fruits from the vegetables ?";
       groceries.src = 'bee.gif';
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-30px";
@@ -2356,7 +2355,6 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.innerHTML = 'guess';
       guessButton.style.border = '10px solid black';
       guessButton.style.boxShadow = "12px 12px 7px black";
-      kids.style.backgroundColor = "lightseagreen";
     }
       
       fruitList.forEach(function(fruit) {

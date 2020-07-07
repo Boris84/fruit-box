@@ -113,7 +113,6 @@ h5 {
   font-family: 'Modak', cursive;
 }
 
-
 #life_icons {
   display: flex;
   margin-left: 5%;
@@ -412,8 +411,6 @@ img {
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;  
   }
-    
-    
     
   #question {
     color: lightseagreen;
