@@ -2418,6 +2418,7 @@ function gameOver() {
     groceries.src = 'aubergine_man.gif';
     //groceries.style.visibility = 'hidden';
     //navContainer.style.backgroundImage = 'url(.gif)';
+    kids.style.backgroundColor = 'lightseagreen';
     document.querySelector('body').style.backgroundImage = 'url(test.gif)';
     //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
     }
