@@ -343,7 +343,7 @@ img {
   #container {
     margin: auto;
     background-color: lightgray;
-    border: 20px ridge whitesmoke;
+    border: 25px ridge whitesmoke;
   }
     
   #kids {
@@ -442,7 +442,7 @@ img {
     display: inline;
     visibility: visible;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: -35px;
 }
     
   img {
@@ -455,7 +455,7 @@ img {
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
-    padding: 0.3em 1em 0.1em 1.1em;
+    padding: 0.4em 1em 0.1em 1.1em;
     box-shadow: 2px 2px 2px black;
     }
     
@@ -509,8 +509,29 @@ img {
     border: 2px solid black;
     box-shadow: 2px 2px 2px black;
     border-radius: 40px;
-    
   }
+    
+  .vegetables {
+    padding: 0px; 
+  }
+
+  .vegetables img {
+    width: 60px;
+    height: 60px;
+    margin: 2px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .vegetable {
+    box-shadow: 5px 5px 2px black;
+    background-color: lightgray;
+    border: 0.3em ridge white;
+    visibility: visible;
+    margin: 10px;
+    width: 90px;
+  }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
