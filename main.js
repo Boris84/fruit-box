@@ -191,7 +191,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "-10px";
-        groceries.style.marginBottom = "-10px";
+//        groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         fruitList[0].style.border = '0.3em ridge lime';
         box1.style.visibility = 'visible';
@@ -288,7 +288,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[1].style.border = '25px solid lime';
-        box1.style.visibility = 'visible';
+        box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
         gameOver();
         }
@@ -2354,13 +2354,14 @@ let randFruit = Math.floor(Math.random() * count);
 
 
   nextButton.onclick = function() {
+      
     let query = window.matchMedia("(max-width: 600px)");
     
     if (query.matches) {
         
       click.play();
       currentlyPlaying = true;
-      question.innerHTML = "Mr Bee is on a mission to find 16 of his favourite fruits..<br>help him to sort the fruits from the vegetables ?";
+      question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
       groceries.style.marginTop = "30px";
       groceries.style.marginBottom = "-45px";
@@ -2371,12 +2372,12 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.innerHTML = 'guess';
       guessButton.style.border = '2px solid black';
       guessButton.style.boxShadow = "2px 2px 2px black";
-      kids.style.color = "lightseagreen"; 
+      kids.style.color = "lightsalmon"; 
       
     } else {
       click.play();
       currentlyPlaying = true;
-      question.innerHTML = "Mr Bee is on a mission to find 16 of his favourite fruits..<br>help him to sort the fruits from the vegetables ?";
+      question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-30px";
@@ -2387,15 +2388,24 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.innerHTML = 'guess';
       guessButton.style.border = '10px solid black';
       guessButton.style.boxShadow = "12px 12px 7px black";
+      kids.style.backgroundColor = "lightsalmon";
     }
       
-      fruitList.forEach(function(fruit) {
-        fruit.style.border = '0.3em ridge white';  
-      });
-
-      vegetableList.forEach(function(vegetable) {
-        vegetable.style.border = '0.3em ridge white';
-      });
+      
+      
+      
+      if (query.matches) {
+        fruitList.forEach(function(fruit) {
+          fruit.style.border = '0.3em ridge whitesmoke';  
+        });
+      } else {
+        fruitList.forEach(function(fruit) {
+          fruit.style.border = '25px ridge whitesmoke';  
+        });
+      }
+//      vegetableList.forEach(function(vegetable) {
+//        vegetable.style.border = '0.3em ridge white';
+//      });
 
   
       guessButton.onclick = function() {
