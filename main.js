@@ -2372,7 +2372,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.innerHTML = 'guess';
       guessButton.style.border = '2px solid black';
       guessButton.style.boxShadow = "2px 2px 2px black";
-      kids.style.color = "lightsalmon"; 
+      kids.style.color = "lightseagreen"; 
       
     } else {
       click.play();
