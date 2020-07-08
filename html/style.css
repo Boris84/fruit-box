@@ -265,7 +265,7 @@ img {
   cursor: pointer;
   font-weight: bold;
   letter-spacing: 4px;
-  font-family: cursive;
+  font-family: 'Bubblegum Sans', cursive;
   border: solid black 10px;
   box-shadow: 10px 10px 10px black;
   border-radius: 40px;
@@ -353,7 +353,7 @@ img {
     
   #container {
     margin: auto;
-    border: 25px ridge whitesmoke;
+    border: 15px ridge whitesmoke;
   }
     
   #kids {
@@ -518,7 +518,7 @@ img {
     font-weight: bold;
     font-size: 1rem;
     letter-spacing: 1px;
-    font-family: 'Freckle Face', cursive; 
+    font-family: 'Bubblegum Sans', cursive;
     padding: 0.5em 1em 0.4em 1.1em;
     border: 2px solid black;
     box-shadow: 2px 2px 2px black;
