@@ -5,10 +5,7 @@ html {
 body {
   width: 100%;
   margin: 0 auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(https://media1.tenor.com/images/fb411a95dd947038bdc15ee0e704af08/tenor.gif?itemid=8177804);
+ 
   /*border-image: url(../worm-border.png) 55 65 round;*/
   /*background-image: url(https://i.gifer.com/V9mg.gif);*/
 }
@@ -17,6 +14,10 @@ body {
   margin: 0 auto;
   text-align: center;
   border: 180px ridge whitesmoke;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(https://media1.tenor.com/images/fb411a95dd947038bdc15ee0e704af08/tenor.gif?itemid=8177804);
 }
 
 #nav-container {
@@ -103,6 +104,12 @@ h5 {
 
 }
 
+section {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 #question {
   display: inline;
   font-size: 6rem;
@@ -137,7 +144,10 @@ h5 {
 
 img {
   width: 13.5%;
+
 }
+
+
 
 #kids {
   color: white;
@@ -218,7 +228,7 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  justify-content: space-evenly;
+  justify-content: center;
   background-image: url('https://i.gifer.com/ZhkE.gif');
 }
 
@@ -229,6 +239,7 @@ img {
   height: 400px;
   margin: 50px;
   padding: 40px;
+  visibility: hidden;
   text-align: center;
 }
 
@@ -341,7 +352,6 @@ img {
     
   #container {
     margin: auto;
-    background-color: lightgray;
     border: 25px ridge whitesmoke;
   }
     

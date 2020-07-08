@@ -194,6 +194,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginBottom = "-10px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         fruitList[0].style.border = '0.3em ridge lime';
+        box1.style.visibility = 'visible';
         box1.src = fruitImage1.src; 
         gameOver();
       
@@ -207,6 +208,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[0].style.border = '25px solid lime';
+        box1.style.visibility = 'visible';
         box1.src = fruitImage1.src; 
         gameOver();
         }
@@ -272,6 +274,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[1].style.border = '0.3em ridge lime';
+        box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
         gameOver();  
      
@@ -285,6 +288,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[1].style.border = '25px solid lime';
+        box1.style.visibility = 'visible';
         box2.src = fruitImage2.src;
         gameOver();
         }
@@ -348,6 +352,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[2].style.border = '0.3em ridge lime';
+        box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
         gameOver();
      
@@ -361,6 +366,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[2].style.border = '25px solid lime';
+        box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
         gameOver();
         }
@@ -424,6 +430,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[3].style.border = '0.3em ridge lime';
+        box4.style.visibility = 'visible';
         box4.src = fruitImage4.src;
         gameOver();
       
@@ -437,6 +444,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px groove lime';
         fruitList[3].style.border = '25px solid lime';
+        box4.style.visibility = 'visible';
         box4.src = fruitImage4.src;     
         gameOver();
         }
@@ -501,6 +509,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[4].style.border = '0.3em ridge lime';
+        box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
         gameOver();
      
@@ -514,6 +523,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px groove lime';
         fruitList[4].style.border = '25px solid lime';
+        box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
         gameOver();
         }
@@ -578,6 +588,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[5].style.border = '0.3em ridge lime';
+        box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
         gameOver();
      
@@ -591,6 +602,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[5].style.border = '25px solid lime';
+        box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
         gameOver();
         }
@@ -656,6 +668,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[6].style.border = '0.3em ridge lime';
+        box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
         gameOver();
       
@@ -669,6 +682,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[6].style.border = '25px solid lime';
+        box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
         gameOver();
         }
@@ -733,6 +747,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[7].style.border = '0.3em ridge lime';
+        box8.style.visibility = 'visible';
         box8.src = fruitImage8.src;  
         gameOver();
       
@@ -746,6 +761,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[7].style.border = '25px solid lime';
+        box8.style.visibility = 'visible';
         box8.src = fruitImage8.src;
         gameOver();
         }
@@ -810,6 +826,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[8].style.border = '0.3em ridge lime';
+        box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
         gameOver();
 
@@ -823,6 +840,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[8].style.border = '25px solid lime';
+        box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
         gameOver();
         }
@@ -887,6 +905,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[9].style.border = '0.3em ridge lime';
+        box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;   
         gameOver();
 
@@ -900,6 +919,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[9].style.border = '25px solid lime';
+        box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;
         gameOver();
         }
@@ -964,6 +984,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[10].style.border = '0.3em ridge lime';
+        box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
         gameOver();
 
@@ -977,6 +998,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[10].style.border = '25px solid lime';
+        box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
         gameOver();
        }
@@ -1041,6 +1063,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[11].style.border = '0.3em ridge lime';
+        box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;  
         gameOver();
 
@@ -1054,6 +1077,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginBottom = "-10px";
         container.style.border = '180px ridge lime';
         fruitList[11].style.border = '25px solid lime';
+        box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;
         gameOver();
         }
@@ -1118,6 +1142,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[12].style.border = '0.3em ridge lime';
+        box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;  
         gameOver();
 
@@ -1131,6 +1156,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[12].style.border = '25px solid lime';
+        box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;
         gameOver();
        }
@@ -1196,6 +1222,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[13].style.border = '0.3em ridge lime'; 
+        box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
         gameOver();
 
@@ -1209,6 +1236,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[13].style.border = '25px solid lime';
+        box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
         gameOver();
        }
@@ -1273,6 +1301,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[14].style.border = '0.3em ridge lime';
+        box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
         gameOver();
 
@@ -1286,6 +1315,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[14].style.border = '25px solid lime';
+        box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
         gameOver();
         }
@@ -1350,6 +1380,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '25px ridge lime';
         fruitList[15].style.border = '0.3em ridge lime';
+        box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
         gameOver();
 
@@ -1363,6 +1394,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '180px ridge lime';
         fruitList[15].style.border = '25px solid lime';
+        box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
         gameOver();
         }
