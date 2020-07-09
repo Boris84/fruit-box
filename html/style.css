@@ -179,7 +179,7 @@ img {
   color: black;
   display: inline;
   cursor: pointer;
-  font-size: 42px;
+  font-size: 50px;
   font-weight: bold;
   border-radius: 40px;
   letter-spacing: 6px;
@@ -196,12 +196,11 @@ img {
   color: black;
   display: none;
   cursor: pointer;
-  font-size: 42px;
+  font-size: 50px;
   font-weight: bold;
   visibility: visible;
   border-radius: 40px;
   letter-spacing: 6px;
-  margin-bottom: 100px;
   border: 10px solid black;
   padding: 20px 40px 20px 40px; 
   background-color: white;
@@ -467,6 +466,7 @@ img {
   }
     
   #guess {
+    margin: 0px;
     line-height: 1;
     font-size: 1rem;
     letter-spacing: 2px;
@@ -478,6 +478,7 @@ img {
     }
     
   #next {
+    margin: 0px;
     line-height: 1.3;
     display: none;
     font-size: 1rem;
