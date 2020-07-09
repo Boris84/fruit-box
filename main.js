@@ -169,7 +169,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage1.src;
       let queryA = window.matchMedia("(max-width: 600px)");
         if (queryA.matches) {
-          groceries.style.marginBottom = "40px";
+//          groceries.style.marginBottom = "40px";
         } else {
           groceries.style.marginTop = "100px";
           groceries.style.marginBottom = "-20px";
@@ -195,7 +195,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         fruitList[0].style.border = '0.3em ridge lime';
         box1.style.visibility = 'visible';
@@ -227,7 +227,6 @@ let randFruit = Math.floor(Math.random() * count);
       if (query.matches) {
         kids.style.color = "#ff0000";
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginBottom = "-80px";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = '<h4>WRONG!!<h4>';
@@ -252,7 +251,7 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage2.src;
     let queryB = window.matchMedia("(max-width: 600px)");
       if (queryB.matches) {
-        groceries.style.marginBottom = "40px";
+//        groceries.style.marginBottom = "40px";
       } else {
         groceries.style.marginTop = "100px";
         groceries.style.marginBottom = "-20px";     
@@ -277,7 +276,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[1].style.border = '0.3em ridge lime';
@@ -334,7 +333,7 @@ let randFruit = Math.floor(Math.random() * count);
     groceries.src = fruitImage3.src;
     let queryC = window.matchMedia("(max-width: 600px)");
     if (queryC.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -359,7 +358,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[2].style.border = '0.3em ridge lime';
@@ -417,7 +416,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryD = window.matchMedia("(max-width: 600px)");
           
     if (queryD.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -442,7 +441,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[3].style.border = '0.3em ridge lime';
@@ -500,7 +499,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryE = window.matchMedia("(max-width: 600px)");
           
     if (queryE.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -525,7 +524,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[4].style.border = '0.3em ridge lime';
@@ -583,7 +582,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryF = window.matchMedia("(max-width: 600px)");
           
     if (queryF.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -608,7 +607,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[5].style.border = '0.3em ridge lime';
@@ -667,7 +666,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryG = window.matchMedia("(max-width: 600px)");
           
     if (queryG.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -692,7 +691,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[6].style.border = '0.3em ridge lime';
@@ -750,7 +749,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryH = window.matchMedia("(max-width: 600px)");
           
     if (queryH.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -775,7 +774,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[7].style.border = '0.3em ridge lime';
@@ -833,7 +832,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryI = window.matchMedia("(max-width: 600px)");
           
     if (queryI.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -858,7 +857,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[8].style.border = '0.3em ridge lime';
@@ -916,7 +915,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryJ = window.matchMedia("(max-width: 600px)");
           
     if (queryJ.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -941,7 +940,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[9].style.border = '0.3em ridge lime';
@@ -999,7 +998,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryK = window.matchMedia("(max-width: 600px)");
           
     if (queryK.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -1024,7 +1023,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[10].style.border = '0.3em ridge lime';
@@ -1082,7 +1081,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryL = window.matchMedia("(max-width: 600px)");
           
     if (queryL.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -1107,7 +1106,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[11].style.border = '0.3em ridge lime';
@@ -1165,7 +1164,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryM = window.matchMedia("(max-width: 600px)");
           
     if (queryM.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -1190,7 +1189,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[12].style.border = '0.3em ridge lime';
@@ -1249,7 +1248,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryN = window.matchMedia("(max-width: 600px)");
           
     if (queryN.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -1274,7 +1273,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[13].style.border = '0.3em ridge lime'; 
@@ -1332,7 +1331,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryO = window.matchMedia("(max-width: 600px)");
           
     if (queryO.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -1357,7 +1356,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[14].style.border = '0.3em ridge lime';
@@ -1415,7 +1414,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryP = window.matchMedia("(max-width: 600px)");
           
     if (queryP.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -1440,7 +1439,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         fruitList[15].style.border = '0.3em ridge lime';
@@ -1498,7 +1497,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryQ = window.matchMedia("(max-width: 600px)");
           
     if (queryQ.matches) {
-      groceries.style.marginBottom = "40px";
+//      groceries.style.marginBottom = "40px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -1523,7 +1522,7 @@ let randFruit = Math.floor(Math.random() * count);
       kids.style.color = "lime";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
-      groceries.style.marginBottom = "-60px";
+      groceries.style.marginBottom = "-90px";
       question.innerHTML = '<h3>RIGHT!!</h3>';
       container.style.border = '15px ridge lime';
       vegetableList[0].style.border = '0.3em ridge lime';
@@ -1579,7 +1578,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryR = window.matchMedia("(max-width: 600px)");
           
      if (queryR.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -1604,7 +1603,7 @@ let randFruit = Math.floor(Math.random() * count);
        kids.style.color = "lime";
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
-       groceries.style.marginBottom = "-60px";
+       groceries.style.marginBottom = "-90px";
        question.innerHTML = '<h3>RIGHT!!</h3>';
        container.style.border = '15px ridge lime';
        vegetableList[1].style.border = '0.3em ridge lime';
@@ -1660,7 +1659,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryS = window.matchMedia("(max-width: 600px)");
           
      if (queryS.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -1685,7 +1684,7 @@ let randFruit = Math.floor(Math.random() * count);
        kids.style.color = "lime";
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
-       groceries.style.marginBottom = "-60px";
+       groceries.style.marginBottom = "-90px";
        question.innerHTML = '<h3>RIGHT!!</h3>';
        container.style.border = '15px ridge lime';
        vegetableList[2].style.border = '0.3em ridge lime';
@@ -1741,7 +1740,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryT = window.matchMedia("(max-width: 600px)");
           
      if (queryT.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -1766,7 +1765,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[3].style.border = '0.3em ridge lime';
@@ -1821,7 +1820,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryU = window.matchMedia("(max-width: 600px)");
           
      if (queryU.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -1846,7 +1845,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[4].style.border = '0.3em ridge lime';
@@ -1900,7 +1899,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryV = window.matchMedia("(max-width: 600px)");
           
      if (queryV.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -1925,7 +1924,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[5].style.border = '0.3em ridge lime';
@@ -1980,7 +1979,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryW = window.matchMedia("(max-width: 600px)");
           
      if (queryW.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -2005,7 +2004,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[6].style.border = '0.3em ridge lime';
@@ -2060,7 +2059,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryX = window.matchMedia("(max-width: 600px)");
           
      if (queryX.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -2085,7 +2084,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[7].style.border = '0.3em ridge lime';
@@ -2140,7 +2139,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryY = window.matchMedia("(max-width: 600px)");
           
      if (queryY.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -2165,7 +2164,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[8].style.border = '0.3em ridge lime';
@@ -2220,7 +2219,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryZ = window.matchMedia("(max-width: 600px)");
           
      if (queryZ.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -2245,7 +2244,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[9].style.border = '0.3em ridge lime';
@@ -2300,7 +2299,7 @@ let randFruit = Math.floor(Math.random() * count);
      let query1 = window.matchMedia("(max-width: 600px)");
           
      if (query1.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -2325,7 +2324,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[10].style.border = '0.3em ridge lime';
@@ -2380,7 +2379,7 @@ let randFruit = Math.floor(Math.random() * count);
      let query2 = window.matchMedia("(max-width: 600px)");
           
      if (query2.matches) {
-       groceries.style.marginBottom = "40px";
+//       groceries.style.marginBottom = "40px";
      } else {
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
@@ -2405,7 +2404,7 @@ let randFruit = Math.floor(Math.random() * count);
         kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "-60px";
+        groceries.style.marginBottom = "-90px";
         question.innerHTML = '<h3>RIGHT!!</h3>';
         container.style.border = '15px ridge lime';
         vegetableList[11].style.border = '0.3em ridge lime';
@@ -2474,7 +2473,7 @@ let randFruit = Math.floor(Math.random() * count);
       currentlyPlaying = true;
       question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
-      groceries.style.marginBottom = "0px";
+      groceries.style.marginBottom = "-30px";
       life_icons.style.marginBottom = "70px";
       container.style.border = "15px ridge whitesmoke";  
       nextButton.style.display = 'none';
