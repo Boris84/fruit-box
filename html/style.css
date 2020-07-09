@@ -180,7 +180,7 @@ img {
   display: inline;
   cursor: pointer;
   font-size: 50px;
-  font-weight: bold;
+/*  font-weight: bold;*/
   border-radius: 40px;
   letter-spacing: 6px;
   margin-bottom: 40px;
@@ -197,7 +197,7 @@ img {
   display: none;
   cursor: pointer;
   font-size: 50px;
-  font-weight: bold;
+/*  font-weight: bold;*/
   visibility: visible;
   border-radius: 40px;
   letter-spacing: 6px;
@@ -261,11 +261,12 @@ img {
 
 #fruit-btn, #vegetable-btn {
   color: black;
+  margin: 10px;
   padding: 25px;
   font-size: 3rem;
   cursor: pointer;
-  font-weight: bold;
-  letter-spacing: 4px;
+/*  font-weight: bold;*/
+  letter-spacing: 8px;
   font-family: 'Bubblegum Sans', cursive;
   border: solid black 10px;
   box-shadow: 10px 10px 10px black;
@@ -519,6 +520,7 @@ img {
   }
 
   #fruit-btn, #vegetable-btn {
+    margin: 3px;
     color: black;
     cursor: pointer;
     font-weight: bold;

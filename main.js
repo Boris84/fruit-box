@@ -2529,11 +2529,12 @@ let randFruit = Math.floor(Math.random() * count);
   
 function gameOver() {
     
-  let query = window.matchMedia("(max-width: 600px)");
-    
-  if (query.matches) {
     if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src ===           fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src ===               fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
-    
+        
+    let query = window.matchMedia("(max-width: 600px)");
+        
+    if (query.matches) {
+        
     youWin();
     currentlyPlaying = false;
     container.style.border = "25px ridge lime"; 
@@ -2551,9 +2552,8 @@ function gameOver() {
     //groceries.style.visibility = 'hidden';
     //navContainer.style.backgroundImage = 'url(.gif)';
     question.innerHTML = '<h3>AWESOME !!!</h3>';    
-    } 
   
-  } else if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===   fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src &&     box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src ===   fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {   
+  } else {
       
     youWin();
     currentlyPlaying = false;
@@ -2570,9 +2570,10 @@ function gameOver() {
     //groceries.style.visibility = 'hidden';
     //navContainer.style.backgroundImage = 'url(.gif)';
     kids.style.backgroundColor = 'lightseagreen';
-    document.querySelector('body').style.backgroundImage = 'url(test.gif)';
+    container.style.backgroundImage = 'url(test.gif)';
     //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
-    }
+   }
+  }
 };
 
 
