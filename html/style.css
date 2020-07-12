@@ -340,20 +340,18 @@ img {
    body {
      width: 100%;
      margin: 0 auto;
-/*
-     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-image: url(https://i.gifer.com/V9mg.gif);
-*/
+
     /*border-image: url(../worm-border.png) 55 65 round;*/
-    /*background-image: url(https://i.gifer.com/V9mg.gif);*/
     } 
     
     
   #container {
     margin: auto;
     border: 15px ridge whitesmoke;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://i.gifer.com/V9mg.gif);
   }
     
   #kids {
