@@ -402,21 +402,21 @@ img {
     
    h1 {
     color: red;
-    font-size: 2.3em;
+    font-size: 3em;
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;
   }
 
   h3 {
     color: lime;
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;
   }
 
   h4 {
     color: #ff0000;
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;  
   }
