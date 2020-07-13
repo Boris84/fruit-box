@@ -124,6 +124,7 @@ function yourDead() {
     game_over_music.play();
     question.style.display = 'none';
 //    life_icons.style.display = 'none';
+    groceries.style.marginTop = "-30px";
     nextButton.innerHTML = 'click "home" to try again';
     nextButton.style.border = 'none';
     nextButton.style.boxShadow = 'none';
