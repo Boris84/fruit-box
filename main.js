@@ -2679,6 +2679,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      groceries.style.marginTop = "115px";
       question.style.fontSize = "1.3rem";
       question.style.color = 'lightseagreen';
+      groceries.style.marginTop = "153px";
       groceries.style.marginBottom = "-30px";
       container.style.border = "15px ridge whitesmoke";  
       nextButton.style.display = 'none';
@@ -2704,7 +2705,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.marginBottom ="40px";
       guessButton.style.border = '10px solid black';
       guessButton.style.boxShadow = "12px 12px 7px black";
-      kids.style.backgroundColor = "yellow";
+      kids.style.backgroundColor = "purple";
     }
       
       
