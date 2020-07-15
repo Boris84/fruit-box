@@ -226,7 +226,7 @@ img {
 /* container */
 .fruits {
   flex: 1;
-  padding: 50px; 
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
   visibility: visible;
@@ -236,7 +236,6 @@ img {
   background-repeat: no-repeat;
   justify-content: center;
   background-image: url('https://i.gifer.com/ZhkE.gif');
- padding: 30px;
 }
 
 /*lines inside gray boxes */
@@ -504,7 +503,7 @@ img {
     
     /*container */
   .fruits {
-    padding: 0px;
+    padding: 40px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
