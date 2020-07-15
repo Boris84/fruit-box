@@ -226,7 +226,7 @@ img {
 /* container */
 .fruits {
   flex: 1;
-  padding: 30px;
+  padding: 50px; 
   display: flex;
   flex-wrap: wrap;
   visibility: visible;
@@ -236,6 +236,7 @@ img {
   background-repeat: no-repeat;
   justify-content: center;
   background-image: url('https://i.gifer.com/ZhkE.gif');
+ padding: 30px;
 }
 
 /*lines inside gray boxes */
@@ -478,11 +479,11 @@ img {
   #guess {
     margin: 0px;
     line-height: 1;
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
-    padding: 0.5em 1em 0.5em 1.1em;
+    padding: 0.4em 1em 0.4em 1.1em;
     background-color: white;
     box-shadow: 2px 2px 2px black;
     font-family: 'Bubblegum Sans', cursive;  
@@ -503,7 +504,7 @@ img {
     
     /*container */
   .fruits {
-    padding: 40px;
+    padding: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -525,6 +526,7 @@ img {
     background-color: lightgray;
     border: 0.3em ridge white;
     visibility: visible;
+    display: none;
     margin: 10px;
     width: 90px;
   }
@@ -545,7 +547,7 @@ img {
   }
     
   #fruit-btn:hover {
-    color: black;
+    color: white;
     box-shadow: none;
     transition: none;
     background-color: none;
@@ -554,7 +556,7 @@ img {
   #fruit-btn:focus {outline:0;}
  
   #vegetable-btn:hover {
-    color: black;
+    color: white;
     box-shadow: none;
     transition: none;
     background-color: none;
