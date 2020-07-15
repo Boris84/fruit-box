@@ -364,7 +364,7 @@ img {
   #kids {
     width: 100%;
 /*    line-height: 1;*/
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
     letter-spacing: 3px; 
     -webkit-text-stroke: 2px black;  
@@ -447,13 +447,13 @@ img {
   }
 
   #life_icons {
-    margin: 0;
+    margin: 0 auto;
     justify-content: center;
 }
 
   #life_a, #life_b, #life_c {
     width: 60px;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     padding: 1em;
 }
 
