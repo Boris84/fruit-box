@@ -2732,7 +2732,7 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
       question.style.fontSize = "1.5rem";
-      question.style.color = 'yellow';
+      question.style.color = 'white';
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "25px";
       container.style.border = "15px ridge whitesmoke";  
@@ -2742,7 +2742,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.innerHTML = 'guess';
       guessButton.style.border = '2px solid black';
       guessButton.style.boxShadow = "2px 2px 2px black";
-      kids.style.color = "yellow"; 
+      kids.style.color = "white"; 
       
     } else {
       click.play();
