@@ -355,13 +355,13 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(https://media2.giphy.com/media/2ilGlSa5yjWhVnOpeU/giphy.gif);
+    background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/source.gif);
   }
     
   #kids {
     width: 100%;
 /*    line-height: 1;*/
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     text-align: center;
     letter-spacing: 3px; 
     -webkit-text-stroke: 2px black;  
