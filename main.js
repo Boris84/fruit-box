@@ -2735,7 +2735,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = 'bee.gif';
 //      groceries.style.marginTop = "115px";
       question.style.fontSize = "1.3rem";
-      question.style.color = 'lightseagreen';
+      question.style.color = 'white';
       groceries.style.marginTop = "153px";
       groceries.style.marginBottom = "-30px";
       container.style.border = "15px ridge whitesmoke";  
@@ -2745,7 +2745,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.innerHTML = 'guess';
       guessButton.style.border = '2px solid black';
       guessButton.style.boxShadow = "2px 2px 2px black";
-      kids.style.color = "lightseagreen"; 
+      kids.style.color = "white"; 
       
     } else {
       click.play();
