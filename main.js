@@ -211,7 +211,7 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else { 
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -254,7 +254,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.backcolor = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        };
@@ -304,7 +304,7 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();  
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -344,7 +344,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';   
         }
       };
@@ -396,7 +396,7 @@ let randFruit = Math.floor(Math.random() * count);
      
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -436,7 +436,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
       };
@@ -488,7 +488,7 @@ let randFruit = Math.floor(Math.random() * count);
       
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -528,7 +528,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        };
@@ -580,7 +580,7 @@ let randFruit = Math.floor(Math.random() * count);
      
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.backcolor = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -620,7 +620,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.backcolor = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        };
@@ -672,7 +672,7 @@ let randFruit = Math.floor(Math.random() * count);
      
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -713,7 +713,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
       };
@@ -765,7 +765,7 @@ let randFruit = Math.floor(Math.random() * count);
       
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -805,7 +805,7 @@ let randFruit = Math.floor(Math.random() * count);
           nextButton.style.display = 'inline';
           question.style.color = 'lime';
           question.innerHTML = 'WRONG !!';
-          kids.style.backgroundColor = "#ff0000";
+          kids.style.color = "#ff0000";
           container.style.border = '180px groove #ff0000';
         }
       };
@@ -857,7 +857,7 @@ let randFruit = Math.floor(Math.random() * count);
       
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -897,7 +897,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -949,7 +949,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -989,7 +989,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -1041,7 +1041,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1081,7 +1081,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        };
@@ -1133,7 +1133,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1173,7 +1173,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        };
@@ -1225,7 +1225,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1265,7 +1265,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -1317,7 +1317,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1358,7 +1358,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -1410,7 +1410,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1450,7 +1450,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -1502,7 +1502,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1542,7 +1542,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -1594,7 +1594,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1634,7 +1634,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -1685,7 +1685,7 @@ let randFruit = Math.floor(Math.random() * count);
 
     } else {
       groceries.src = 'bee.gif';
-      kids.style.backgroundColor = "lime";
+      kids.style.color = "lime";
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
       groceries.style.marginTop = "100px";
@@ -1724,7 +1724,7 @@ let randFruit = Math.floor(Math.random() * count);
       nextButton.style.display = 'inline';
       question.style.color = '#ff0000';
       question.innerHTML = 'WRONG !!';
-      kids.style.backgroundColor = "#ff0000";
+      kids.style.color = "#ff0000";
       container.style.border = '180px groove #ff0000';
      }
     };
@@ -1775,7 +1775,7 @@ let randFruit = Math.floor(Math.random() * count);
 
      } else {
        groceries.src = 'bee.gif';
-       kids.style.backgroundColor = "lime";
+       kids.style.color = "lime";
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
        groceries.style.marginTop = "100px";
@@ -1814,7 +1814,7 @@ let randFruit = Math.floor(Math.random() * count);
        nextButton.style.display = 'inline';
        question.style.color = '#ff000';
        question.innerHTML = 'WRONG !!';
-       kids.style.backgroundColor = "#ff0000";
+       kids.style.color = "#ff0000";
        container.style.border = '180px groove #ff0000';
       }
      };
@@ -1865,7 +1865,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1904,7 +1904,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -1955,7 +1955,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -1993,7 +1993,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        };
@@ -2043,7 +2043,7 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -2081,7 +2081,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        }; 
@@ -2132,7 +2132,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -2170,7 +2170,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
       };
@@ -2221,7 +2221,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -2259,7 +2259,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        };
@@ -2310,7 +2310,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -2348,7 +2348,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        }; 
@@ -2399,7 +2399,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -2437,7 +2437,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        }; 
@@ -2488,7 +2488,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -2526,7 +2526,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
        }; 
@@ -2577,7 +2577,7 @@ let randFruit = Math.floor(Math.random() * count);
 
         } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -2615,7 +2615,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
       }; 
@@ -2666,7 +2666,7 @@ let randFruit = Math.floor(Math.random() * count);
 
       } else {
         groceries.src = 'bee.gif';
-        kids.style.backgroundColor = "lime";
+        kids.style.color = "lime";
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         groceries.style.marginTop = "100px";
@@ -2704,7 +2704,7 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.style.color = '#ff0000';
         question.innerHTML = 'WRONG !!';
-        kids.style.backgroundColor = "#ff0000";
+        kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
       }; 
@@ -2761,7 +2761,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.marginBottom ="40px";
       guessButton.style.border = '10px solid black';
       guessButton.style.boxShadow = "12px 12px 7px black";
-      kids.style.backgroundColor = "yellow";
+      kids.style.color = "yellow";
     }
       
       
