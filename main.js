@@ -82,6 +82,7 @@ let click = document.getElementById('click');
 let win = document.getElementById('win');
 let cheer = document.getElementById('crowd');
 let looser = document.getElementById('you_loose');
+let bumblebee = document.getElementById('bumblebee');
 
 let correct = document.getElementById('correct');
 let game_over_music = document.getElementById('game_over');
@@ -156,6 +157,7 @@ function youWin() {
 guessButton.onclick = function() {
   click.play();
 //  sound.play();
+  bumblebee.play();
   guessFruit();
 }
 
@@ -208,6 +210,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[0].style.border = '0.3em ridge lime';
         box1.style.visibility = 'visible';
         box1.src = fruitImage1.src; 
+        bumblebee.play();
         gameOver();
       } else { 
         groceries.src = 'bee.gif';
@@ -222,7 +225,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px ridge lime';
         fruitList[0].style.border = '25px solid lime';
         box1.style.visibility = 'visible';
-        box1.src = fruitImage1.src; 
+        box1.src = fruitImage1.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -301,6 +305,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[1].style.border = '0.3em ridge lime';
         box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
+        bumblebee.play();
         gameOver();  
       } else {
         groceries.src = 'bee.gif';
@@ -315,6 +320,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[1].style.border = '25px solid lime';
         box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -392,6 +398,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[2].style.border = '0.3em ridge lime';
         box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
+        bumblebee.play();
         gameOver();
      
       } else {
@@ -407,6 +414,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[2].style.border = '25px solid lime';
         box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -484,6 +492,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[3].style.border = '0.3em ridge lime';
         box4.style.visibility = 'visible';
         box4.src = fruitImage4.src;
+        bumblebee.play();
         gameOver();
       
       } else {
@@ -498,7 +507,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px groove lime';
         fruitList[3].style.border = '25px solid lime';
         box4.style.visibility = 'visible';
-        box4.src = fruitImage4.src;     
+        box4.src = fruitImage4.src;    
+        bumblebee.play();
         gameOver();
         }
       };
@@ -576,6 +586,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[4].style.border = '0.3em ridge lime';
         box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
+        bumblebee.play();
         gameOver();
      
       } else {
@@ -591,6 +602,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[4].style.border = '25px solid lime';
         box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -668,6 +680,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[5].style.border = '0.3em ridge lime';
         box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
+        bumblebee.play();
         gameOver();
      
       } else {
@@ -683,6 +696,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[5].style.border = '25px solid lime';
         box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -761,6 +775,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[6].style.border = '0.3em ridge lime';
         box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
+        bumblebee.play();
         gameOver();
       
       } else {
@@ -776,6 +791,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[6].style.border = '25px solid lime';
         box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -852,7 +868,8 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         fruitList[7].style.border = '0.3em ridge lime';
         box8.style.visibility = 'visible';
-        box8.src = fruitImage8.src;  
+        box8.src = fruitImage8.src;
+        bumblebee.play();
         gameOver();
       
       } else {
@@ -868,6 +885,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[7].style.border = '25px solid lime';
         box8.style.visibility = 'visible';
         box8.src = fruitImage8.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -945,6 +963,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[8].style.border = '0.3em ridge lime';
         box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -960,6 +979,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[8].style.border = '25px solid lime';
         box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -1037,6 +1057,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[9].style.border = '0.3em ridge lime';
         box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;   
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -1052,6 +1073,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[9].style.border = '25px solid lime';
         box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -1129,6 +1151,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[10].style.border = '0.3em ridge lime';
         box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -1144,6 +1167,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[10].style.border = '25px solid lime';
         box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
+        bumblebee.play();
         gameOver();
        }
       }; 
@@ -1221,6 +1245,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[11].style.border = '0.3em ridge lime';
         box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;  
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -1236,6 +1261,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[11].style.border = '25px solid lime';
         box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;
+        bumblebee.play();
         gameOver();
         }
       }; 
@@ -1313,6 +1339,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[12].style.border = '0.3em ridge lime';
         box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;  
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -1328,6 +1355,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[12].style.border = '25px solid lime';
         box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;
+        bumblebee.play();
         gameOver();
        }
       };
@@ -1406,6 +1434,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[13].style.border = '0.3em ridge lime'; 
         box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -1421,6 +1450,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[13].style.border = '25px solid lime';
         box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
+        bumblebee.play();
         gameOver();
        }
       };
@@ -1498,6 +1528,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[14].style.border = '0.3em ridge lime';
         box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -1513,6 +1544,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[14].style.border = '25px solid lime';
         box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -1590,6 +1622,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[15].style.border = '0.3em ridge lime';
         box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -1605,6 +1638,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruitList[15].style.border = '25px solid lime';
         box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -1681,6 +1715,7 @@ let randFruit = Math.floor(Math.random() * count);
       container.style.border = '15px ridge lime';
       vegetableList[0].style.border = '0.3em ridge lime';
       item1.src = fruitImage17.src; 
+      bumblebee.play();
       gameOver();
 
     } else {
@@ -1695,6 +1730,7 @@ let randFruit = Math.floor(Math.random() * count);
       vegetableList[0].style.border = '25px solid lime';
       container.style.border = '180px ridge lime';
       item1.src = fruitImage17.src;
+      bumblebee.play();
       gameOver();
      }
     }; 
@@ -1771,6 +1807,7 @@ let randFruit = Math.floor(Math.random() * count);
        container.style.border = '15px ridge lime';
        vegetableList[1].style.border = '0.3em ridge lime';
        item2.src = fruitImage18.src;  
+       bumblebee.play();
        gameOver();
 
      } else {
@@ -1785,6 +1822,7 @@ let randFruit = Math.floor(Math.random() * count);
        container.style.border = '180px ridge lime';
        vegetableList[1].style.border = '25px ridge lime';
        item2.src = fruitImage18.src;
+       bumblebee.play();
        gameOver();
       }
      }; 
@@ -1860,7 +1898,8 @@ let randFruit = Math.floor(Math.random() * count);
        question.innerHTML = 'RIGHT !!';
        container.style.border = '15px ridge lime';
        vegetableList[2].style.border = '0.3em ridge lime';
-       item3.src = fruitImage19.src;  
+       item3.src = fruitImage19.src; 
+       bumblebee.play();
        gameOver();
 
       } else {
@@ -1951,6 +1990,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         vegetableList[3].style.border = '0.3em ridge lime';
         item4.src = fruitImage20.src; 
+        bumblebee.play();
         gameOver();
 
         } else {
@@ -1964,6 +2004,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item4.src = fruitImage20.src;
+        bumblebee.play();
         gameOver();
         }
         };
@@ -2040,6 +2081,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         vegetableList[4].style.border = '0.3em ridge lime';
         item5.src = fruitImage21.src; 
+        bumblebee.play();
         gameOver();
       } else {
         groceries.src = 'bee.gif';
@@ -2052,6 +2094,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item5.src = fruitImage21.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -2128,6 +2171,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         vegetableList[5].style.border = '0.3em ridge lime';
         item6.src = fruitImage22.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -2141,6 +2185,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item6.src = fruitImage22.src;
+        bumblebee.play();
         gameOver();
         }
       }; 
@@ -2217,6 +2262,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         vegetableList[6].style.border = '0.3em ridge lime';
         item7.src = fruitImage23.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -2230,6 +2276,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item7.src = fruitImage23.src;
+        bumblebee.play();
         gameOver();
         }
       }; 
@@ -2306,6 +2353,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         vegetableList[7].style.border = '0.3em ridge lime';
         item8.src = fruitImage24.src; 
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -2319,6 +2367,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item8.src = fruitImage24.src;
+        bumblebee.play();
         gameOver();
         }
       }; 
@@ -2395,6 +2444,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         vegetableList[8].style.border = '0.3em ridge lime';
         item9.src = fruitImage25.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -2408,6 +2458,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item9.src = fruitImage25.src;
+        bumblebee.play();
         gameOver();
         }
       };
@@ -2484,6 +2535,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         vegetableList[9].style.border = '0.3em ridge lime';
         item10.src = fruitImage26.src;  
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -2497,6 +2549,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item10.src = fruitImage26.src;
+        bumblebee.play();
         gameOver();
         }
       }; 
@@ -2573,6 +2626,7 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '15px ridge lime';
         vegetableList[10].style.border = '0.3em ridge lime';
         item11.src = fruitImage27.src; 
+        bumblebee.play();
         gameOver();
 
         } else {
@@ -2586,6 +2640,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item11.src = fruitImage27.src;
+        bumblebee.play();
         gameOver();
         }
       }; 
@@ -2661,7 +2716,8 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '15px ridge lime';
         vegetableList[11].style.border = '0.3em ridge lime';
-        item12.src = fruitImage28.src; 
+        item12.src = fruitImage28.src;
+        bumblebee.play();
         gameOver();
 
       } else {
@@ -2675,6 +2731,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerHTML = 'RIGHT !!';
         container.style.border = '180px ridge lime';
         item12.src = fruitImage28.src;
+        bumblebee.play();
         gameOver();
         }
       }; 
@@ -2728,6 +2785,7 @@ let randFruit = Math.floor(Math.random() * count);
     if (query.matches) {
         
       click.play();
+      bumblebee.play();
       currentlyPlaying = true;
       question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
@@ -2746,6 +2804,7 @@ let randFruit = Math.floor(Math.random() * count);
       
     } else {
       click.play();
+      bumblebee.play();
       currentlyPlaying = true;
       question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
