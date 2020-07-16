@@ -462,11 +462,11 @@ img {
     display: inline;
     visibility: visible;
     margin-top: 32px;
-    margin-bottom: -45px;
+    margin-bottom: -50px;
   }
     
   img {
-    width: 50%;
+    width: 60%;
     padding: 0px;
     margin: 0px;
   }
