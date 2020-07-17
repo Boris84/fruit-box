@@ -25,6 +25,11 @@ body {
   background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/source.gif);
 }
 
+.main-container {
+  margin: 0 auto;
+  max-width: 95%;
+}
+
 #nav-container {
   width: 80%;
   margin: 0 auto;
@@ -34,8 +39,8 @@ body {
 }
 
 .nav-items {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 #home, #games, #help, #myAccount {
@@ -133,14 +138,12 @@ section {
 }
 
 #life_icons {
-  width: 9%;
+  width: 8%;
   display: flex;
-  margin-left: 5%;
+  padding: 2em;
 }
 
 #life_a, #life_b, #life_c {
-  width: 1%;
-  padding: 1.5em;
 }
 
 #death_icon {
@@ -157,7 +160,7 @@ section {
 }
 
 img {
-  width: 13.5%;
+  width: 13.7%;
 }
 
 #kids {
@@ -456,9 +459,10 @@ img {
   }
 
   #life_icons {
-    margin: 0 auto;
-    justify-content: center;
-}
+     width: 9%; 
+     margin: 0 auto;
+      justify-content: center;
+  }
 
   #life_a, #life_b, #life_c {
     margin-bottom: 1em;
