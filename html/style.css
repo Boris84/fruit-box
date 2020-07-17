@@ -324,6 +324,8 @@ img {
 
 #vegetable-btn:focus {outline:0;}
 
+
+
 /*
 .flex-container {
   display: flex;
@@ -348,18 +350,17 @@ img {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    
   @viewport {
     width: device-width ;
     zoom: 1.0 ;
-}
+  }
     
-    
-   body {
-     width: 100%;
-     margin: 0 auto;
-    } 
-    
-    
+  body {
+    width: 100%;
+    margin: 0 auto;
+  } 
+     
   #container {
     margin: auto;
     border: none;
@@ -487,12 +488,12 @@ img {
     margin: 0px;
     line-height: 1.3;
     font-size: 1rem;
+    box-shadow: none;
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
     padding: 0.2em 1em 0.2em 1.1em;
     background-color: white;
-    box-shadow: 2px 2px 2px black;
     font-family: 'Bubblegum Sans', cursive;  
     }
     
@@ -505,7 +506,7 @@ img {
     border-radius: 20px;
     border: 2px solid black;
     padding: 0.2em 1em 0.2em 1.1em;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: none;
     font-family: 'Bubblegum Sans', cursive;  
   }
     
@@ -539,11 +540,11 @@ img {
   }
 
   #fruit-btn, #vegetable-btn {
-/*    margin: auto;*/
     color: black;
+    margin: 0 auto;
     font-size: 1rem;
     cursor: pointer;
-/*    font-weight: bold;*/
+    /* font-weight: bold; */
     letter-spacing: 2px;
     font-family: 'Bubblegum Sans', cursive;
     padding: 0.5em 1em 0.4em 1.1em;
@@ -554,19 +555,19 @@ img {
   }
     
   #fruit-btn:hover {
-    color: white;
+    color: black;
     box-shadow: none;
     transition: none;
-    background-color: none;
+    background-color: white;
   }
   
   #fruit-btn:focus {outline:0;}
  
   #vegetable-btn:hover {
-    color: white;
+    color: black;
     box-shadow: none;
     transition: none;
-    background-color: none;
+    background-color: white;
   }
 
   #vegetable-btn:focus {outline:0;}

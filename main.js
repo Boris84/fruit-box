@@ -2719,7 +2719,6 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'inline';
       guessButton.innerHTML = 'guess';
       guessButton.style.border = '2px solid black';
-      guessButton.style.boxShadow = "2px 2px 2px black";
       kids.style.color = "white"; 
       
     } else {
@@ -2778,7 +2777,6 @@ function gameOver() {
         
     youWin();
     currentlyPlaying = false;
-    container.style.border = "25px ridge lime"; 
     container.style.backgroundImage = 'url(test.gif)';    
     guessButton.style.display = 'none';
     nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
@@ -2795,7 +2793,7 @@ function gameOver() {
     question.innerHTML = 'AWESOME!!!';   
     question.style.fontSize = "1.7rem";
     question.style.color = 'lime';
-
+    
   
   } else {
       
