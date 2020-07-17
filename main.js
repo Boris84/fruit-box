@@ -129,7 +129,7 @@ function yourDead() {
     nextButton.style.border = 'none';
     nextButton.style.boxShadow = 'none';
     nextButton.style.cursor = 'auto';
-    nextButton.onclick = "";
+    kids.style.color = 'white';
     nextButton.style.background = 'transparent';
     deadText.innerHTML = 'GAME OVER !!!';
     looser.play();  
@@ -2689,11 +2689,11 @@ let randFruit = Math.floor(Math.random() * count);
   }
       
   }
+        currentlyPlaying = true;
         guessButton.style.border = 'none';
         groceries.style.marginTop = '100px';
         guessButton.style.boxShadow = 'none';
         guessButton.style.background = 'none';
-        currentlyPlaying = true;
   }
 
 

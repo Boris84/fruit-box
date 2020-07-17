@@ -362,7 +362,7 @@ img {
     
   #container {
     margin: auto;
-    border: 15px ridge whitesmoke;
+    border: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -539,12 +539,12 @@ img {
   }
 
   #fruit-btn, #vegetable-btn {
-    margin: 3px;
+/*    margin: auto;*/
     color: black;
-    cursor: pointer;
-    font-weight: bold;
     font-size: 1rem;
-    letter-spacing: 1px;
+    cursor: pointer;
+/*    font-weight: bold;*/
+    letter-spacing: 2px;
     font-family: 'Bubblegum Sans', cursive;
     padding: 0.5em 1em 0.4em 1.1em;
     border: 2px solid black;
