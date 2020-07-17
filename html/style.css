@@ -133,14 +133,13 @@ section {
 }
 
 #life_icons {
+  width: 9%;
   display: flex;
   margin-left: 5%;
 }
 
 #life_a, #life_b, #life_c {
-  width: auto;
-  height: auto;
-  max-width: 100%;
+  width: 1%;
   padding: 1.5em;
 }
 
@@ -462,7 +461,6 @@ img {
 }
 
   #life_a, #life_b, #life_c {
-    width: 4em;
     margin-bottom: 1em;
     padding: 1em;
 }
