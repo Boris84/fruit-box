@@ -136,7 +136,7 @@ section {
   width: auto;
   height: auto;
   max-width: 100%;
-/*  padding: 1.5em;*/
+  padding: 1.5em;
 }
 
 #death_icon {
@@ -451,7 +451,7 @@ img {
 }
 
   #life_a, #life_b, #life_c {
-    width: 60px;
+    width: 50px;
     margin-bottom: 1em;
     padding: 1em;
 }
