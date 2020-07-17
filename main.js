@@ -176,7 +176,7 @@ let randFruit = Math.floor(Math.random() * count);
       let queryA = window.matchMedia("(max-width: 600px)");
         if (queryA.matches) {
           groceries.style.marginTop = "-60px";
-          groceries.style.marginBottom = "-60px";
+          groceries.style.marginBottom = "0px";
         } else {
           groceries.style.marginTop = "0px";
           groceries.style.marginBottom = "0px";
