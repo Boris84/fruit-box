@@ -138,7 +138,7 @@ section {
 }
 
 #life_a, #life_b, #life_c {
-  width: 4%;
+  width: 5%;
   padding: 1.5em;
 }
 
@@ -230,7 +230,10 @@ img {
 /* container */
 .fruits {
   flex: 1;
+  padding: 30px;
   display: flex;
+  max-width: 70%;
+  margin: 0 auto;
   flex-wrap: wrap;
   visibility: visible;
   font-family: cursive;
@@ -238,7 +241,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   justify-content: center;
-  padding: 30px;
 }
 
 /*lines inside gray boxes */
