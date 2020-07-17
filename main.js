@@ -175,7 +175,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = fruitImage1.src;
       let queryA = window.matchMedia("(max-width: 600px)");
         if (queryA.matches) {
-          groceries.style.marginTop = "-60px";
+          groceries.style.marginTop = "0px";
           groceries.style.marginBottom = "0px";
         } else {
           groceries.style.marginTop = "0px";
@@ -2713,8 +2713,8 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = 'bee.gif';
       question.style.fontSize = "1.5rem";
       question.style.color = 'white';
-      groceries.style.marginTop = "96px";
-      groceries.style.marginBottom = "24px";
+      groceries.style.marginTop = "100px";
+      groceries.style.marginBottom = "20px";
       container.style.border = "15px ridge whitesmoke";  
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
