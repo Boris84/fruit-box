@@ -113,7 +113,6 @@ h5 {
   letter-spacing: 10px;
   margin-bottom: 300px;
   -webkit-text-stroke: 4px black;  
-
 }
 
 section {
@@ -174,7 +173,7 @@ img {
 
 
 #fruit-row .image {
-    width="500px";
+  width="500px";
 }
 
 #guess {
@@ -469,7 +468,7 @@ img {
   #groceries {
     display: inline;
     visibility: visible;
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: -50px;
   }
     
@@ -542,7 +541,7 @@ img {
     /* font-weight: bold; */
     letter-spacing: 2px;
     font-family: 'Bubblegum Sans', cursive;
-    padding: 0.5em 1em 0.4em 1.1em;
+    padding: 0.2em 1em 0.2em 1.1em;
     border: 2px solid black;
     box-shadow: none;
     border-radius: 40px;
