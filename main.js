@@ -157,7 +157,7 @@ function youWin() {
 guessButton.onclick = function() { 
 
   setInterval(function(){   
-//    sound.play();
+    sound.play();
     console.log('hello');
   }, 46 * 1000);
     
