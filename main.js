@@ -15,7 +15,6 @@ let fruitImage13 = document.getElementById('Peanuts');
 let fruitImage14 = document.getElementById('Aubergine');
 let fruitImage15 = document.getElementById('Pepper');
 let fruitImage16 = document.getElementById('Sweetcorn');
-
 let fruitImage17 = document.getElementById('Potato');
 let fruitImage18 = document.getElementById('Onion');
 let fruitImage19 = document.getElementById('Mushrooms');
@@ -28,7 +27,6 @@ let fruitImage25 = document.getElementById('Carrot');
 let fruitImage26 = document.getElementById('Radish');
 let fruitImage27 = document.getElementById('Zucchini');
 let fruitImage28 = document.getElementById('Turnip');
-
 let box1 = document.getElementById('_Squash');
 let box2 = document.getElementById('_Orange');
 let box3 = document.getElementById('_Banana');
@@ -45,7 +43,6 @@ let box13 = document.getElementById('_Peanuts');
 let box14 = document.getElementById('_Aubergine');
 let box15 = document.getElementById('_Pepper');
 let box16 = document.getElementById('_Sweetcorn');
-
 let item1 = document.getElementById('_Potato');
 let item2 = document.getElementById('_Onion');
 let item3 = document.getElementById('_Mushrooms');
@@ -58,11 +55,9 @@ let item9 = document.getElementById('_Carrot');
 let item10 = document.getElementById('_Radish');
 let item11 = document.getElementById('_Zucchini');
 let item12 = document.getElementById('_Turnip');
-
 let life_a = document.getElementById('life_a');
 let life_b = document.getElementById('life_b');
 let life_c = document.getElementById('life_c');
-
 let kids = document.getElementById('kids');
 let homeButton = document.getElementById('home');
 let guessButton = document.getElementById('guess');
@@ -74,7 +69,6 @@ let container = document.getElementById('container');
 let navContainer = document.getElementById('nav-container');
 let fruitList = document.querySelectorAll('.fruit');
 let vegetableList = document.querySelectorAll('.vegetable');
-
 let right = document.getElementById('right');
 let wrong = document.getElementById('wrong');
 let sound = document.getElementById('music');
@@ -83,17 +77,15 @@ let win = document.getElementById('win');
 let cheer = document.getElementById('crowd');
 let looser = document.getElementById('you_loose');
 let bumblebee = document.getElementById('bumblebee');
-
 let correct = document.getElementById('correct');
 let game_over_music = document.getElementById('game_over');
 let deadText = document.getElementById('dead-text');
 let life_icons = document.getElementById('life_icons');
+
 let gameTheme;
 
 let lives = 2;
 let currentlyPlaying = true;
-
-
 let isClicked = (button) => {
   if (button) {
     return true;
@@ -101,7 +93,6 @@ let isClicked = (button) => {
     return false;
   }
 }
-
 function checkLives(src) {
   if (lives === 2) {
     life_c.src = 'death_icon.png';
@@ -114,10 +105,8 @@ function checkLives(src) {
     yourDead();
   }
 }
-
 function yourDead() {
   let query = window.matchMedia("(max-width: 600px)");
-
   if (query.matches) {
     currentlyPlaying = false;
     sound.pause();
@@ -142,8 +131,6 @@ function yourDead() {
     looser.play();
   }
 }
-
-
 function youWin() {
   currentlyPlaying = false;
   if (!currentlyPlaying) {
@@ -153,23 +140,23 @@ function youWin() {
   }
 }
 
-
 guessButton.onclick = function() { 
 
+  setInterval(function(){   
+    sound.play();
+    console.log('hello');
+  }, 46 * 1000);
 gameTheme = setInterval(function(){   
   sound.play();
 }, 46 * 1000);
-    
+
   click.play();
   sound.play();
   bumblebee.play();
   guessFruit()
 }
-
-
 //switch function for Fruits
 function guessFruit() { 
-
 const count = 28;
     
 let randFruit = Math.floor(Math.random() * count);    
@@ -183,10 +170,11 @@ let randFruit = Math.floor(Math.random() * count);
           groceries.style.marginBottom = "0px";
         } else {
           groceries.style.marginTop = "0px";
+          groceries.style.marginBottom = "0px";
           groceries.style.marginBottom = "15px";
         }
        question.innerHTML = "..fruit or veg ?";
-            
+
    if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -238,7 +226,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -274,10 +261,11 @@ let randFruit = Math.floor(Math.random() * count);
          groceries.style.marginBottom = "0px";
       } else {
         groceries.style.marginTop = "0px";
+        groceries.style.marginBottom = "0px";     
         groceries.style.marginBottom = "15px";     
       }
           question.innerHTML = "..fruit or veg ?";
-         
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -290,7 +278,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -328,7 +315,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -363,10 +349,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
       question.innerHTML = "..fruit or veg ?";
-            
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -379,7 +366,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -454,10 +440,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
     } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
     }
        question.innerHTML = "..fruit or veg ?";
-            
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -471,7 +458,6 @@ let randFruit = Math.floor(Math.random() * count);
         correct.play();
             
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -509,7 +495,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -544,10 +529,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";
-            
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -560,7 +546,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -598,7 +583,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -633,10 +617,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";
-            
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -649,7 +634,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -687,7 +671,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -722,10 +705,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";
-            
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -738,7 +722,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -776,7 +759,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
         if (query.matches) {
           groceries.src = 'angry_bee.gif';
           groceries.style.marginTop = "80px";
@@ -811,10 +793,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";  
-        
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -827,7 +810,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -900,10 +882,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";      
-          
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -916,7 +899,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -989,10 +971,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";
-            
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -1005,7 +988,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -1043,7 +1025,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -1078,10 +1059,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";
-            
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -1094,7 +1076,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -1157,7 +1138,6 @@ let randFruit = Math.floor(Math.random() * count);
       }
      }
     break;
-
     case 11:
     groceries.src= fruitImage12.src;
     let queryL = window.matchMedia("(max-width: 600px)");
@@ -1167,10 +1147,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";
-           
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -1183,7 +1164,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -1256,10 +1236,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";  
-            
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -1272,7 +1253,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -1311,7 +1291,6 @@ let randFruit = Math.floor(Math.random() * count);
         lives--;
         checkLives();     
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -1346,10 +1325,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?"; 
-        
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -1362,7 +1342,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -1435,10 +1414,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?";
-          
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -1451,7 +1431,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -1524,10 +1503,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?"; 
-          
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -1540,7 +1520,6 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       correct.play();
       let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -1578,7 +1557,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -1613,10 +1591,11 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
+      groceries.style.marginBottom = "0px";
       groceries.style.marginBottom = "15px";
     }
     question.innerHTML = "..fruit or veg ?"; 
-          
+
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -1665,7 +1644,6 @@ let randFruit = Math.floor(Math.random() * count);
       checkLives();
       lives--;
       let query = window.matchMedia("(max-width: 600px)");
-
     if (query.matches) {
       groceries.src = 'angry_bee.gif';
       groceries.style.marginTop = "80px";
@@ -1700,10 +1678,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -1716,7 +1695,6 @@ let randFruit = Math.floor(Math.random() * count);
        click.play();
        correct.play();
        let query = window.matchMedia("(max-width: 600px)");
-
      if (query.matches) {
        groceries.src = 'bee.gif';
        guessButton.style.display = 'none';
@@ -1752,7 +1730,6 @@ let randFruit = Math.floor(Math.random() * count);
        checkLives();
        lives--;
        let query = window.matchMedia("(max-width: 600px)");
-
      if (query.matches) {
        groceries.src = 'angry_bee.gif';
        groceries.style.marginTop = "80px";
@@ -1787,10 +1764,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -1803,7 +1781,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
      if (query.matches) {
        groceries.src = 'bee.gif';
        guessButton.style.display = 'none';
@@ -1838,7 +1815,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -1873,10 +1849,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -1889,7 +1866,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -1924,7 +1900,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -1959,10 +1934,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -1975,7 +1951,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -2010,7 +1985,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;     
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -2045,10 +2019,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";     
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -2096,7 +2071,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -2131,10 +2105,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";     
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -2147,7 +2122,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -2182,7 +2156,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -2217,10 +2190,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -2233,7 +2207,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -2268,7 +2241,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -2303,10 +2275,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -2319,7 +2292,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -2354,7 +2326,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -2389,10 +2360,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";     
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
      question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -2405,7 +2377,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -2440,7 +2411,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -2475,10 +2445,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
        question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -2491,7 +2462,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -2526,7 +2496,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;  
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -2561,10 +2530,11 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
+       groceries.style.marginBottom = "0px";
        groceries.style.marginBottom = "15px";
      }
        question.innerHTML = "..fruit or veg ?"; 
-          
+
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
        document.getElementById('option_a');
@@ -2577,7 +2547,6 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
@@ -2612,7 +2581,6 @@ let randFruit = Math.floor(Math.random() * count);
         checkLives();
         lives--;
         let query = window.matchMedia("(max-width: 600px)");
-
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         groceries.style.marginTop = "80px";
@@ -2644,9 +2612,6 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.boxShadow = 'none';
         guessButton.style.background = 'none';
   }
-
-
-
   nextButton.onclick = function() {
       
     let query = window.matchMedia("(max-width: 600px)");
@@ -2705,24 +2670,23 @@ let randFruit = Math.floor(Math.random() * count);
 //      vegetableList.forEach(function(vegetable) {
 //        vegetable.style.border = '0.3em ridge white';
 //      });
-
   
       guessButton.onclick = function() {
         click.play();
         guessFruit();
       };
    }
-
-
   
 function gameOver() {
-    
+
     if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src ===           fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src ===               fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
-    
+
+
     clearInterval(gameTheme);
     let query = window.matchMedia("(max-width: 600px)");
-        
+
     if (query.matches) {
+    sound.pause();
     youWin();
     clearInterval(gameTheme);
     currentlyPlaying = false;
@@ -2766,23 +2730,3 @@ function gameOver() {
    }
   }
 };
-
-
-
-
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
