@@ -469,6 +469,7 @@ img {
   #groceries {
     display: inline;
     visibility: visible;
+    margin-top: 0px;
     margin-bottom: -33px;
   }
     
