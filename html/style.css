@@ -390,7 +390,7 @@ img {
   #question {
     color: white;
     display: inline;
-/*    line-height: 1.3;*/
+    line-height: 1.3;
     font-size: 1.4rem;
     font-weight: bold;
     letter-spacing: 6px;
