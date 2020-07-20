@@ -6,7 +6,7 @@ let fruitImage4 = document.getElementById('Pumpkin');
 let fruitImage5 = document.getElementById('Cherries'); 
 let fruitImage6 = document.getElementById('Blueberries');
 let fruitImage7 = document.getElementById('Olives'); 
-let fruitImage8 = document.getElementById('Pineapple');
+let fruitImage8 = document.getElementById('Peapod');
 let fruitImage9 = document.getElementById('Grapes');
 let fruitImage10 = document.getElementById('Avacados');
 let fruitImage11 = document.getElementById('Tomato');
@@ -20,7 +20,7 @@ let fruitImage17 = document.getElementById('Potato');
 let fruitImage18 = document.getElementById('Onion');
 let fruitImage19 = document.getElementById('Mushrooms');
 let fruitImage20 = document.getElementById('Broccoli');
-let fruitImage21 = document.getElementById('Spinach');
+let fruitImage21 = document.getElementById('Rhubarb');
 let fruitImage22 = document.getElementById('Ginger');
 let fruitImage23 = document.getElementById('Celery');
 let fruitImage24 = document.getElementById('Garlic');
@@ -36,7 +36,7 @@ let box4 = document.getElementById('_Pumpkin');
 let box5 = document.getElementById('_Cherries');
 let box6 = document.getElementById('_Blueberries');
 let box7 = document.getElementById('_Olives');
-let box8 = document.getElementById('_Pineapple');
+let box8 = document.getElementById('_Peapod');
 let box9 = document.getElementById('_Grapes');
 let box10 = document.getElementById('_Avacados');
 let box11 = document.getElementById('_Tomato');
@@ -50,7 +50,7 @@ let item1 = document.getElementById('_Potato');
 let item2 = document.getElementById('_Onion');
 let item3 = document.getElementById('_Mushrooms');
 let item4 = document.getElementById('_Broccoli');
-let item5 = document.getElementById('_Spinach');
+let item5 = document.getElementById('_Rhubarb');
 let item6 = document.getElementById('_Ginger');
 let item7 = document.getElementById('_Celery');
 let item8 = document.getElementById('_Garlic');
@@ -87,40 +87,51 @@ let game_over_music = document.getElementById('game_over');
 
 let deadText = document.getElementById('dead-text');
 let life_icons = document.getElementById('life_icons');
-
-let gameTheme;
-
 let lives = 2;
+
 let currentlyPlaying = true;
 
-let isClicked = (button) => {
-  if (button) {
+function isPlaying(currentlyPlaying){
+  if (currentlyPlaying){
     return true;
   } else {
     return false;
   }
 }
-function checkLives(src) {
-  if (lives === 2) {
-    life_c.src = 'death_icon.png';
-  } 
-  if (lives === 1) {
-    life_b.src = 'death_icon.png';
+
+let isClicked = (button) => {
+  if (isPlaying(currentlyPlaying) && button){
+    return true;
+  } else {
+    return false;
   }
-  if (lives === 0) {
-    life_a.src = 'death_icon.png';
+}
+
+function checkLives(src){
+  isPlaying();
+    
+  if (currentlyPlaying && lives === 2){
+    life_c.src = 'death_icon_c.png';
+  } 
+  if (currentlyPlaying && lives === 1){
+    life_b.src = 'death_icon_b.png';
+  }
+  if (currentlyPlaying && lives === 0){
+    life_a.src = 'death_icon_a.png';
     yourDead();
   }
 }
 
-function yourDead() {
-  clearInterval(gameTheme);
+function yourDead(){
+
+  currentlyPlaying = false;
     
+  if (isPlaying(!currentlyPlaying)){
+    sound.pause();
+  }
   let query = window.matchMedia("(max-width: 600px)");
     
   if (query.matches) {
-    currentlyPlaying = false;
-    sound.pause();
     game_over_music.play();
     question.style.display = 'none';
     groceries.style.marginTop = "-30px";
@@ -135,7 +146,6 @@ function yourDead() {
     deadText.innerHTML = 'GAME OVER !!!';
     looser.play();  
   } else {
-    sound.pause();
     game_over_music.play();
     container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     question.style.display = 'none';
@@ -145,37 +155,38 @@ function yourDead() {
   }
 }
 
-function youWin() {
-  currentlyPlaying = false;
-  if (!currentlyPlaying) {
+function youWin(){
+currentlyPlaying = false;
+
+  if (isPlaying(!currentlyPlaying)){
+    sound.pause();
     cheer.play();
     win.play();
   }
 }
 
-guessButton.onclick = function() { 
-
-  gameTheme = setInterval(function(){   
-    sound.play();
-  }, 46 * 1000);
-
-  click.play();
+guessButton.onclick = function(){ 
   sound.play();
+  click.play();
   bumblebee.play();
   guessFruit()
 }
+
+
 //switch function for Fruits
 function guessFruit() { 
+isPlaying();
+
 const count = 28;
-    
 let randFruit = Math.floor(Math.random() * count);    
   switch (randFruit) {
                
-    case 0:
-      groceries.src = fruitImage1.src;
-      let queryA = window.matchMedia("(max-width: 600px)");
+  case 0:
+    groceries.src = fruitImage1.src;
+          
+    let queryA = window.matchMedia("(max-width: 600px)");
         if (queryA.matches) {
-          groceries.style.marginTop = "-150px";
+          groceries.style.marginTop = "0px";
           groceries.style.marginBottom = "0px";
         } else {
           groceries.style.marginTop = "0px";
@@ -263,9 +274,10 @@ let randFruit = Math.floor(Math.random() * count);
  
     case 1:
     groceries.src = fruitImage2.src;
+          
     let queryB = window.matchMedia("(max-width: 600px)");
       if (queryB.matches) {
-         groceries.style.marginTop = "-150px";
+         groceries.style.marginTop = "0px";
          groceries.style.marginBottom = "0px";
       } else {
         groceries.style.marginTop = "0px";
@@ -352,7 +364,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryC = window.matchMedia("(max-width: 600px)");
           
     if (queryC.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -442,7 +454,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryD = window.matchMedia("(max-width: 600px)");
           
     if (queryD.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
     } else {
        groceries.style.marginTop = "0px";
@@ -530,7 +542,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryE = window.matchMedia("(max-width: 600px)");
           
     if (queryE.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -617,7 +629,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryF = window.matchMedia("(max-width: 600px)");
           
     if (queryF.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -704,7 +716,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryG = window.matchMedia("(max-width: 600px)");
           
     if (queryG.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -791,7 +803,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryH = window.matchMedia("(max-width: 600px)");
           
     if (queryH.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -879,7 +891,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryI = window.matchMedia("(max-width: 600px)");
           
     if (queryI.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -967,7 +979,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryJ = window.matchMedia("(max-width: 600px)");
           
     if (queryJ.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -1054,7 +1066,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryK = window.matchMedia("(max-width: 600px)");
           
     if (queryK.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -1141,7 +1153,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryL = window.matchMedia("(max-width: 600px)");
           
     if (queryL.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -1229,7 +1241,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryM = window.matchMedia("(max-width: 600px)");
           
     if (queryM.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -1317,7 +1329,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryN = window.matchMedia("(max-width: 600px)");
           
     if (queryN.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -1405,7 +1417,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryO = window.matchMedia("(max-width: 600px)");
           
     if (queryO.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -1493,7 +1505,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryP = window.matchMedia("(max-width: 600px)");
           
     if (queryP.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -1580,7 +1592,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryQ = window.matchMedia("(max-width: 600px)");
           
     if (queryQ.matches) {
-      groceries.style.marginTop = "-150px";
+      groceries.style.marginTop = "0px";
       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "0px";
@@ -1666,7 +1678,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryR = window.matchMedia("(max-width: 600px)");
           
      if (queryR.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
@@ -1751,7 +1763,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryS = window.matchMedia("(max-width: 600px)");
           
      if (queryS.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
@@ -1835,7 +1847,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryT = window.matchMedia("(max-width: 600px)");
           
      if (queryT.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
@@ -1919,7 +1931,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryU = window.matchMedia("(max-width: 600px)");
           
      if (queryU.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
@@ -2003,7 +2015,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryV = window.matchMedia("(max-width: 600px)");
           
      if (queryV.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";     
      } else {
        groceries.style.marginTop = "0px";
@@ -2088,7 +2100,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryW = window.matchMedia("(max-width: 600px)");
           
      if (queryW.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";     
      } else {
        groceries.style.marginTop = "0px";
@@ -2172,7 +2184,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryX = window.matchMedia("(max-width: 600px)");
           
      if (queryX.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
@@ -2256,7 +2268,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryY = window.matchMedia("(max-width: 600px)");
           
      if (queryY.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
@@ -2340,7 +2352,7 @@ let randFruit = Math.floor(Math.random() * count);
      let queryZ = window.matchMedia("(max-width: 600px)");
           
      if (queryZ.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";     
      } else {
        groceries.style.marginTop = "0px";
@@ -2424,7 +2436,7 @@ let randFruit = Math.floor(Math.random() * count);
      let query1 = window.matchMedia("(max-width: 600px)");
           
      if (query1.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
@@ -2508,7 +2520,7 @@ let randFruit = Math.floor(Math.random() * count);
      let query2 = window.matchMedia("(max-width: 600px)");
           
      if (query2.matches) {
-       groceries.style.marginTop = "-150px";
+       groceries.style.marginTop = "0px";
        groceries.style.marginBottom = "0px";
      } else {
        groceries.style.marginTop = "0px";
@@ -2586,8 +2598,7 @@ let randFruit = Math.floor(Math.random() * count);
     }
   }
       
-  }
-        currentlyPlaying = true;
+  }   
         guessButton.style.border = 'none';
         groceries.style.marginTop = '100px';
         guessButton.style.boxShadow = 'none';
@@ -2659,52 +2670,58 @@ let randFruit = Math.floor(Math.random() * count);
    }
   
 function gameOver() {
-    clearInterval(gameTheme);
 
-    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src ===           fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src ===               fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
-  
+    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src ===                       fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src ===               fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+      
     let query = window.matchMedia("(max-width: 600px)");
 
     if (query.matches) {
-    youWin();
-    currentlyPlaying = false;
-    container.style.backgroundImage = 'url(test.gif)';    
-    guessButton.style.display = 'none';
-    nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
-    nextButton.style.fontSize = "0.8rem";
-    nextButton.style.backgroundColor = 'transparent';
-    nextButton.style.border = 'none';
-    nextButton.style.color = 'black';
-    nextButton.style.margin = "20px";
-    nextButton.onclick = false;
-    //question.style.display = 'none';
-    groceries.style.marginTop = "40px";
-    groceries.src = 'banana_man.gif';
-    //groceries.style.visibility = 'hidden';
-    //navContainer.style.backgroundImage = 'url(.gif)';
-    question.innerHTML = 'AWESOME!!';   
-    question.style.fontSize = "2rem";
-    question.style.color = 'lime';    
+      youWin();
+      currentlyPlaying = false;
+      container.style.backgroundImage = 'url(test.gif)';    
+      guessButton.style.display = 'none';
+      nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+      nextButton.style.fontSize = "0.8rem";
+      nextButton.style.backgroundColor = 'transparent';
+      nextButton.style.border = 'none';
+      nextButton.style.color = 'black';
+      nextButton.style.margin = "20px";
+      nextButton.style.cursor = 'pointer';
+      nextButton.style.boxShadow = 'none';
+      nextButton.onclick = false;
+      //question.style.display = 'none';
+      groceries.style.marginTop = "40px";
+      groceries.src = 'banana_man.gif';
+      //groceries.style.visibility = 'hidden';
+      //navContainer.style.backgroundImage = 'url(.gif)';
+      question.innerHTML = 'AWESOME!!';   
+      question.style.fontSize = "2rem";
+      question.style.color = 'lime';    
   
-  } else {
-    youWin();
-    currentlyPlaying = false;
-    container.style.border = "180px ridge lime";  
-    guessButton.style.display = 'none';
-    nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
-    nextButton.style.fontSize = "60px";
-    nextButton.style.backgroundColor = 'none';
-    nextButton.style.border = 'none';
-    nextButton.style.color = 'black';
-    nextButton.onclick = false;
-    //question.style.display = 'none';
-    groceries.style.marginTop = "10px";
-    groceries.src = 'aubergine_man.gif';
-    //groceries.style.visibility = 'hidden';
-    //navContainer.style.backgroundImage = 'url(.gif)';
-    container.style.backgroundImage = 'url(test.gif)';
-    question.style.innerHTML = 'AWESOME!!!';
-    //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
-   }
-  }
-};
+    } else {
+      youWin();
+      currentlyPlaying = false;
+      container.style.border = "180px ridge lime";  
+      guessButton.style.display = 'none';
+      nextButton.style.letterSpacing = "8px";
+      nextButton.style.fontSize = "60px";
+      nextButton.style.backgroundColor = 'transparent';
+      nextButton.style.boxShadow = 'none';
+      nextButton.style.border = 'none';
+      nextButton.style.color = 'black';
+      nextButton.style.cursor = 'pointer';
+      nextButton.onclick = false;
+      nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+      groceries.style.width = "20%";
+      groceries.style.marginTop = "15px";
+      groceries.src = 'banana_man_pc.gif';
+      //groceries.style.visibility = 'hidden';
+      //navContainer.style.backgroundImage = 'url(.gif)';
+      container.style.backgroundImage = 'url(test.gif)';
+      question.style.fontSize = "8rem";
+      question.style.letterSpacing = "10px";
+      question.innerHTML = 'AWESOME !!!';
+      //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
+     }
+    }
+  };

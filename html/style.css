@@ -126,7 +126,7 @@ section {
 
 #groceries {
   display: inline;
-    margin: 0;
+  margin: 0;
 }
 
 img {
@@ -413,6 +413,7 @@ img {
   #groceries {
     display: inline;
     visibility: visible;
+    margin-top: 0px;
     margin-bottom: -33px;
   }
     
