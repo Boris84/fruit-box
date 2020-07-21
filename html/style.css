@@ -185,6 +185,7 @@ img {
 #next:focus {outline:0;}
 /*gets rid of default button border */
 #guess:focus {outline:0;}
+
 #options {
   display: none;
 }
