@@ -291,6 +291,8 @@ img {
 }
 */
  
+
+
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -391,6 +393,7 @@ img {
   #question {
     color: white;
     display: inline;
+/*    line-height: 1.3;*/
     line-height: 1.3;
     font-size: 1.4rem;
     font-weight: bold;
@@ -414,9 +417,7 @@ img {
   #groceries {
     display: inline;
     visibility: visible;
-    margin-top: 0px;
     margin-bottom: -33px;
-    padding: 0;
   }
     
   img {
