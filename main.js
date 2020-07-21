@@ -2712,7 +2712,6 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
       guessButton.innerHTML = 'guess';
-      guessButton.style.marginBottom ="0px";
       guessButton.style.border = '2px solid black';
       kids.style.color = "white"; 
       
