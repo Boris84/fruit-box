@@ -419,6 +419,7 @@ img {
     display: inline;
     visibility: visible;
     margin-bottom: -28px;
+    padding: 0px;
   }
     
   img {
