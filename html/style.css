@@ -331,6 +331,11 @@ img {
     border: none;
   }
     
+
+  #fruit-row .image {
+    width = "100px";
+  }
+    
   #nav-container {
     width: 90%;
     display: flex;
