@@ -341,7 +341,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-/*    margin-bottom: 150px;*/
+    margin-bottom: 60px;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
@@ -423,7 +423,7 @@ img {
   #groceries {
     display: inline;
     visibility: visible;
-    margin-bottom: -71px;
+    margin-bottom: -78px;
   }
     
   img {
