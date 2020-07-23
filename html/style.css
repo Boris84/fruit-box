@@ -413,6 +413,7 @@ img {
 }
   #life_a, #life_b, #life_c {
     width: 60px;
+    position: relative;
     margin-bottom: 20px;
     padding: 1em;
 }
