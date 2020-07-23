@@ -413,7 +413,7 @@ img {
 }
   #life_a, #life_b, #life_c {
     width: 60px;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding: 1em;
 }
   #death_icon {
@@ -498,7 +498,7 @@ img {
     padding: 0.4em 1em 0.4em 1.1em;
     border: 2px solid black;
     box-shadow: none;
-    border-radius: 40px;
+    border-radius: 20px;
     background-color: white;
   }
     
