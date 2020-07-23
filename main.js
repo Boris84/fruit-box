@@ -2716,6 +2716,7 @@ let randFruit = Math.floor(Math.random() * count);
         if (query.matches) {
           guessButton.style.border = 'none';
           groceries.style.marginTop = '50px';
+          groceries.style.marginBottom = '18px';
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
         } else {
