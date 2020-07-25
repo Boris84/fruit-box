@@ -308,7 +308,6 @@ img {
   } 
      
   #container {
-    max-height: 1000px;
     margin: auto;
     border: none;
     background-size: cover;
@@ -420,10 +419,10 @@ img {
   }
     
   #groceries {
-    width: 30%;
+    width: 50%;
     display: inline;
     visibility: visible;
-    margin-bottom: -88px;
+    margin-bottom: -78px;
   }
     
   img {
