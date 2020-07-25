@@ -148,9 +148,7 @@ img {
 #fruit-images {
   display: none;
 }
-#fruit-images img {
-  width: "500px";
-}
+
 #guess {
   color: black;
   display: inline;
@@ -421,13 +419,13 @@ img {
   }
     
   #groceries {
+    width: 40%;
     display: inline;
     visibility: visible;
-    margin-bottom: -78px;
+    margin-bottom: -98px;
   }
     
   img {
-    width: 40%;
     padding: 0px;
     margin: 0px;
   }
