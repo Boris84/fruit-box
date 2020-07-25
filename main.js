@@ -187,7 +187,7 @@ let randFruit = Math.floor(Math.random() * count);
     let queryA = window.matchMedia("(max-width: 600px)");
         if (queryA.matches) {
           groceries.style.marginTop = "0px";
-          groceries.style.marginBottom = "0px";               
+          groceries.style.marginBottom = "-40px";               
         } else {
           groceries.style.paddingTop = "20px";
           groceries.style.paddingBottom = "20px";
@@ -2716,7 +2716,7 @@ let randFruit = Math.floor(Math.random() * count);
         if (query.matches) {
           guessButton.style.border = 'none';
           groceries.style.marginTop = '50px';
-          groceries.style.marginBottom = '18px';
+          groceries.style.marginBottom = '0px';
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
         } else {
@@ -2742,7 +2742,7 @@ let randFruit = Math.floor(Math.random() * count);
       question.style.fontSize = "1.5rem";
       question.style.color = 'white';
       groceries.style.marginTop = "67px";
-      groceries.style.marginBottom = "-3px";
+      groceries.style.marginBottom = "-5px";
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
