@@ -308,6 +308,7 @@ img {
   } 
      
   #container {
+    max-height: 1000px;
     margin: auto;
     border: none;
     background-size: cover;
@@ -422,7 +423,7 @@ img {
     width: 30%;
     display: inline;
     visibility: visible;
-    margin-bottom: -78px;
+    margin-bottom: -88px;
   }
     
   img {
