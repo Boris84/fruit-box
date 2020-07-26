@@ -2715,8 +2715,8 @@ let randFruit = Math.floor(Math.random() * count);
     
         if (query.matches) {
           guessButton.style.border = 'none';
-          groceries.style.marginTop = '10%';
-          groceries.style.marginBottom = '0px';
+          groceries.style.marginTop = '100px';
+          groceries.style.marginBottom = '-10px';
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
         } else {
@@ -2743,7 +2743,7 @@ let randFruit = Math.floor(Math.random() * count);
       question.style.fontSize = "1.5rem";
       question.style.color = 'white';
       groceries.style.marginTop = "50px";
-      groceries.style.marginBottom = "13px";
+      groceries.style.marginBottom = "12px";
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
