@@ -2715,13 +2715,14 @@ let randFruit = Math.floor(Math.random() * count);
     
         if (query.matches) {
           guessButton.style.border = 'none';
-          groceries.style.marginTop = '50px';
+          groceries.style.marginTop = '10%';
           groceries.style.marginBottom = '0px';
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
         } else {
           guessButton.style.border = 'none';
           groceries.style.marginTop = '100px';
+          groceries.style.marginBottom = '0px';
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none';
      }

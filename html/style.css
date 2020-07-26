@@ -125,13 +125,12 @@ section {
 }
 
 #groceries {
+  width: 13%;
   display: inline;
   margin: 0px;
 }
 
-img {
-  width: 15%;
-}
+
 #kids {
   color: yellow;
   font-size: 10rem;
@@ -308,6 +307,7 @@ img {
   } 
      
   #container {
+    width: 90%;
     margin: auto;
     border: none;
     background-size: cover;
@@ -419,7 +419,7 @@ img {
   }
     
   #groceries {
-    width: 50%;
+    width: 40%;
     display: inline;
     visibility: visible;
     margin-bottom: -78px;
