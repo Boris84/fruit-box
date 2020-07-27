@@ -98,13 +98,11 @@ h5 {
   margin-bottom: 300px;
   -webkit-text-stroke: 4px black;  
 }
-/*
 section {
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
-*/
 #question {
   color: white;
   display: inline;
@@ -384,11 +382,14 @@ img {
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;  
   }
+/*
   section {
       padding: 0px;
       margin: 0px;
+      text-align: center;
   }
     
+*/
   #question {
     color: white;
     display: inline;
@@ -400,8 +401,8 @@ img {
     font-family: 'Modak', cursive;
   }
   #life_icons {
-    margin: auto;
-    margin-bottom: 1em;
+    margin: 0 auto;
+    margin-bottom: 2em;
     justify-content: center;
 }
   #life_a, #life_b, #life_c {
@@ -416,7 +417,7 @@ img {
     width: 37%;
     display: inline;
     visibility: visible;
-    margin-bottom: -48px; 
+    margin-bottom: -102px; /* 48 */
   }
 
     
