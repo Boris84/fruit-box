@@ -395,11 +395,11 @@ img {
   }
   #life_icons {
     margin: 0 auto;
+    margin-bottom: 2em;
     justify-content: center;
 }
   #life_a, #life_b, #life_c {
     width: 60px;
-    margin-bottom: 1em;
     padding: 1em;
 }
   #death_icon {
@@ -407,7 +407,7 @@ img {
   }
     
   #groceries {
-/*    width: 40%;*/
+    width: 37%;
     display: inline;
     visibility: visible;
     margin-bottom: -33px;
