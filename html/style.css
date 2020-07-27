@@ -98,13 +98,11 @@ h5 {
   margin-bottom: 300px;
   -webkit-text-stroke: 4px black;  
 }
-/*
 section {
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
-*/
 #question {
   color: white;
   display: inline;
@@ -382,6 +380,9 @@ img {
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;  
   }
+  section {
+      
+  }
     
   #question {
     color: white;
@@ -410,7 +411,7 @@ img {
     width: 37%;
     display: inline;
     visibility: visible;
-    margin-bottom: -48px;
+    margin-bottom: -102px;
   }
 
   img {

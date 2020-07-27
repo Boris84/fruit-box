@@ -175,6 +175,8 @@ guessButton.onclick = function(){
 
 //switch function for Fruits
 function guessFruit() { 
+  isPlaying();
+
 const count = 28;
     
 let randFruit = Math.floor(Math.random() * count);    
