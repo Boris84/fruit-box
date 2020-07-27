@@ -405,10 +405,10 @@ img {
   }
     
   #groceries {
+/*    width: 40%;*/
     display: inline;
     visibility: visible;
-    margin-top: 16px;
-    margin-bottom: -50px;
+    margin-bottom: -33px;
   }
 
   img {
