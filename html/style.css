@@ -22,7 +22,7 @@ body {
   background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/source.gif);
 }
 #nav-container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
