@@ -428,6 +428,7 @@ img {
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
+    margin-bottom: 0px;
     padding: 0.3em 1em 0.3em 1.1em;
     background-color: white;
     font-family: 'Bubblegum Sans', cursive;  
@@ -440,6 +441,7 @@ img {
     font-size: 1rem;
     letter-spacing: 2px;
     border-radius: 20px;
+    margin-bottom: 0px;
     border: 2px solid black;
     padding: 0.3em 1em 0.3em 1.1em;
     box-shadow: none;
@@ -486,6 +488,8 @@ img {
     box-shadow: none;
     border-radius: 40px;
     background-color: white;
+    margin-bottom: 0px;
+
   }
     
   #fruit-btn:hover {
