@@ -328,7 +328,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    margin-bottom: 30%;
+    margin-bottom: 8em;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
@@ -410,7 +410,7 @@ img {
     width: 37%;
     display: inline;
     visibility: visible;
-    margin-bottom: -33px;
+    margin-bottom: -48px;
   }
 
   img {
