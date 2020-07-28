@@ -369,7 +369,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    margin-bottom: 30%;
+/*    margin-bottom: 30%;*/
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
@@ -438,6 +438,7 @@ img {
   }
     
   #life_icons {
+    position: relative;
     margin: 0 auto;
     justify-content: center;
   }
