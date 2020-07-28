@@ -136,21 +136,17 @@ section {
   margin-left: 5%;
 }
 
-#life_a, #life_b, #life_c {
+#life_icon_a, #life_icon_b, #life_icon_c {
   width: 5%;
   padding: 1.5em;
 }
 
 #death_icon {
-  width: 140px;
+  width: 5%;
 }
 
 #groceries {
   display: inline;
-}
-
-img {
-  width: 13.5%;
 }
 
 #kids {
@@ -367,7 +363,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-/*    margin-bottom: 30%;*/
+    margin-bottom: 20%;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
@@ -436,15 +432,14 @@ img {
   }
     
   #life_icons {
-    position: relative;
     margin: 0 auto;
+    margin-bottom: 1em;
     justify-content: center;
   }
     
-  #life_a, #life_b, #life_c {
-    width: 60px;
-    margin-bottom: 1em;
-    padding: 1em;
+  #life_icon_a, #life_icon_b, #life_icon_c {
+    width: 5%;
+    padding: 2em;
   }
     
   #death_icon {

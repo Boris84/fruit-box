@@ -101,13 +101,13 @@ let isClicked = (button) => {
 
 function checkLives(src) {
   if (lives === 2) {
-    life_c.src = 'death_icon.png';
+    life_icon_c.src = 'death_icon_c.png';
   } 
   if (lives === 1) {
-    life_b.src = 'death_icon.png';
+    life_icon_b.src = 'death_icon_b.png';
   }
   if (lives === 0) {
-    life_a.src = 'death_icon.png';
+    life_icon_a.src = 'death_icon_a.png';
     yourDead();
   }
 }
