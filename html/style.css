@@ -179,7 +179,6 @@ img {
 /*  font-weight: bold;*/
   border-radius: 40px;
   letter-spacing: 6px;
-  margin-bottom: 20px;
   border: 10px solid black;
   padding: 20px 40px 20px 40px;
   background-color: white;
@@ -195,7 +194,6 @@ img {
 /*  font-weight: bold;*/
   border-radius: 40px;
   visibility: visible;
-  margin-bottom: 20px;
   letter-spacing: 6px;
   border: 10px solid black;
   padding: 20px 40px 20px 40px; 
