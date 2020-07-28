@@ -2,9 +2,11 @@
   width: device-width;
   zoom: 1.0 ;
 }
+
 html {
   font-size: 16px;
 }
+
 body {
   width: 100%;
   margin: 0 auto;
@@ -12,6 +14,7 @@ body {
   /*border-image: url(../worm-border.png) 55 65 round;*/
   /*background-image: url(https://i.gifer.com/V9mg.gif);*/
 }
+
 #container {
   margin: 0 auto;
   text-align: center;
@@ -21,17 +24,20 @@ body {
   border: 180px ridge whitesmoke;
   background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/source.gif);
 }
+
 #nav-container {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 .nav-items {
     display: flex;
     align-items: flex-end;
 }
+
 #home, #games, #help, #myAccount {
   transition: top ease-in-out 0.3s;
   font-family: 'Bubblegum Sans', cursive;  
@@ -47,24 +53,30 @@ body {
   color: black;
   top: 0;
 }
+
 #dead-text {
   color: #ff0000;
   font-size: 9rem;
   -webkit-text-stroke: 7px black;
   font-family: 'Luckiest Guy', cursive;  
 }
+
 #home:hover {
   top: -20px;
 }
+
 #games:hover {
   top: -20px;
 }
+
 #help:hover {
   top: -20px;
 }
+
 #myAccount:hover {
   top: -20px;
 }
+
 h1 {
   color: red;
   font-size: 10rem;
@@ -74,23 +86,27 @@ h1 {
   -webkit-text-stroke: 2px black;
   font-family: 'Luckiest Guy', cursive;  
 }
+
 h2 {
   font-size: 5rem; 
   letter-spacing: 10px;
   font-family: 'Bubblegum Sans', cursive;
 }
+
 h3 {
   color: lime;
   font-size: 7rem;
   letter-spacing: 10px;
   -webkit-text-stroke: 2px black;
 }
+
 h4 {
   color: #ff0000;
   font-size: 7rem;
   letter-spacing: 10px;
   -webkit-text-stroke: 4px black;  
 }
+
 h5 {
   color: lime;
   font-size: 12rem;
@@ -98,11 +114,13 @@ h5 {
   margin-bottom: 300px;
   -webkit-text-stroke: 4px black;  
 }
+
 section {
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
+
 #question {
   color: white;
   display: inline;
@@ -112,23 +130,29 @@ section {
   -webkit-text-stroke: 2px black;  
   font-family: 'Modak', cursive;
 }
+
 #life_icons {
   display: flex;
   margin-left: 5%;
 }
+
 #life_a, #life_b, #life_c {
   width: 5%;
   padding: 1.5em;
 }
+
 #death_icon {
   width: 140px;
 }
+
 #groceries {
   display: inline;
 }
+
 img {
   width: 13.5%;
 }
+
 #kids {
   color: yellow;
   font-size: 10rem;
@@ -142,6 +166,7 @@ img {
   -webkit-text-stroke: 1px black;  
   font-family: 'Modak', cursive;
 }
+
 #fruit-images {
   display: none;
 }
@@ -161,6 +186,7 @@ img {
   box-shadow: 10px 10px 10px black;
   font-family: 'Bubblegum Sans', cursive;  
 }
+
 #next {
   color: black;
   display: none;
@@ -177,12 +203,16 @@ img {
   box-shadow: 10px 10px 10px black;
   font-family: 'Bubblegum Sans', cursive;  
 }
+
 #next:focus {outline:0;}
+
 /*gets rid of default button border */
 #guess:focus {outline:0;}
+
 #options {
   display: none;
 }
+
 /* container */
 .fruit-boxes {
   flex: 1;
@@ -198,6 +228,7 @@ img {
   background-repeat: no-repeat;
   justify-content: center;
 }
+
 /*lines inside gray boxes */
 .fruit-boxes img {
   flex: 1;
@@ -208,6 +239,7 @@ img {
   visibility: hidden;
   text-align: center;
 }
+
 /* gray boxes */
 .fruit-box {
   box-shadow: 15px 15px 5px black;
@@ -217,9 +249,11 @@ img {
   visibility: visible;
   margin: 20px;
 }
+
 #praise, #praiseImage {
   display: none;
 }
+
 #fruit-btn, #vegetable-btn {
   color: black;
   margin: 10px;
@@ -233,13 +267,16 @@ img {
   box-shadow: 10px 10px 10px black;
   border-radius: 40px;
 }
+
 #fruit-btn:hover {
   box-shadow: 12px 12px 5px black;
   transition: all 0.4s ease-in-out;
   background-color: lightseagreen;
   color: white;
 }
+
 #fruit-btn:focus {outline:0;}
+
 .vegetable-boxes {
   height: auto; 
   padding: 50px; 
@@ -248,6 +285,7 @@ img {
   font-family: cursive;
   justify-content: space-evenly;
 }
+
 .vegetable-boxes img {
   width: 500px;
   height: 400px;
@@ -255,19 +293,23 @@ img {
   padding: 40px;
   text-align: center;
 }
+
 .vegetable-box {
   box-shadow: 15px 15px 5px black;
   background-color: lightgray;
   border: 25px ridge white;
   margin: 20px;
 }
+
 #vegetable-btn:hover {
   box-shadow: 12px 12px 5px black;
   transition: all 0.4s ease-in-out;
   background-color: lightseagreen;
   color: white;
 }
+
 #vegetable-btn:focus {outline:0;}
+
 /*
 .flex-container {
   display: flex;
@@ -285,16 +327,15 @@ img {
 }
 */
  
+
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     
-/*
   @viewport {
-    width: device-width;
-    zoom: 1.0;
+    width: device-width ;
+    zoom: 1.0 ;
   }
-*/
     
   body {
     width: 100%;
@@ -328,7 +369,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    margin-bottom: 100px;
+    margin-bottom: 30%;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
@@ -370,26 +411,21 @@ img {
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;
   }
+    
   h3 {
     color: lime;
 /*    font-size: 2em;*/
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;
   }
+    
   h4 {
     color: #ff0000;
 /*    font-size: 2em;*/
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;  
   }
-/*
-  section {
-      padding: 0px;
-      margin: 0px;
-      text-align: center;
-  }
     
-*/
   #question {
     color: white;
     display: inline;
@@ -400,15 +436,18 @@ img {
     -webkit-text-stroke: 1px black;  
     font-family: 'Modak', cursive;
   }
+    
   #life_icons {
     margin: 0 auto;
-    margin-bottom: 2em;
     justify-content: center;
-}
+  }
+    
   #life_a, #life_b, #life_c {
     width: 60px;
+    margin-bottom: 1em;
     padding: 1em;
-}
+  }
+    
   #death_icon {
     width: 140px;
   }
@@ -417,9 +456,8 @@ img {
     width: 37%;
     display: inline;
     visibility: visible;
-    margin-bottom: -102px; /* 48 */
+    margin-bottom: -50px;
   }
-
     
   #guess {
     margin: 0px;
@@ -429,8 +467,7 @@ img {
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
-    margin-bottom: 0px;
-    padding: 0.3em 1em 0.3em 1.1em;
+    padding: 0.2em 1em 0.2em 1.1em;
     background-color: white;
     font-family: 'Bubblegum Sans', cursive;  
     }
@@ -442,11 +479,14 @@ img {
     font-size: 1rem;
     letter-spacing: 2px;
     border-radius: 20px;
-    margin-bottom: 0px;
     border: 2px solid black;
-    padding: 0.3em 1em 0.3em 1.1em;
+    padding: 0.2em 1em 0.2em 1.1em;
     box-shadow: none;
     font-family: 'Bubblegum Sans', cursive;  
+  }
+    
+  #fruit-images {
+  /*box-sizing: border-box;*/
   }
     
     /*container */
@@ -466,6 +506,7 @@ img {
     padding: 10px;
     text-align: center;
    }
+    
   /* gray boxes */
   .fruit-box {
     box-shadow: 5px 5px 2px black;
@@ -476,6 +517,7 @@ img {
     margin: 10px;
     width: 90px;
   }
+    
   #fruit-btn, #vegetable-btn {
     color: black;
     margin: 0 auto;
@@ -484,13 +526,12 @@ img {
     /* font-weight: bold; */
     letter-spacing: 2px;
     font-family: 'Bubblegum Sans', cursive;
-    padding: 0.3em 1em 0.3em 1.1em;
+    padding: 0.5em 1em 0.4em 1.1em;
+    padding: 0.2em 1em 0.2em 1.1em;
     border: 2px solid black;
     box-shadow: none;
     border-radius: 40px;
     background-color: white;
-    margin-bottom: 0px;
-
   }
     
   #fruit-btn:hover {
@@ -508,18 +549,22 @@ img {
     transition: none;
     background-color: white;
   }
+    
   #vegetable-btn:focus {outline:0;}
-  .vegetables {
+  
+  .vegetable-boxes {
     padding: 0px; 
   }
-  .vegetables img {
+    
+  .vegetable-boxes img {
     width: 60px;
     height: 60px;
     margin: 2px;
     padding: 10px;
     text-align: center;
   }
-  .vegetable {
+    
+  .vegetable-box {
     box-shadow: 5px 5px 2px black;
     background-color: lightgray;
     border: 0.3em ridge white;

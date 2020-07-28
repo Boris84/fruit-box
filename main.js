@@ -1,4 +1,3 @@
-
 let fruitImage1 = document.getElementById('Squash');
 let fruitImage2 = document.getElementById('Orange');
 let fruitImage3 = document.getElementById('Banana');
@@ -15,7 +14,6 @@ let fruitImage13 = document.getElementById('Peanuts');
 let fruitImage14 = document.getElementById('Aubergine');
 let fruitImage15 = document.getElementById('Pepper');
 let fruitImage16 = document.getElementById('Sweetcorn');
-
 let fruitImage17 = document.getElementById('Potato');
 let fruitImage18 = document.getElementById('Onion');
 let fruitImage19 = document.getElementById('Mushrooms');
@@ -45,7 +43,6 @@ let box13 = document.getElementById('_Peanuts');
 let box14 = document.getElementById('_Aubergine');
 let box15 = document.getElementById('_Pepper');
 let box16 = document.getElementById('_Sweetcorn');
-
 let item1 = document.getElementById('_Potato');
 let item2 = document.getElementById('_Onion');
 let item3 = document.getElementById('_Mushrooms');
@@ -57,6 +54,7 @@ let item8 = document.getElementById('_Garlic');
 let item9 = document.getElementById('_Carrot');
 let item10 = document.getElementById('_Radish');
 let item11 = document.getElementById('_Zucchini');
+
 let item12 = document.getElementById('_Turnip');
 let life_a = document.getElementById('life_a');
 let life_b = document.getElementById('life_b');
@@ -84,54 +82,42 @@ let looser = document.getElementById('you_loose');
 let bumblebee = document.getElementById('bumblebee');
 let correct = document.getElementById('correct');
 let game_over_music = document.getElementById('game_over');
-
 let deadText = document.getElementById('dead-text');
 let life_icons = document.getElementById('life_icons');
-let lives = 2;
 
+
+let lives = 2;
 let currentlyPlaying = true;
 
-function isPlaying(currentlyPlaying){
-  if (currentlyPlaying){
-    return true;
-  } else {
-    return false;
-  }
-}
 
 let isClicked = (button) => {
-  if (isPlaying(currentlyPlaying) && button){
+  if (button) {
     return true;
   } else {
     return false;
   }
 }
 
-function checkLives(src){
-  isPlaying();
-    
-  if (currentlyPlaying && lives === 2){
-    life_c.src = 'death_icon_c.png';
+
+function checkLives(src) {
+  if (lives === 2) {
+    life_c.src = 'death_icon.png';
   } 
-  if (currentlyPlaying && lives === 1){
-    life_b.src = 'death_icon_b.png';
+  if (lives === 1) {
+    life_b.src = 'death_icon.png';
   }
-  if (currentlyPlaying && lives === 0){
-    life_a.src = 'death_icon_a.png';
+  if (lives === 0) {
+    life_a.src = 'death_icon.png';
     yourDead();
   }
 }
 
-function yourDead(){
 
-  currentlyPlaying = false;
-    
-  if (isPlaying(!currentlyPlaying)){
-    sound.pause();
-  }
+function yourDead() {
   let query = window.matchMedia("(max-width: 600px)");
-    
   if (query.matches) {
+    currentlyPlaying = false;
+    sound.pause();
     game_over_music.play();
     question.style.display = 'none';
     groceries.style.marginTop = "-30px";
@@ -139,13 +125,12 @@ function yourDead(){
     nextButton.style.border = 'none';
     nextButton.style.boxShadow = 'none';
     nextButton.style.cursor = 'auto';
-    nextButton.onclick = false;
     kids.style.color = 'white';
     nextButton.style.background = 'transparent';
-    container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     deadText.innerHTML = 'GAME OVER !!!';
     looser.play();  
   } else {
+    sound.pause();
     game_over_music.play();
     container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     question.style.display = 'none';
@@ -155,27 +140,32 @@ function yourDead(){
   }
 }
 
-function youWin(){
-currentlyPlaying = false;
-
-  if (isPlaying(!currentlyPlaying)){
+function youWin() {
+  currentlyPlaying = false;
+  if (!currentlyPlaying) {
     sound.pause();
     cheer.play();
     win.play();
   }
 }
 
-guessButton.onclick = function(){ 
-//  sound.play();
+guessButton.onclick = function() { 
+
+  setInterval(function(){   
+//    sound.play();
+    console.log('hello');
+  }, 46 * 1000);
+
   click.play();
   bumblebee.play();
-  guessFruit()
+  guessFruit();
 }
+
+
 
 
 //switch function for Fruits
 function guessFruit() { 
-  isPlaying();
 
 const count = 28;
     
@@ -211,8 +201,8 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -247,8 +237,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -300,8 +291,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -335,8 +327,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -387,8 +380,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -425,8 +419,9 @@ let randFruit = Math.floor(Math.random() * count);
             
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -478,8 +473,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -513,8 +509,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -565,8 +562,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -600,8 +598,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -652,8 +651,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -687,8 +687,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -739,8 +740,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -774,8 +776,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
         if (query.matches) {
           groceries.src = 'angry_bee.gif';
-          groceries.style.marginTop = "50px";
-          groceries.style.marginBottom = "-16px";
+          groceries.style.marginTop = "90px";
+          groceries.style.marginBottom = "25px";
+          groceries.style.marginBottom = "13px";
           question.style.color = '#ff0000';
           question.style.fontSize = "1.7rem";
           guessButton.style.display = 'none';
@@ -826,8 +829,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -862,8 +866,9 @@ let randFruit = Math.floor(Math.random() * count);
         
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -914,8 +919,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -950,8 +956,9 @@ let randFruit = Math.floor(Math.random() * count);
       
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1002,8 +1009,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1037,8 +1045,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1089,8 +1098,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1125,8 +1135,9 @@ let randFruit = Math.floor(Math.random() * count);
         
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1176,8 +1187,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1212,8 +1224,9 @@ let randFruit = Math.floor(Math.random() * count);
       
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1264,8 +1277,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1300,8 +1314,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1352,8 +1367,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1388,8 +1404,9 @@ let randFruit = Math.floor(Math.random() * count);
             
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1440,8 +1457,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1476,8 +1494,9 @@ let randFruit = Math.floor(Math.random() * count);
               
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1528,8 +1547,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1563,8 +1583,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1616,8 +1637,9 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = 'bee.gif';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
-      groceries.style.marginTop = "50px";
-      groceries.style.marginBottom = "-16px";
+      groceries.style.marginTop = "90px";
+      groceries.style.marginBottom = "25px";
+      groceries.style.marginBottom = "13px";
       question.style.color = 'lime';
       question.style.fontSize = "1.7rem";
       question.innerHTML = 'RIGHT';
@@ -1649,8 +1671,9 @@ let randFruit = Math.floor(Math.random() * count);
       let query = window.matchMedia("(max-width: 600px)");
     if (query.matches) {
       groceries.src = 'angry_bee.gif';
-      groceries.style.marginTop = "50px";
-      groceries.style.marginBottom = "-16px";
+      groceries.style.marginTop = "90px";
+      groceries.style.marginBottom = "25px";
+      groceries.style.marginBottom = "13px";
       question.style.color = '#ff0000';
       question.style.fontSize = "1.7rem";
       guessButton.style.display = 'none';
@@ -1701,8 +1724,9 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.src = 'bee.gif';
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
-       groceries.style.marginTop = "50px";
-       groceries.style.marginBottom = "-16px";
+       groceries.style.marginTop = "90px";
+       groceries.style.marginBottom = "25px";
+       groceries.style.marginBottom = "13px";
        question.style.color = 'lime';
        question.style.fontSize = "1.7rem";
        question.innerHTML = 'RIGHT';
@@ -1734,8 +1758,9 @@ let randFruit = Math.floor(Math.random() * count);
        let query = window.matchMedia("(max-width: 600px)");
      if (query.matches) {
        groceries.src = 'angry_bee.gif';
-       groceries.style.marginTop = "50px";
-       groceries.style.marginBottom = "-16px";
+       groceries.style.marginTop = "90px";
+       groceries.style.marginBottom = "25px";
+       groceries.style.marginBottom = "13px";
        question.style.color = '#ff0000';
        question.style.fontSize = "1.7rem";
        guessButton.style.display = 'none';
@@ -1786,8 +1811,9 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.src = 'bee.gif';
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
-       groceries.style.marginTop = "50px";
-       groceries.style.marginBottom = "-16px";
+       groceries.style.marginTop = "90px";
+       groceries.style.marginBottom = "25px";
+       groceries.style.marginBottom = "13px";
        question.style.color = 'lime';
        question.style.fontSize = "1.7rem";
        question.innerHTML = 'RIGHT';
@@ -1818,8 +1844,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1870,8 +1897,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1902,8 +1930,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -1954,8 +1983,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -1986,8 +2016,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -2039,8 +2070,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -2071,8 +2103,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -2123,8 +2156,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -2155,8 +2189,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -2207,8 +2242,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -2239,8 +2275,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -2291,8 +2328,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -2323,8 +2361,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -2375,8 +2414,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -2407,8 +2447,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -2459,8 +2500,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -2491,8 +2533,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -2543,8 +2586,9 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = 'lime';
         question.style.fontSize = "1.7rem";
         question.innerHTML = 'RIGHT';
@@ -2575,8 +2619,9 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
-        groceries.style.marginTop = "50px";
-        groceries.style.marginBottom = "-16px";
+        groceries.style.marginTop = "90px";
+        groceries.style.marginBottom = "25px";
+        groceries.style.marginBottom = "13px";
         question.style.color = '#ff0000';
         question.style.fontSize = "1.7rem";
         guessButton.style.display = 'none';
@@ -2594,29 +2639,16 @@ let randFruit = Math.floor(Math.random() * count);
         container.style.border = '180px groove #ff0000';
         }
       }; 
-     }
-    }
-   }
-    
-       let query = window.matchMedia("(max-width: 600px)");
-       if (query.matches) {
-         currentlyPlaying = true;
-         guessButton.style.border = 'none';
-         groceries.style.marginTop = '50px';
-         groceries.style.marginBottom = "-22px";
-         guessButton.style.boxShadow = 'none';
-         guessButton.style.background = 'none';  
-       } else {
-         currentlyPlaying = true;
-         guessButton.style.border = 'none';
-         groceries.style.marginTop = '100px';
-         guessButton.style.boxShadow = 'none';
-         guessButton.style.background = 'none';
     }
   }
-
-
-
+      
+  }
+        currentlyPlaying = true;
+        guessButton.style.border = 'none';
+        groceries.style.marginTop = '100px';
+        guessButton.style.boxShadow = 'none';
+        guessButton.style.background = 'none';
+  }
   nextButton.onclick = function() {
       
     let query = window.matchMedia("(max-width: 600px)");
@@ -2630,8 +2662,10 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = 'bee.gif';
       question.style.fontSize = "1.5rem";
       question.style.color = 'white';
-      groceries.style.marginTop = "54px";
-      groceries.style.marginBottom = "-18px";
+      groceries.style.marginTop = "95px";
+      groceries.style.marginBottom = "23px";
+      groceries.style.marginTop = "96px";
+      groceries.style.marginBottom = "13px";
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
@@ -2659,7 +2693,9 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.boxShadow = "12px 12px 7px black";
       kids.style.color = "yellow";
     }
-  
+      
+      
+      
       
       if (query.matches) {
         fruitList.forEach(function(fruit) {
@@ -2678,61 +2714,60 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         guessFruit();
       };
-  }
+   }
   
 function gameOver() {
-
-    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src ===                       fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src ===               fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
-      
+    
+    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src ===           fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src ===               fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+        
     let query = window.matchMedia("(max-width: 600px)");
 
     if (query.matches) {
-      youWin();
-      currentlyPlaying = false;
-      container.style.backgroundImage = 'url(test.gif)';    
-      guessButton.style.display = 'none';
-      nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
-      nextButton.style.fontSize = "0.8rem";
-      nextButton.style.backgroundColor = 'transparent';
-      nextButton.style.border = 'none';
-      nextButton.style.color = 'black';
-      nextButton.style.margin = "20px";
-      nextButton.style.cursor = 'pointer';
-      nextButton.style.boxShadow = 'none';
-      nextButton.onclick = false;
-      //question.style.display = 'none';
-      groceries.style.marginTop = "40px";
-      groceries.src = 'banana_man.gif';
-      //groceries.style.visibility = 'hidden';
-      //navContainer.style.backgroundImage = 'url(.gif)';
-      question.innerHTML = 'AWESOME!!';   
-      question.style.fontSize = "2rem";
-      question.style.color = 'lime';    
-  
-    } else {
-      youWin();
-      currentlyPlaying = false;
-      container.style.border = "180px ridge lime";  
-      guessButton.style.display = 'none';
-      nextButton.style.letterSpacing = "8px";
-      nextButton.style.fontSize = "60px";
-      nextButton.style.backgroundColor = 'transparent';
-      nextButton.style.boxShadow = 'none';
-      nextButton.style.border = 'none';
-      nextButton.style.color = 'black';
-      nextButton.style.cursor = 'pointer';
-      nextButton.onclick = false;
-      nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
-      groceries.style.width = "20%";
-      groceries.style.marginTop = "15px";
-      groceries.src = 'banana_man_pc.gif';
-      //groceries.style.visibility = 'hidden';
-      //navContainer.style.backgroundImage = 'url(.gif)';
-      container.style.backgroundImage = 'url(test.gif)';
-      question.style.fontSize = "8rem";
-      question.style.letterSpacing = "10px";
-      question.innerHTML = 'AWESOME !!!';
-      //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
-     }
-    }
-  };
+        
+    sound.pause();
+    youWin();
+    currentlyPlaying = false;
+    container.style.backgroundImage = 'url(test.gif)';    
+    guessButton.style.display = 'none';
+    nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+    nextButton.style.fontSize = "0.6rem";
+    nextButton.style.backgroundColor = 'transparent';
+    nextButton.style.border = 'none';
+    nextButton.style.color = 'black';
+    nextButton.style.margin = "30px";
+    nextButton.style.cursor = "auto";
+    nextButton.onclick = false;
+    //question.style.display = 'none';
+    groceries.style.marginTop = "40px";
+    groceries.style.marginBottom = "-60px";
+    groceries.src = 'banana_man.gif';
+    //groceries.style.visibility = 'hidden';
+    //navContainer.style.backgroundImage = 'url(.gif)';
+    question.innerHTML = 'AWESOME !!';   
+    question.style.fontSize = "1.7rem";
+    question.style.color = 'lime';
+
+
+  } else {
+      
+    sound.pause();
+    youWin();
+    currentlyPlaying = false;
+    container.style.border = "180px ridge lime";  
+    guessButton.style.display = 'none';
+    nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+    nextButton.style.fontSize = "60px";
+    nextButton.style.backgroundColor = 'khaki';
+    nextButton.style.border = '20px ridge whitesmoke';
+    nextButton.style.color = 'black';
+    //question.style.display = 'none';
+    groceries.style.marginTop = "10px";
+    groceries.src = 'aubergine_man.gif';
+    //groceries.style.visibility = 'hidden';
+    //navContainer.style.backgroundImage = 'url(.gif)';
+    container.style.backgroundImage = 'url(test.gif)';
+    question.style.innerHTML = 'AWESOME!!!';
+    //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
+   }
+  }
+};
