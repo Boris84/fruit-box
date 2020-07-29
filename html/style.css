@@ -364,7 +364,7 @@ section {
   }
     
   #nav-container {
-    width: 90%;
+/*    width: 100%;*/
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
@@ -443,7 +443,7 @@ section {
   }
     
   #life_a, #life_b, #life_c {
-    width: 13%;
+    width: 20%;
     padding: 6px;
   }
     
