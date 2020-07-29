@@ -350,6 +350,12 @@ section {
     background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/source.gif);
   }
     
+    .main-container {
+        margin-top: 200px;
+        margin-bottom: -120px;
+        height: 800px;
+    }
+    
   #kids {
     width: 100%;
     /*line-height: 1;*/
