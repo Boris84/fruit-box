@@ -1,7 +1,9 @@
+/*
 @viewport {
   width: device-width;
   zoom: 1.0 ;
 }
+*/
 
 html {
   font-size: 16px;
@@ -10,7 +12,6 @@ html {
 body {
   width: 100%;
   margin: 0 auto;
- 
   /*border-image: url(../worm-border.png) 55 65 round;*/
   /*background-image: url(https://i.gifer.com/V9mg.gif);*/
 }
@@ -34,8 +35,8 @@ body {
 }
 
 .nav-items {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 #home, #games, #help, #myAccount {
@@ -136,7 +137,7 @@ section {
   margin-left: 5%;
 }
 
-#life_icon_a, #life_icon_b, #life_icon_c {
+#life_a, #life_b, #life_c {
   width: 5%;
   padding: 1.5em;
 }
@@ -146,7 +147,8 @@ section {
 }
 
 #groceries {
-  display: inline;
+  width: 13%;
+  display: inline;    
 }
 
 #kids {
@@ -172,7 +174,7 @@ section {
   display: inline;
   cursor: pointer;
   font-size: 50px;
-/*  font-weight: bold;*/
+  position: relative;
   border-radius: 40px;
   letter-spacing: 6px;
   border: 10px solid black;
@@ -187,7 +189,7 @@ section {
   display: none;
   cursor: pointer;
   font-size: 50px;
-/*  font-weight: bold;*/
+  position: relative;
   border-radius: 40px;
   visibility: visible;
   letter-spacing: 6px;
@@ -209,8 +211,7 @@ section {
 
 /* container */
 .fruit-boxes {
-  flex: 1;
-  padding: 30px;
+  margin: 30px;
   display: flex;
   max-width: 70%;
   margin: 0 auto;
@@ -225,9 +226,8 @@ section {
 
 /*lines inside gray boxes */
 .fruit-boxes img {
-  flex: 1;
   width: 500px;
-  height: 400px;
+  height: 440px;
   margin: 50px;
   padding: 40px;
   visibility: hidden;
@@ -325,11 +325,16 @@ section {
 /* Media Queries */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    
+   
   @viewport {
     width: device-width ;
     zoom: 1.0 ;
   }
+    
+   html {
+      margin: 0;
+      padding: 0;
+    } 
     
   body {
     width: 100%;
@@ -347,7 +352,7 @@ section {
     
   #kids {
     width: 100%;
-/*    line-height: 1;*/
+    /*line-height: 1;*/
     font-size: 2.5rem;
     text-align: center;
     letter-spacing: 3px; 
@@ -433,13 +438,13 @@ section {
     
   #life_icons {
     margin: 0 auto;
-    margin-bottom: 1em;
+    margin-bottom: 20px;
     justify-content: center;
   }
     
-  #life_icon_a, #life_icon_b, #life_icon_c {
-    width: 5%;
-    padding: 2em;
+  #life_a, #life_b, #life_c {
+    width: 10%;
+    padding: 6px;
   }
     
   #death_icon {
@@ -450,7 +455,7 @@ section {
     width: 37%;
     display: inline;
     visibility: visible;
-    margin-bottom: -50px;
+    margin-bottom: -55px;
   }
     
   #guess {
