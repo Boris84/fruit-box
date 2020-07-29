@@ -443,7 +443,7 @@ section {
   }
     
   #life_a, #life_b, #life_c {
-    width: 20%;
+    width: 18%;
     padding: 6px;
   }
     
@@ -455,7 +455,7 @@ section {
     width: 37%;
     display: inline;
     visibility: visible;
-    margin-bottom: -55px;
+    margin-bottom: -33px;
   }
     
   #guess {
