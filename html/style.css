@@ -368,7 +368,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    margin-bottom: 20%;
+    margin-bottom: 100px;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
@@ -443,7 +443,7 @@ section {
   }
     
   #life_a, #life_b, #life_c {
-    width: 11.5%;
+    width: 13%;
     padding: 6px;
   }
     
