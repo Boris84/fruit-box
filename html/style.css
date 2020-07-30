@@ -425,6 +425,10 @@ section {
     -webkit-text-stroke: 2px black;  
   }
     
+  section {
+    width: 80%;
+  }
+    
   #question {
     color: white;
     display: inline;
@@ -438,7 +442,7 @@ section {
     
   #life_icons {
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     justify-content: center;
   }
     
