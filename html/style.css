@@ -116,11 +116,6 @@ h5 {
   -webkit-text-stroke: 4px black;  
 }
 
-section {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
 
 #question {
   color: white;
@@ -424,10 +419,7 @@ section {
     letter-spacing: 4px;
     -webkit-text-stroke: 2px black;  
   }
-    
-  section {
-    width: 80%;
-  }
+
     
   #question {
     color: white;
@@ -442,7 +434,7 @@ section {
     
   #life_icons {
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     justify-content: center;
   }
     
@@ -459,7 +451,7 @@ section {
     width: 37%;
     display: inline;
     visibility: visible;
-    margin-bottom: -30px;
+    margin-bottom: 25px;
   }
     
   #guess {
