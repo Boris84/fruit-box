@@ -2790,7 +2790,7 @@ function gameOver() {
       question.style.fontSize = "8rem";
       question.style.letterSpacing = "10px";
       question.innerHTML = 'AWESOME !!!';
-      //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
+      //document.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
      }
     }
   };
