@@ -2403,7 +2403,6 @@ let randFruit = Math.floor(Math.random() * count);
       currentlyPlaying = true;
       question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
-      groceries.style.marginTop = "40px";
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
