@@ -697,7 +697,6 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = 'RIGHT';
-        container.style.border = '15px ridge lime';
         fruitList[6].style.border = '0.3em ridge lime';
         box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
