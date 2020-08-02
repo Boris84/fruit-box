@@ -435,7 +435,9 @@ img {
     
     /*container */
   .fruit-boxes {
+    width: 90%;
     padding: 0px;
+    margin: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
