@@ -303,7 +303,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 15px ridge whitesmoke;
+    border: none;
     background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/source.gif);
   }
     
