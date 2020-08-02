@@ -124,45 +124,39 @@ function checkLives(src){
 
 
 
-function yourDead() {
+function yourDead(){
 
-currentlyPlaying = false;
+  currentlyPlaying = false;
     
   if (isPlaying(!currentlyPlaying)){
     sound.pause();
   }
-    
   let query = window.matchMedia("(max-width: 600px)");
     
   if (query.matches) {
-    currentlyPlaying = false;
     game_over_music.play();
     question.style.display = 'none';
     groceries.style.marginTop = "-30px";
-    container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     nextButton.innerHTML = 'click "home" to try again';
-    nextButton.style.background = 'transparent';
     nextButton.style.border = 'none';
     nextButton.style.boxShadow = 'none';
     nextButton.style.cursor = 'auto';
+    nextButton.onclick = false;
     kids.style.color = 'white';
+    nextButton.style.background = 'transparent';
+    container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     deadText.innerHTML = 'GAME OVER !!!';
     looser.play();  
   } else {
-    currentlyPlaying = false;
     game_over_music.play();
-    question.style.display = 'none';
-    nextButton.style.boxShadow = 'none';
-    nextButton.style.background = 'transparent';
-    nextButton.style.fontSize = "3.7rem";
-    nextButton.style.border = 'none';
-    nextButton.style.cursor = 'auto';
-    nextButton.innerHTML = 'click "home" to try again';
     container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
+    question.style.display = 'none';
+    nextButton.style.visibility = 'hidden';
     deadText.innerHTML = 'GAME OVER !!!';
     looser.play();
   }
 }
+
 
 function youWin() {
   currentlyPlaying = false;
@@ -2405,68 +2399,58 @@ let randFruit = Math.floor(Math.random() * count);
 
   
 function gameOver() {
-    
-    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
-        
+
+    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+      
     let query = window.matchMedia("(max-width: 600px)");
 
     if (query.matches) {
-        
-    sound.pause();
-    youWin();
-    currentlyPlaying = false;
-    container.style.backgroundImage = 'url(test.gif)';    
-    guessButton.style.display = 'none';
-    nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
-    nextButton.style.fontSize = "0.6rem";
-    nextButton.style.backgroundColor = 'transparent';
-    nextButton.style.border = 'none';
-    nextButton.style.color = 'black';
-    nextButton.style.margin = "30px";
-    nextButton.style.cursor = "auto";
-    nextButton.boxShadow = 'none';
-    nextButton.onclick = false;
-    //question.style.display = 'none';
-    groceries.style.marginTop = "40px";
-    groceries.style.marginBottom = "-60px";
-    groceries.src = 'banana_man.gif';
-    //groceries.style.visibility = 'hidden';
-    //navContainer.style.backgroundImage = 'url(.gif)';
-    question.innerHTML = 'AWESOME !!';   
-    question.style.fontSize = "1.7rem";
-    question.style.color = 'lime';
-    kids.style.color = 'white';
-
-        
-  } else {
-      
-    sound.pause();
-    youWin();
-    currentlyPlaying = false;
-    container.style.border = "180px ridge lime";  
-    guessButton.style.display = 'none';
-    nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
-    nextButton.style.fontSize = "60px";
-    nextButton.style.border = 'none';
-    nextButton.style.backgroundColor = 'transparent';
-    nextButton.style.border = 'none';
-    nextButton.style.cursor = "auto";
-    nextButton.style.color = 'black';
-    nextButton.style.boxShadow = 'none';
-    nextButton.onclick = false;  
-    //question.style.display = 'none';
-    groceries.style.marginTop = "30px";
-    groceries.src = 'banana_man_pc.gif';
-    groceries.style.width = "15%";
-    question.style.fontSize = "7rem";
-    question.innerHTML = 'AWESOME !!!';   
-    question.style.color = 'lime';
-    kids.style.color = 'lime';
-    //groceries.style.visibility = 'hidden';
-    //navContainer.style.backgroundImage = 'url(.gif)';
-    container.style.backgroundImage = 'url(test.gif)';
-    question.style.innerHTML = 'AWESOME!!!';
-    //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
-   }
-  }
-};
+      youWin();
+      currentlyPlaying = false;
+      container.style.backgroundImage = 'url(test.gif)';    
+      guessButton.style.display = 'none';
+      nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+      nextButton.style.fontSize = "0.8rem";
+      nextButton.style.backgroundColor = 'transparent';
+      nextButton.style.border = 'none';
+      nextButton.style.color = 'black';
+      nextButton.style.margin = "20px";
+      nextButton.style.cursor = 'pointer';
+      nextButton.style.boxShadow = 'none';
+      nextButton.onclick = false;
+      //question.style.display = 'none';
+      groceries.style.marginTop = "40px";
+      groceries.src = 'banana_man.gif';
+      //groceries.style.visibility = 'hidden';
+      //navContainer.style.backgroundImage = 'url(.gif)';
+      question.innerHTML = 'AWESOME!!';   
+      question.style.fontSize = "2rem";
+      question.style.color = 'lime';    
+  
+    } else {
+      youWin();
+      currentlyPlaying = false;
+      container.style.border = "180px ridge lime";  
+      guessButton.style.display = 'none';
+      nextButton.style.letterSpacing = "8px";
+      nextButton.style.fontSize = "60px";
+      nextButton.style.backgroundColor = 'transparent';
+      nextButton.style.boxShadow = 'none';
+      nextButton.style.border = 'none';
+      nextButton.style.color = 'black';
+      nextButton.style.cursor = 'pointer';
+      nextButton.onclick = false;
+      nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+      groceries.style.width = "20%";
+      groceries.style.marginTop = "15px";
+      groceries.src = 'banana_man_pc.gif';
+      //groceries.style.visibility = 'hidden';
+      //navContainer.style.backgroundImage = 'url(.gif)';
+      container.style.backgroundImage = 'url(test.gif)';
+      question.style.fontSize = "8rem";
+      question.style.letterSpacing = "10px";
+      question.innerHTML = 'AWESOME !!!';
+      //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
+     }
+    }
+  };
