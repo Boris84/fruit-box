@@ -391,7 +391,6 @@ img {
   #death_icon {
     width: 140px;
   }
-    
  
   #groceries {
     display: inline;
@@ -400,8 +399,8 @@ img {
     margin-top: 30px;
     margin-bottom: -35px;
 */
-    margin-top: 40px;
-    margin-bottom: -120px;
+/*    margin-top: 40px;*/
+    margin-bottom: -80px;
 
 }
 

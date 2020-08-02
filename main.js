@@ -2503,7 +2503,7 @@ let randFruit = Math.floor(Math.random() * count);
       
   }
         guessButton.style.border = 'none';
-//        groceries.style.marginTop = '100px';
+        groceries.style.marginTop = '40px';
         groceries.style.marginBottom ="0px";
         guessButton.style.boxShadow = 'none';
         guessButton.style.background = 'none';
