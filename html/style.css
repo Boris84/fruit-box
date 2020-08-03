@@ -317,13 +317,14 @@ section {
     
     
   #container {
+    width: 100%;
     margin: 0 auto;
     height: 0 auto;
     border: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(https://media1.giphy.com/media/2ilGlSa5yjWhVnOpeU/source.gif); 
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5543647be4b00dafb2652b4a/1562325330240-QDB1GATUUEX796KNO70A/ke17ZwdGBToddI8pDm48kCxghu66RuxdcE1za67s-wJZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzOsKD2MMBYfulDydqX_a7PudIt55CjEe9NfBvbkOOHXmWmQKoQs3OEaoPDq0Fb7qM/Lowes_Seed_02_ANIM_V4.gif); 
 /*
     height: 800px;
 */

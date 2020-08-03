@@ -142,7 +142,7 @@ function yourDead(){
     nextButton.style.boxShadow = 'none';
     nextButton.style.cursor = 'auto';
     nextButton.onclick = false;
-    kids.style.color = 'white';
+    kids.style.color = '#ff0000';
     nextButton.style.background = 'transparent';
     container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     deadText.innerHTML = 'GAME OVER !!!';
@@ -151,6 +151,7 @@ function yourDead(){
     game_over_music.play();
     container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     question.style.display = 'none';
+    kids.style.color = '#ff0000';
     nextButton.style.visibility = 'hidden';
     deadText.innerHTML = 'GAME OVER !!!';
     looser.play();
