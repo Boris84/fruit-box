@@ -142,7 +142,7 @@ function yourDead(){
     nextButton.style.boxShadow = 'none';
     nextButton.style.cursor = 'auto';
     nextButton.onclick = false;
-    kids.style.color = '#ff0000';
+    kids.style.color = 'white';
     nextButton.style.background = 'transparent';
     container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     deadText.innerHTML = 'GAME OVER !!!';
@@ -151,7 +151,7 @@ function yourDead(){
     game_over_music.play();
     container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     question.style.display = 'none';
-    kids.style.color = '#ff0000';
+    kids.style.color = 'white';
     nextButton.style.visibility = 'hidden';
     deadText.innerHTML = 'GAME OVER !!!';
     looser.play();
@@ -2466,6 +2466,7 @@ function gameOver() {
       guessButton.style.display = 'none';
       nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
       nextButton.style.fontSize = "0.8rem";
+      nextButton.style.lineHeight = "1.6";
       nextButton.style.backgroundColor = 'transparent';
       nextButton.style.border = 'none';
       nextButton.style.color = 'black';
@@ -2478,7 +2479,7 @@ function gameOver() {
       groceries.src = 'banana_man.gif';
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
-      question.innerHTML = 'AWESOME!!';   
+      question.innerHTML = 'AWESOME!!!';   
       question.style.fontSize = "2rem";
       question.style.color = 'lime';    
   
