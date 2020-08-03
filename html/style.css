@@ -324,12 +324,12 @@ section {
   #container {
 /*    width: 90%;*/
     margin: auto;
-    height: 1070px;
+    height: 1000px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border: none;
-    background-image: url(https://www.pinclipart.com/picdir/big/154-1549151_picture-royalty-free-download-amazing-vegetable-garden-garden.png);
+    background-image: url(https://media1.giphy.com/media/2ilGlSa5yjWhVnOpeU/source.gif);
   }
     
   #kids {
@@ -354,7 +354,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    margin-bottom: 20%;
+    margin-bottom: 30%;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
