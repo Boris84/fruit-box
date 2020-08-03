@@ -309,7 +309,7 @@ section {
 @media only screen and (max-width: 600px) {
    body {
      width: 100%;
-     height: 920px;
+     height: auto;
      margin: 0 auto;
      background-size: cover;
      background-position: center;
@@ -321,16 +321,15 @@ section {
     
     
   #container {
-/*    width: 90%;*/
-/*
     margin: auto;
+    border: none;
+    background-image: none; 
+/*
     height: 800px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 */
-    border: none;
-    background-image: none;
   }
     
   #kids {
