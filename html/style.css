@@ -309,7 +309,6 @@ section {
 @media only screen and (max-width: 600px) {
    body {
      width: 100%;
-     height: auto;
      margin: 0 auto;
     /*border-image: url(../worm-border.png) 55 65 round;*/
     /*background-image: url(https://i.gifer.com/V9mg.gif);*/
@@ -319,7 +318,7 @@ section {
   #container {
     width: 100%;
     margin: 0 auto;
-    height: 0 auto;
+    height: 930px;
     border: none;
     background-size: cover;
     background-position: center;
@@ -350,7 +349,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    margin-bottom: 30%;
+    margin-bottom: 20%;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;

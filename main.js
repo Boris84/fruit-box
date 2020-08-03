@@ -2410,7 +2410,6 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.display = 'inline';
       guessButton.innerHTML = 'guess';
       guessButton.style.border = '2px solid black';
-      guessButton.style.boxShadow = "2px 2px 2px black";
       kids.style.color = "white"; 
       
     } else {
