@@ -311,24 +311,21 @@ section {
      width: 100%;
      height: auto;
      margin: 0 auto;
-     background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
-     background-image: url(https://media1.giphy.com/media/2ilGlSa5yjWhVnOpeU/source.gif);
     /*border-image: url(../worm-border.png) 55 65 round;*/
     /*background-image: url(https://i.gifer.com/V9mg.gif);*/
     } 
     
     
   #container {
-    margin: auto;
+    margin: 0 auto;
+    height: 0 auto;
     border: none;
-    background-image: none; 
-/*
-    height: 800px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: url(https://media1.giphy.com/media/2ilGlSa5yjWhVnOpeU/source.gif); 
+/*
+    height: 800px;
 */
   }
     
