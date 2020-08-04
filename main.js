@@ -218,6 +218,7 @@ let randFruit = Math.floor(Math.random() * count);
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerHTML = 'RIGHT!!';
+        question.style.fontFamily =  'Luckiest Guy';
         question.style.color = 'lime';
         fruitList[0].style.border = '0.3em ridge lime';
         box1.style.visibility = 'visible';
