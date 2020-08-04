@@ -2534,7 +2534,7 @@ let randFruit = Math.floor(Math.random() * count);
   
 function gameOver() {
 
-    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+    if (box1.src === fruitImage1.src) {
       
     let query = window.matchMedia("(max-width: 600px)");
 
@@ -2545,7 +2545,7 @@ function gameOver() {
       guessButton.style.display = 'none';
       nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
       nextButton.style.fontSize = "0.8rem";
-      nextButton.style.lineHeight = "1.6";
+      nextButton.style.lineHeight = "2.1";
       nextButton.style.backgroundColor = 'transparent';
       nextButton.style.border = 'none';
       nextButton.style.color = 'black';
@@ -2554,12 +2554,13 @@ function gameOver() {
       nextButton.style.boxShadow = 'none';
       nextButton.onclick = false;
       //question.style.display = 'none';
-      groceries.style.width = "40%";
+      groceries.style.width = "45%";
       groceries.style.marginTop = "40px";
       groceries.src = 'banana_man.gif';
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
-      question.innerHTML = 'AWESOME !!!';   
+      question.innerHTML = 'AWESOME !!';   
+//      question.style.fontFamily = 'Modak', 'cursive';
       question.style.fontSize = "2em";
       question.style.color = 'lime';    
   
