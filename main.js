@@ -169,7 +169,7 @@ function youWin() {
 
 
 guessButton.onclick = function(){ 
-//  sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -2554,6 +2554,7 @@ function gameOver() {
       nextButton.style.boxShadow = 'none';
       nextButton.onclick = false;
       //question.style.display = 'none';
+      groceries.style.width = "40%";
       groceries.style.marginTop = "40px";
       groceries.src = 'banana_man.gif';
       //groceries.style.visibility = 'hidden';
