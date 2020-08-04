@@ -169,7 +169,7 @@ function youWin() {
 
 
 guessButton.onclick = function(){ 
-//  sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -2534,7 +2534,7 @@ let randFruit = Math.floor(Math.random() * count);
   
 function gameOver() {
 
-    if (box1.src === fruitImage1.src) {
+    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
       
     let query = window.matchMedia("(max-width: 600px)");
 
@@ -2554,7 +2554,7 @@ function gameOver() {
       nextButton.style.boxShadow = 'none';
       nextButton.onclick = false;
       //question.style.display = 'none';
-      groceries.style.width = "38%";
+      groceries.style.width = "50%";
       groceries.style.marginTop = "40px";
       groceries.src = 'banana_man.gif';
       //groceries.style.visibility = 'hidden';
