@@ -119,7 +119,7 @@ function checkLives(src){
   if (currentlyPlaying && lives === 0){
     life_a.src = 'death_icon_a.png';
     yourDead();
-  }
+  } 
 }
 
 
@@ -169,7 +169,7 @@ function youWin() {
 
 
 guessButton.onclick = function(){ 
-  sound.play();
+//  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -2554,11 +2554,12 @@ function gameOver() {
       nextButton.style.boxShadow = 'none';
       nextButton.onclick = false;
       //question.style.display = 'none';
-      groceries.style.width = "45%";
+      groceries.style.width = "38%";
       groceries.style.marginTop = "40px";
       groceries.src = 'banana_man.gif';
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
+      question.style.letterSpacing = "2px";
       question.innerHTML = 'AWESOME !!';   
 //      question.style.fontFamily = 'Modak', 'cursive';
       question.style.fontSize = "2em";

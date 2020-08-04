@@ -238,6 +238,7 @@ section {
   cursor: pointer;
 /*  font-weight: bold;*/
   letter-spacing: 8px;
+  background-color: white;
   font-family: 'Bubblegum Sans', cursive;
   border: solid black 10px;
   box-shadow: 10px 10px 10px black;
