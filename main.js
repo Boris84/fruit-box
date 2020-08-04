@@ -2459,6 +2459,7 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       currentlyPlaying = true;
       question.style.color = 'white';
+      question.style.fontSize = "1.3rem";
       question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
       nextButton.style.display = 'none';
