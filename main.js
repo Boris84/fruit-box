@@ -136,7 +136,6 @@ function yourDead(){
   if (query.matches) {
     game_over_music.play();
     question.style.display = 'none';
-    groceries.style.marginTop = "-30px";
     nextButton.innerHTML = 'click "home" to try again';
     nextButton.style.border = 'none';
     nextButton.style.boxShadow = 'none';
@@ -184,7 +183,7 @@ guessButton.onclick = function(){
 //switch function for Fruits
 function guessFruit() { 
 const count = 28;
-    
+
 let randFruit = Math.floor(Math.random() * count);    
     
   switch (randFruit) {
@@ -210,14 +209,14 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
         option[1].onclick = function() {
         click.play();
-        right.play();
+        correct.play();
         let query = window.matchMedia("(max-width: 600px)");
           
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         question.style.color = 'lime';
         fruitList[0].style.border = '0.3em ridge lime';
@@ -238,6 +237,7 @@ let randFruit = Math.floor(Math.random() * count);
         box1.style.visibility = 'visible';
         box1.src = fruitImage1.src; 
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -251,7 +251,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -291,13 +291,13 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
         option[1].onclick = function() {
         click.play();
-        right.play();
+        correct.play();
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[1].style.border = '0.3em ridge lime';
@@ -318,6 +318,7 @@ let randFruit = Math.floor(Math.random() * count);
         box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -331,7 +332,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -372,13 +373,13 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
         option[1].onclick = function() {
         click.play();
-        right.play();
+        correct.play();
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[2].style.border = '0.3em ridge lime';
@@ -399,6 +400,7 @@ let randFruit = Math.floor(Math.random() * count);
         box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -413,7 +415,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -454,13 +456,13 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
         option[1].onclick = function() {
         click.play();
-        right.play();
+        correct.play();
         let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[3].style.border = '0.3em ridge lime';
@@ -481,6 +483,7 @@ let randFruit = Math.floor(Math.random() * count);
         box4.style.visibility = 'visible';
         box4.src = fruitImage4.src; 
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -494,7 +497,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -535,7 +538,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
           
       let query = window.matchMedia("(max-width: 600px)");
           
@@ -543,7 +546,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[4].style.border = '0.3em ridge lime';
@@ -564,6 +567,7 @@ let randFruit = Math.floor(Math.random() * count);
         box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -577,7 +581,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -606,7 +610,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
     }
-    question.innerHTML = "..fruit or veg ?";
+      question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -618,7 +622,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
           
       let query = window.matchMedia("(max-width: 600px)");
           
@@ -626,7 +630,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[5].style.border = '0.3em ridge lime';
@@ -647,6 +651,7 @@ let randFruit = Math.floor(Math.random() * count);
         box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -660,7 +665,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -701,13 +706,13 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
         option[1].onclick = function() {
         click.play();
-        right.play();
+        correct.play();
       let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[6].style.border = '0.3em ridge lime';
@@ -727,6 +732,7 @@ let randFruit = Math.floor(Math.random() * count);
         box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -740,7 +746,7 @@ let randFruit = Math.floor(Math.random() * count);
           groceries.src = 'angry_bee.gif';
           guessButton.style.display = 'none';
           nextButton.style.display = 'inline';
-          question.innerHTML = 'WRONG!!';   
+          question.innerHTML = 'WRONG !!';   
           question.style.color = '#ff0000';
           question.style.fontFamily =  'Luckiest Guy', 'cursive';
         } else {
@@ -781,13 +787,15 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
+          
       let query = window.matchMedia("(max-width: 600px)");
+          
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[7].style.border = '0.3em ridge lime';
@@ -808,6 +816,7 @@ let randFruit = Math.floor(Math.random() * count);
         box8.style.visibility = 'visible';
         box8.src = fruitImage8.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -822,7 +831,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -863,13 +872,15 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
+          
       let query = window.matchMedia("(max-width: 600px)");
+           
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[8].style.border = '0.3em ridge lime';
@@ -890,6 +901,7 @@ let randFruit = Math.floor(Math.random() * count);
         box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -904,7 +916,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -945,7 +957,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
           
       let query = window.matchMedia("(max-width: 600px)");
           
@@ -953,7 +965,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[9].style.border = '0.3em ridge lime';
@@ -974,6 +986,7 @@ let randFruit = Math.floor(Math.random() * count);
         box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -987,7 +1000,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1028,13 +1041,13 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
       let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[10].style.border = '0.3em ridge lime';
@@ -1055,6 +1068,7 @@ let randFruit = Math.floor(Math.random() * count);
         box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
         bumblebee.play();
+        right.play();
         gameOver();
        }
       }; 
@@ -1069,7 +1083,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1086,6 +1100,7 @@ let randFruit = Math.floor(Math.random() * count);
       }
      }
     break;
+          
     case 11:
     groceries.src= fruitImage12.src;
     let queryL = window.matchMedia("(max-width: 600px)");
@@ -1109,7 +1124,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
           
       let query = window.matchMedia("(max-width: 600px)");
           
@@ -1117,7 +1132,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[11].style.border = '0.3em ridge lime';
@@ -1138,6 +1153,7 @@ let randFruit = Math.floor(Math.random() * count);
         box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       }; 
@@ -1152,7 +1168,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1193,7 +1209,7 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
           
       let query = window.matchMedia("(max-width: 600px)");
           
@@ -1201,7 +1217,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[12].style.border = '0.3em ridge lime';
@@ -1222,6 +1238,7 @@ let randFruit = Math.floor(Math.random() * count);
         box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;
         bumblebee.play();
+        right.play();
         gameOver();
        }
       };
@@ -1236,7 +1253,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1277,13 +1294,13 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
       let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[13].style.border = '0.3em ridge lime'; 
@@ -1304,6 +1321,7 @@ let randFruit = Math.floor(Math.random() * count);
         box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
         bumblebee.play();
+        right.play();
         gameOver();
        }
       };
@@ -1318,7 +1336,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1359,13 +1377,13 @@ let randFruit = Math.floor(Math.random() * count);
       } else {
       option[1].onclick = function() {
       click.play();
-      right.play();
+      correct.play();
       let query = window.matchMedia("(max-width: 600px)");
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[14].style.border = '0.3em ridge lime';
@@ -1386,6 +1404,7 @@ let randFruit = Math.floor(Math.random() * count);
         box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -1400,7 +1419,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1439,15 +1458,17 @@ let randFruit = Math.floor(Math.random() * count);
       if (box16.src === fruitImage16.src) {
         guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      right.play();
+        option[1].onclick = function() {
+        click.play();
+        correct.play();
+            
       let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         fruitList[15].style.border = '0.3em ridge lime';
@@ -1468,6 +1489,7 @@ let randFruit = Math.floor(Math.random() * count);
         box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
         bumblebee.play();
+        right.play();
         gameOver();
         }
       };
@@ -1481,7 +1503,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1529,7 +1551,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = 'bee.gif';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
-      question.innerHTML = 'RIGHT!!';
+      question.innerHTML = 'RIGHT !!';
       question.style.color = 'lime';
       question.style.fontFamily =  'Luckiest Guy', 'cursive';
       vegetableList[0].style.border = '0.3em ridge lime';
@@ -1561,7 +1583,7 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = 'angry_bee.gif';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
-      question.innerHTML = 'WRONG!!';   
+      question.innerHTML = 'WRONG !!';   
       question.style.color = '#ff0000';
       question.style.fontFamily =  'Luckiest Guy', 'cursive';
     } else {
@@ -1608,7 +1630,7 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.src = 'bee.gif';
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
-       question.innerHTML = 'RIGHT!!';
+       question.innerHTML = 'RIGHT !!';
        question.style.color = 'lime';
        question.style.fontFamily =  'Luckiest Guy', 'cursive';
        vegetableList[1].style.border = '0.3em ridge lime';
@@ -1640,7 +1662,7 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.src = 'angry_bee.gif';
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
-       question.innerHTML = 'WRONG!!';   
+       question.innerHTML = 'WRONG !!';   
        question.style.color = '#ff0000';
        question.style.fontFamily =  'Luckiest Guy', 'cursive';
      } else {
@@ -1687,7 +1709,7 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.src = 'bee.gif';
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
-       question.innerHTML = 'RIGHT!!';
+       question.innerHTML = 'RIGHT !!';
        question.style.color = 'lime';
        question.style.fontFamily =  'Luckiest Guy', 'cursive';
        vegetableList[2].style.border = '0.3em ridge lime';
@@ -1719,7 +1741,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1766,7 +1788,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[3].style.border = '0.3em ridge lime';
@@ -1797,7 +1819,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1844,7 +1866,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[4].style.border = '0.3em ridge lime';
@@ -1875,7 +1897,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -1923,7 +1945,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[5].style.border = '0.3em ridge lime';
@@ -1954,7 +1976,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -2001,7 +2023,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[6].style.border = '0.3em ridge lime';
@@ -2032,7 +2054,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -2079,7 +2101,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[7].style.border = '0.3em ridge lime';
@@ -2110,7 +2132,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
        } else {
@@ -2157,7 +2179,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[8].style.border = '0.3em ridge lime';
@@ -2188,7 +2210,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -2235,7 +2257,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[9].style.border = '0.3em ridge lime';
@@ -2266,7 +2288,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -2313,7 +2335,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[10].style.border = '0.3em ridge lime';
@@ -2344,7 +2366,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -2391,7 +2413,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'RIGHT!!';
+        question.innerHTML = 'RIGHT !!';
         question.style.color = 'lime';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
         vegetableList[11].style.border = '0.3em ridge lime';
@@ -2422,7 +2444,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.innerHTML = 'WRONG!!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
@@ -2536,8 +2558,8 @@ function gameOver() {
       groceries.src = 'banana_man.gif';
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
-      question.innerHTML = 'AWESOME!!!';   
-      question.style.fontSize = "2rem";
+      question.innerHTML = 'AWESOME !!!';   
+      question.style.fontSize = "2em";
       question.style.color = 'lime';    
   
     } else {
