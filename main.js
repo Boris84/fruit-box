@@ -2554,7 +2554,6 @@ function gameOver() {
       nextButton.style.boxShadow = 'none';
       nextButton.onclick = false;
       //question.style.display = 'none';
-      groceries.style.width = "50%";
       groceries.style.marginTop = "40px";
       groceries.src = 'banana_man.gif';
       //groceries.style.visibility = 'hidden';
