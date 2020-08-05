@@ -168,7 +168,7 @@ if (!currentlyPlaying && lives === 2) {
   deadText.style.color = 'hotpink';
   deadText.style.marginBottom = "20px";
   deadText.style.fontFamily = 'Freckle Face', 'cursive';
-  deadText.innerHTML = 'Flawless !!';
+  deadText.innerHTML = 'Flawless';
   flawless.play();
   sound.pause();
   cheer.play();
@@ -2577,6 +2577,7 @@ function gameOver() {
       //question.style.display = 'none';
       groceries.style.marginTop = "40px";
       groceries.src = 'you_win.gif';
+      groceries.style.width = "40%";
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
       question.style.letterSpacing = "4px";
