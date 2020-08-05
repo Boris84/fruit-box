@@ -81,6 +81,7 @@ let cheer = document.getElementById('crowd');
 let looser = document.getElementById('you_loose');
 let bumblebee = document.getElementById('bumblebee');
 let correct = document.getElementById('correct');
+let flawless = document.getElementById('flawless');
 let game_over_music = document.getElementById('game_over');
 
 let deadText = document.getElementById('dead-text');
@@ -112,15 +113,19 @@ function checkLives(src){
     
   if (currentlyPlaying && lives === 2){
     life_c.src = 'death_icon_c.png';
+    currentlyPlaying = false;
   } 
-  if (currentlyPlaying && lives === 1){
+  else if (currentlyPlaying && lives === 1){
     life_b.src = 'death_icon_b.png';
+    currentlyPlaying = false;
   }
-  if (currentlyPlaying && lives === 0){
+  else if (currentlyPlaying && lives === 0) {
     life_a.src = 'death_icon_a.png';
     yourDead();
-  } 
-}
+  }
+};
+
+
 
 
 
@@ -159,17 +164,40 @@ function yourDead(){
 
 
 function youWin() {
-  currentlyPlaying = false;
-  if (!currentlyPlaying) {
-    sound.pause();
-    cheer.play();
-    win.play();
-  }
-}
+    
+currentlyPlaying = false;
+    
+if (!currentlyPlaying && lives === 2) {
+  deadText.style.color = 'hotpink';
+  deadText.style.marginBottom = "20px";
+  deadText.style.fontFamily = 'Freckle Face', 'cursive';
+  deadText.innerHTML = 'Flawless !!';
+  flawless.play();
+  sound.pause();
+  cheer.play();
+  
+  setTimeout(function(){ 
+    win.play(); 
+  }, 3000);
 
+  setInterval(function(){
+    if (deadText.style.color === 'hotpink') {
+      deadText.style.color = 'yellow';
+    } else {
+      deadText.style.color = 'hotpink';
+    }
+  }, 500);
+    
+  } else if (!currentlyPlaying) {
+      sound.pause();
+      cheer.play();
+      win.play();
+    } 
+  };
+          
 
 guessButton.onclick = function(){ 
-  sound.play();
+//  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -2533,12 +2561,12 @@ let randFruit = Math.floor(Math.random() * count);
 
   
 function gameOver() {
-
-    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+  
+    if (box1.src === fruitImage1.src) {
       
     let query = window.matchMedia("(max-width: 600px)");
 
-    if (query.matches) {
+    if (query.matches) {      
       youWin();
       currentlyPlaying = false;
       container.style.backgroundImage = 'url(test.gif)';    
@@ -2555,15 +2583,15 @@ function gameOver() {
       nextButton.onclick = false;
       //question.style.display = 'none';
       groceries.style.marginTop = "40px";
-      groceries.src = 'banana_man.gif';
+      groceries.src = 'you_win.gif';
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
-      question.style.letterSpacing = "2px";
+      question.style.letterSpacing = "4px";
       question.innerHTML = 'AWESOME !!';   
 //      question.style.fontFamily = 'Modak', 'cursive';
       question.style.fontSize = "2em";
-      question.style.color = 'lime';    
-  
+      question.style.color = 'lime';
+        
     } else {
       youWin();
       currentlyPlaying = false;
