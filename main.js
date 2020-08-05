@@ -127,7 +127,7 @@ function checkLives(src){
 
 
 function yourDead(){
-
+ isPlaying();
   currentlyPlaying = false;
     
   if (isPlaying(!currentlyPlaying)){
@@ -161,14 +161,15 @@ function yourDead(){
 
 
 function youWin() {
-    
+isPlaying();
+   
 currentlyPlaying = false;
     
 if (!currentlyPlaying && lives === 2) {
   deadText.style.color = 'hotpink';
   deadText.style.marginBottom = "20px";
   deadText.style.fontFamily = 'Freckle Face', 'cursive';
-  deadText.innerHTML = 'Flawless';
+  deadText.innerHTML = 'flawless !!';
   flawless.play();
   sound.pause();
   cheer.play();
@@ -204,7 +205,9 @@ guessButton.onclick = function(){
 
 
 //switch function for Fruits
-function guessFruit() { 
+function guessFruit() {
+isPlaying();
+
 const count = 28;
 
 let randFruit = Math.floor(Math.random() * count);    
@@ -2496,7 +2499,7 @@ let randFruit = Math.floor(Math.random() * count);
 
 
   nextButton.onclick = function() {
-      
+
     let query = window.matchMedia("(max-width: 600px)");
     
     if (query.matches) {
@@ -2556,9 +2559,12 @@ let randFruit = Math.floor(Math.random() * count);
 
   
 function gameOver() {
-  
-    if (box1.src === fruitImage1.src ) {
-      
+ isPlaying();
+
+    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+        
+    currentlyPlaying = false;
+        
     let query = window.matchMedia("(max-width: 600px)");
 
     if (query.matches) {      
@@ -2573,7 +2579,7 @@ function gameOver() {
       nextButton.style.border = 'none';
       nextButton.style.color = 'black';
       nextButton.style.margin = "20px";
-      nextButton.style.cursor = 'pointer';
+      nextButton.style.cursor = 'auto';
       nextButton.style.boxShadow = 'none';
       nextButton.onclick = false;
       groceries.style.marginTop = "40px";
@@ -2596,7 +2602,7 @@ function gameOver() {
       nextButton.style.boxShadow = 'none';
       nextButton.style.border = 'none';
       nextButton.style.color = 'black';
-      nextButton.style.cursor = 'pointer';
+      nextButton.style.cursor = 'auto';
       nextButton.onclick = false;
       nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
       groceries.style.width = "20%";
