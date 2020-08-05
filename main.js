@@ -2577,7 +2577,7 @@ function gameOver() {
       //question.style.display = 'none';
       groceries.style.marginTop = "40px";
       groceries.src = 'you_win.gif';
-      groceries.style.width = "40%";
+      groceries.style.width = "45%";
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
       question.style.letterSpacing = "4px";
@@ -2606,6 +2606,7 @@ function gameOver() {
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
       container.style.backgroundImage = 'url(test.gif)';
+      question.style.fontFamily = 'Freckle Face', 'cursive';
       question.style.fontSize = "8rem";
       question.style.letterSpacing = "10px";
       question.innerHTML = 'AWESOME !!!';
