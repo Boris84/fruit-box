@@ -180,6 +180,8 @@ if (!currentlyPlaying && lives === 2) {
   setInterval(function(){
     if (deadText.style.color === 'hotpink') {
       deadText.style.color = 'yellow';
+    } else if (deadText.style.color === 'yellow') {
+      deadText.style.color = 'blue';
     } else {
       deadText.style.color = 'hotpink';
     }
@@ -2577,7 +2579,7 @@ function gameOver() {
       //question.style.display = 'none';
       groceries.style.marginTop = "40px";
       groceries.src = 'you_win.gif';
-      groceries.style.width = "45%";
+      groceries.style.width = "50%";
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
       question.style.letterSpacing = "4px";
