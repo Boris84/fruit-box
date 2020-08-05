@@ -126,9 +126,6 @@ function checkLives(src){
 };
 
 
-
-
-
 function yourDead(){
 
   currentlyPlaying = false;
@@ -197,15 +194,11 @@ if (!currentlyPlaying && lives === 2) {
           
 
 guessButton.onclick = function(){ 
-//  sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
 }
-
-
-
-
 
 
 //switch function for Fruits
@@ -2562,7 +2555,7 @@ let randFruit = Math.floor(Math.random() * count);
   
 function gameOver() {
   
-    if (box1.src === fruitImage1.src) {
+    if (box1.src === fruitImage1.src ) {
       
     let query = window.matchMedia("(max-width: 600px)");
 
@@ -2587,8 +2580,8 @@ function gameOver() {
       //groceries.style.visibility = 'hidden';
       //navContainer.style.backgroundImage = 'url(.gif)';
       question.style.letterSpacing = "4px";
-      question.innerHTML = 'AWESOME !!';   
-//      question.style.fontFamily = 'Modak', 'cursive';
+      question.innerHTML = 'AWESOME !!!';   
+      question.style.fontFamily = 'Freckle Face', 'cursive';
       question.style.fontSize = "2em";
       question.style.color = 'lime';
         
