@@ -181,7 +181,7 @@ if (!currentlyPlaying && lives === 2) {
     if (deadText.style.color === 'hotpink') {
       deadText.style.color = 'yellow';
     } else if (deadText.style.color === 'yellow') {
-      deadText.style.color = 'blue';
+      deadText.style.color = 'aqua';
     } else {
       deadText.style.color = 'hotpink';
     }
@@ -2576,12 +2576,9 @@ function gameOver() {
       nextButton.style.cursor = 'pointer';
       nextButton.style.boxShadow = 'none';
       nextButton.onclick = false;
-      //question.style.display = 'none';
       groceries.style.marginTop = "40px";
       groceries.src = 'you_win.gif';
       groceries.style.width = "50%";
-      //groceries.style.visibility = 'hidden';
-      //navContainer.style.backgroundImage = 'url(.gif)';
       question.style.letterSpacing = "4px";
       question.innerHTML = 'AWESOME !!!';   
       question.style.fontFamily = 'Freckle Face', 'cursive';
@@ -2605,14 +2602,11 @@ function gameOver() {
       groceries.style.width = "20%";
       groceries.style.marginTop = "15px";
       groceries.src = 'banana_man_pc.gif';
-      //groceries.style.visibility = 'hidden';
-      //navContainer.style.backgroundImage = 'url(.gif)';
       container.style.backgroundImage = 'url(test.gif)';
       question.style.fontFamily = 'Freckle Face', 'cursive';
       question.style.fontSize = "8rem";
       question.style.letterSpacing = "10px";
       question.innerHTML = 'AWESOME !!!';
-      //ocument.getElementById('text').innerHTML = '<h1>AWESOME !!!</h1>'; 
      }
     }
   };

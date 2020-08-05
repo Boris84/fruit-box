@@ -448,7 +448,7 @@ section {
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
-    padding: 0.3em 1em 0.3em 1.1em;
+    padding: 0.4em 1em 0.4em 1.1em;
     font-family: 'Bubblegum Sans', cursive;  
     }
  
@@ -464,7 +464,7 @@ section {
     letter-spacing: 2px;
     border-radius: 20px;
     border: 2px solid black;
-    padding: 0.3em 1em 0.3em 1.1em;
+    padding: 0.4em 1em 0.4em 1.1em;
     font-family: 'Bubblegum Sans', cursive;  
   }
     #next:focus {outline:0;}
@@ -505,7 +505,7 @@ section {
     font-size: 1rem;
     letter-spacing: 1px;
     font-family: 'Bubblegum Sans', cursive;
-    padding: 0.3em 1em 0.3em 1.1em;
+    padding: 0.4em 1em 0.4em 1.1em;
     border: 2px solid black;
     box-shadow: none;
     border-radius: 40px;
