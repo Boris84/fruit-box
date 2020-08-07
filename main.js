@@ -2464,7 +2464,7 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
      
         if (query.matches) {
-          container.style.height = "930px";
+          container.style.height = "910px";
         }
 
         guessButton.style.border = 'none';
