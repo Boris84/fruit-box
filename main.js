@@ -2463,11 +2463,9 @@ let randFruit = Math.floor(Math.random() * count);
   }
         guessButton.style.border = 'none';
         groceries.style.marginTop = '40px';
-        groceries.style.marginBottom ="-40px";
+        groceries.style.marginBottom ="-45px";
         guessButton.style.boxShadow = 'none';
         guessButton.style.background = 'none';
-        guessButton.style.marginBottom = "-30px";
-        nextButton.style.marginBottom = "-30px";
         currentlyPlaying = true;
   }
 
@@ -2485,7 +2483,7 @@ let randFruit = Math.floor(Math.random() * count);
       question.style.fontFamily = 'Modak', 'cursive';
       question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
-      groceries.style.marginBottom ="-40px";
+      groceries.style.marginBottom ="-45px";
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
