@@ -197,7 +197,7 @@ if (!currentlyPlaying && lives === 2) {
           
 
 guessButton.onclick = function(){ 
-  sound.play();
+//  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -1771,7 +1771,7 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.style.marginTop = "100px";
        groceries.style.marginBottom = "-20px";
      }
-     question.innerHTML = "..fruit or veg ?"; 
+       question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
@@ -1784,7 +1784,9 @@ let randFruit = Math.floor(Math.random() * count);
         option[2].onclick = function() {
         click.play();
         correct.play();
+            
         let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
