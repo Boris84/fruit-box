@@ -435,6 +435,7 @@ section {
  
   #groceries {
     width: 38%;
+    padding-top: 0px;
     display: inline;
     visibility: visible;
     margin-bottom: -55px;
