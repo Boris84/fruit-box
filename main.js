@@ -2466,6 +2466,8 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginBottom ="-40px";
         guessButton.style.boxShadow = 'none';
         guessButton.style.background = 'none';
+        guessButton.style.marginBottom = "-30px";
+        nextButton.style.marginBottom = "-30px";
         currentlyPlaying = true;
   }
 
