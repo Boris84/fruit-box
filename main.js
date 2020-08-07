@@ -197,7 +197,7 @@ if (!currentlyPlaying && lives === 2) {
           
 
 guessButton.onclick = function(){ 
-//  sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
