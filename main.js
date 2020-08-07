@@ -623,10 +623,10 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 5:
     groceries.src = fruitImage6.src;
+    let queryF = window.matchMedia("(max-width: 600px)");
 
     if (queryF.matches) {
 
-       groceries.style.marginBottom = "0px";
     } else {
       groceries.style.marginTop = "100px";
       groceries.style.marginBottom = "-20px";
@@ -2463,7 +2463,7 @@ let randFruit = Math.floor(Math.random() * count);
   }
         guessButton.style.border = 'none';
         groceries.style.marginTop = '40px';
-        groceries.style.marginBottom ="-50px";
+        groceries.style.marginBottom ="-40px";
         guessButton.style.boxShadow = 'none';
         guessButton.style.background = 'none';
         currentlyPlaying = true;
@@ -2483,6 +2483,7 @@ let randFruit = Math.floor(Math.random() * count);
       question.style.fontFamily = 'Modak', 'cursive';
       question.innerHTML = "..ready ?";
       groceries.src = 'bee.gif';
+      groceries.style.marginBottom ="-40px";
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
