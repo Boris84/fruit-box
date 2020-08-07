@@ -349,7 +349,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 /*
     background-color: lightgray;
     border: 20px ridge whitesmoke;
@@ -365,8 +365,8 @@ section {
 
     
   #home, #games, #help, #myAccount {
-    font-size: 0.9rem;
-    letter-spacing: 3px;
+    font-size: 1.3rem;
+    letter-spacing: 6px;
     -webkit-text-stroke: 1px black;
     font-family: 'Modak', cursive;  
     transition: top ease-in-out 0.3s;
