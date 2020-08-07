@@ -365,7 +365,7 @@ section {
     
   #home, #games, #help, #myAccount {
     font-size: 1.1rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     -webkit-text-stroke: 1px black;
     font-family: 'Modak', cursive;  
     transition: top ease-in-out 0.3s;
