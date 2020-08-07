@@ -319,7 +319,6 @@ section {
   #container {
     width: 100%;
     margin: 0 auto;
-    height: 980px;
     border: none;
     background-size: cover;
     background-position: center;
@@ -365,8 +364,8 @@ section {
 
     
   #home, #games, #help, #myAccount {
-    font-size: 1.3rem;
-    letter-spacing: 6px;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
     -webkit-text-stroke: 1px black;
     font-family: 'Modak', cursive;  
     transition: top ease-in-out 0.3s;
@@ -426,7 +425,7 @@ section {
     
   #life_a, #life_b, #life_c {
     width: 60px;
-    margin-bottom: 3em;
+    margin-bottom: 20px;
     padding: 1em;
   }
     
