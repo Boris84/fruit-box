@@ -366,14 +366,15 @@ section {
   #home, #games, #help, #myAccount {
     font-size: 0.9rem;
     letter-spacing: 3px;
-    font-family: 'Bubblegum Sans', cursive;  
+    -webkit-text-stroke: 1px black;
+    font-family: 'Modak', cursive;  
     transition: top ease-in-out 0.3s;
     text-decoration: none;
     position: relative;
-    font-weight: bold;
+/*    font-weight: bold;*/
     cursor: pointer;
     margin: 10px;
-    color: black;
+    color: white;
 /*    top: 0;*/
   }
     
