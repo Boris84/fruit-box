@@ -2461,11 +2461,17 @@ let randFruit = Math.floor(Math.random() * count);
   }
       
   }
+        let query = window.matchMedia("(max-width: 600px)");
+     
+        if (query.matches) {
+          container.style.height = "930px";
+        }
+
         guessButton.style.border = 'none';
         groceries.style.marginTop = '40px';
         groceries.style.marginBottom ="-40px";
         guessButton.style.boxShadow = 'none';
-        guessButton.style.background = 'none';      
+        guessButton.style.background = 'none';  
         currentlyPlaying = true;
   }
 
