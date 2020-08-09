@@ -110,29 +110,36 @@ section {
   -webkit-text-stroke: 1px black;  
   font-family: 'Modak', cursive;
 }
+
+#question span {
+  color: lightpink;
+}
+
 #life_icons {
   display: flex;
   margin-left: 5%;
   padding-bottom: 80px;
 }
+
 #life_a, #life_b, #life_c {
   width: 5%;
   padding: 1.5em;
 }
+
 #death_icon {
   width: 140px;
 }
+
 #groceries {
+  position: relative;
   width: 12.5%;
   display: inline;
-  margin-bottom: -60px;
-  /*visibility: visible;*/
-  /*width: 14%;*/
+  margin-bottom: -90px;
 }
 
 #kids {
   height: 220px;
-  color: lightgreen;
+  color: lightpink;
   font-size: 10rem;
   line-height: 1.5;
   font-weight: bold;
@@ -144,53 +151,52 @@ section {
   -webkit-text-stroke: 1px black;  
   font-family: 'Modak', cursive;
 }
+
 #fruit-images {
   display: none;
 }
 
 #guess {
-  margin: 0px;
+  margin: 10px;
   color: black;
   display: inline;
   cursor: pointer;
   font-size: 50px;
-/*font-weight: bold;*/
-  border-radius: 40px;
+  border-radius: 50px;
   letter-spacing: 6px;
   border: 10px solid black;
-  padding: 20px 40px 20px 40px;
+  padding: 26px 40px 26px 40px;
   background-color: white;
   box-shadow: 10px 10px 10px black;
   font-family: 'Bubblegum Sans', cursive;  
 }
 #next {
-  margin: 0px;
+  margin: 10px;
   color: black;
   display: none;
   cursor: pointer;
   font-size: 50px;
-/*  font-weight: bold;*/
   visibility: visible;
-  border-radius: 40px;
+  border-radius: 50px;
   letter-spacing: 6px;
   border: 10px solid black;
-  padding: 20px 40px 20px 40px; 
+  padding: 26px 40px 26px 40px; 
   background-color: white;
   box-shadow: 10px 10px 10px black;
   font-family: 'Bubblegum Sans', cursive;  
 }
+
 #next:focus {outline:0;}
+
 /*gets rid of default button border */
 #guess:focus {outline:0;}
 
-#options {
-  display: none;
-}
 
 /* container */
 .fruit-boxes {
   flex: 1;
   width: 75%;
+  padding: 0px;
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -227,19 +233,22 @@ section {
   display: none;
 }
 
+#options {
+  display: none;
+}
+
 #fruit-btn, #vegetable-btn {
   color: black;
-  margin: 10px;
-  padding: 25px;
-  font-size: 3rem;
+  margin: 0px 10px 0px 10px;
+  font-size: 50px;
   cursor: pointer;
-/*  font-weight: bold;*/
+  border-radius: 50px;
   letter-spacing: 8px;
   background-color: white;
-  font-family: 'Bubblegum Sans', cursive;
+  padding: 30px 40px 28px 40px; 
   border: solid black 10px;
   box-shadow: 10px 10px 10px black;
-  border-radius: 40px;
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 #fruit-btn:hover {
@@ -416,6 +425,11 @@ section {
    font-family: 'Modak', cursive;
   }
     
+  
+  #question span {
+    color: lightgreen;
+  }
+    
   #life_icons {
     margin: 0;
     padding: 0px;
@@ -513,7 +527,7 @@ section {
     padding: 0.4em 1em 0.4em 1.1em;
     border: 2px solid black;
     box-shadow: none;
-    border-radius: 40px;
+    border-radius: 20px;
   }
     
   #fruit-btn:hover {

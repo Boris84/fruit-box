@@ -60,14 +60,17 @@ let life_a = document.getElementById('life_a');
 let life_b = document.getElementById('life_b');
 let life_c = document.getElementById('life_c');
 
-let kids = document.getElementById('kids');
-let homeButton = document.getElementById('home');
+let home = document.getElementById('home');
+let games = document.getElementById('games');
+let help = document.getElementById('help');
+let myAccount = document.getElementById('myAccount');
 let guessButton = document.getElementById('guess');
 let nextButton = document.getElementById('next');
 let question = document.getElementById('question');
 let option = document.getElementsByTagName('button');
 let groceries = document.getElementById('groceries');
 let container = document.getElementById('container');
+let navItems = document.getElementsByClassName('.nav-items');
 let navContainer = document.getElementById('nav-container');
 let fruitList = document.querySelectorAll('.fruit-box');
 let vegetableList = document.querySelectorAll('.vegetable-box');
@@ -153,8 +156,16 @@ function yourDead(){
     game_over_music.play();
     container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     question.style.display = 'none';
-    kids.style.color = 'white';
-    nextButton.style.visibility = 'hidden';
+    nextButton.innerHTML = 'click "home" to try again';
+    nextButton.style.border = 'none';
+    nextButton.style.boxShadow = 'none';
+    nextButton.style.cursor = 'auto';
+    nextButton.onclick = false;
+    home.style.color = 'black'; 
+    games.style.color = 'black';
+    help.style.color = 'black';
+    myAccount.style.color = 'black';
+    deadText.style.letterSpacing = "8px";
     deadText.innerHTML = 'GAME OVER !!!';
     looser.play();
   }
@@ -167,29 +178,43 @@ isPlaying();
 currentlyPlaying = false;
     
 if (!currentlyPlaying && lives === 2) {
-  deadText.style.color = 'hotpink';
+    
+let query = window.matchMedia("(max-width: 600px)");
+    
+if (query.matches) {
+  deadText.style.color = 'lightpink';
   deadText.style.marginBottom = "20px";
   deadText.style.fontFamily = 'Freckle Face', 'cursive';
-  deadText.innerHTML = 'flawless !!';
+  deadText.innerHTML = '..flawless !!';
   flawless.play();
   sound.pause();
   cheer.play();
-  
+} else {
+  deadText.style.color = 'lightpink';
+  deadText.style.marginBottom = "20px";
+  deadText.style.letterSpacing = "6px";
+  deadText.style.fontFamily = 'Freckle Face', 'cursive';
+  deadText.innerHTML = '..flawless !!';
+  flawless.play();
+  sound.pause();
+  cheer.play();
+}
+    
   setTimeout(function(){ 
     win.play(); 
   }, 3000);
 
   setInterval(function(){
-    if (deadText.style.color === 'hotpink') {
+    if (deadText.style.color === 'lightpink') {
       deadText.style.color = 'yellow';
     } else if (deadText.style.color === 'yellow') {
       deadText.style.color = 'aqua';
     } else {
-      deadText.style.color = 'hotpink';
+      deadText.style.color = 'lightpink';
     }
   }, 500);
     
-  } else if (!currentlyPlaying) {
+} else if (!currentlyPlaying) {
       sound.pause();
       cheer.play();
       win.play();
@@ -198,7 +223,7 @@ if (!currentlyPlaying && lives === 2) {
           
 
 guessButton.onclick = function(){ 
-//  sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -217,7 +242,7 @@ let randFruit = Math.floor(Math.random() * count);
                
     case 0:
       groceries.src = fruitImage1.src;
-       question.innerHTML = "..fruit or veg ?";
+      question.innerHTML = "..fruit or veg ?";
             
    if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -246,12 +271,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else { 
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
-        nextButton.style.display = 'inline'; 
+        nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[0].style.border = '25px solid lime';
         box1.style.visibility = 'visible';
         box1.src = fruitImage1.src; 
@@ -277,7 +304,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = "#ff0000";
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -288,12 +318,7 @@ let randFruit = Math.floor(Math.random() * count);
  
     case 1:
     groceries.src = fruitImage2.src;
-    let queryB = window.matchMedia("(max-width: 600px)");
-      if (queryB.matches) {
-
-      } else {
-           
-      }
+      
       question.innerHTML = "..fruit or veg ?";
          
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -322,12 +347,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();  
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[1].style.border = '25px solid lime';
         box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
@@ -353,7 +380,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = "#ff0000";
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';   
         }
@@ -364,13 +394,7 @@ let randFruit = Math.floor(Math.random() * count);
        
     case 2:
     groceries.src = fruitImage3.src;
-    let queryC = window.matchMedia("(max-width: 600px)");
-
-    if (queryC.matches) {
-
-    } else {
-      
-    }
+     
       question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -399,12 +423,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color ='lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[2].style.border = '25px solid lime';
         box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
@@ -431,7 +457,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -442,13 +471,7 @@ let randFruit = Math.floor(Math.random() * count);
         
     case 3:
     groceries.src= fruitImage4.src;
-    let queryD = window.matchMedia("(max-width: 600px)");
-
-    if (queryD.matches) {
-
-    } else {
-       
-    }
+          
       question.innerHTML = "..fruit or veg ?";
 
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -477,12 +500,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px groove lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px groove lime';
         fruitList[3].style.border = '25px solid lime';
         box4.style.visibility = 'visible';
         box4.src = fruitImage4.src; 
@@ -508,7 +533,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -519,13 +547,7 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 4:
     groceries.src = fruitImage5.src;
-    let queryE = window.matchMedia("(max-width: 600px)");
 
-    if (queryE.matches) {
-
-    } else {
-      
-    }
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -556,12 +578,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px groove lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px groove lime';
         fruitList[4].style.border = '25px solid lime';
         box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
@@ -587,7 +611,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -598,13 +625,7 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 5:
     groceries.src = fruitImage6.src;
-    let queryF = window.matchMedia("(max-width: 600px)");
-
-    if (queryF.matches) {
-
-    } else {
-      
-    }
+             
       question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -635,12 +656,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();     
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[5].style.border = '25px solid lime';
         box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
@@ -666,7 +689,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -677,13 +703,7 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 6:
     groceries.src = fruitImage7.src;
-    let queryG = window.matchMedia("(max-width: 600px)");
 
-    if (queryG.matches) {
-
-    } else {
-      
-    }
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -712,12 +732,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        fruitList[6].style.border = '25px solid lightgreen';
+        question.style.color = 'lime';
+        fruitList[6].style.border = '25px solid lime';
         box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
         bumblebee.play();
@@ -742,7 +764,10 @@ let randFruit = Math.floor(Math.random() * count);
           groceries.src = 'angry_bee.gif';
           guessButton.style.display = 'none';
           nextButton.style.display = 'inline';
+          groceries.style.marginTop = '50px';
+          groceries.style.marginBottom ="-33px";
           question.innerHTML = 'WRONG !!';
+          question.style.color = '#ff0000';
           kids.style.color = "#ff0000";
           container.style.border = '180px groove #ff0000';
         }
@@ -752,15 +777,9 @@ let randFruit = Math.floor(Math.random() * count);
     break;
       
     case 7:
-    groceries.src = fruitImage8.src;
-    let queryH = window.matchMedia("(max-width: 600px)");
+      groceries.src = fruitImage8.src;
 
-    if (queryH.matches) {
-
-    } else {
-      
-    }
-    question.innerHTML = "..fruit or veg ?";  
+      question.innerHTML = "..fruit or veg ?";  
         
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -790,12 +809,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[7].style.border = '25px solid lime';
         box8.style.visibility = 'visible';
         box8.src = fruitImage8.src;
@@ -822,7 +843,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -832,15 +856,9 @@ let randFruit = Math.floor(Math.random() * count);
     break;
          
     case 8:
-    groceries.src= fruitImage9.src;
-    let queryI = window.matchMedia("(max-width: 600px)");
-
-    if (queryI.matches) {
-
-    } else {
-      
-    }
-    question.innerHTML = "..fruit or veg ?";      
+      groceries.src= fruitImage9.src;
+     
+      question.innerHTML = "..fruit or veg ?";      
           
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -870,12 +888,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[8].style.border = '25px solid lime';
         box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
@@ -902,7 +922,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -912,15 +935,9 @@ let randFruit = Math.floor(Math.random() * count);
     break;
         
     case 9:
-    groceries.src= fruitImage10.src;
-    let queryJ = window.matchMedia("(max-width: 600px)");
+      groceries.src= fruitImage10.src;
 
-    if (queryJ.matches) {
-
-    } else {
-      
-    }
-    question.innerHTML = "..fruit or veg ?";
+      question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -950,12 +967,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[9].style.border = '25px solid lime';
         box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;
@@ -981,7 +1000,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -992,13 +1014,7 @@ let randFruit = Math.floor(Math.random() * count);
          
     case 10:
     groceries.src= fruitImage11.src;
-    let queryK = window.matchMedia("(max-width: 600px)");
-
-    if (queryK.matches) {
-
-    } else {
-      
-    }
+    
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1027,12 +1043,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[10].style.border = '25px solid lime';
         box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
@@ -1059,7 +1077,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -1070,14 +1091,8 @@ let randFruit = Math.floor(Math.random() * count);
           
     case 11:
     groceries.src= fruitImage12.src;
-    let queryL = window.matchMedia("(max-width: 600px)");
 
-    if (queryL.matches) {
-
-    } else {
-      
-    }
-    question.innerHTML = "..fruit or veg ?";
+      question.innerHTML = "..fruit or veg ?";
            
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -1107,12 +1122,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[11].style.border = '25px solid lime';
         box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;
@@ -1139,7 +1156,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -1150,13 +1170,7 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 12:
     groceries.src = fruitImage13.src;
-    let queryM = window.matchMedia("(max-width: 600px)");
 
-    if (queryM.matches) {
-
-    } else {
-      
-    }
     question.innerHTML = "..fruit or veg ?";  
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1187,12 +1201,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[12].style.border = '25px solid lime';
         box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;
@@ -1219,7 +1235,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -1229,15 +1248,9 @@ let randFruit = Math.floor(Math.random() * count);
     break;
         
     case 13:
-    groceries.src = fruitImage14.src;
-    let queryN = window.matchMedia("(max-width: 600px)");
+      groceries.src = fruitImage14.src;
 
-    if (queryN.matches) {
-
-    } else {
-      
-    }
-    question.innerHTML = "..fruit or veg ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
         
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -1265,12 +1278,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[13].style.border = '25px solid lime';
         box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
@@ -1297,7 +1312,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -1307,15 +1325,9 @@ let randFruit = Math.floor(Math.random() * count);
     break;  
           
     case 14:
-    groceries.src = fruitImage15.src;
-    let queryO = window.matchMedia("(max-width: 600px)");
+      groceries.src = fruitImage15.src;
 
-    if (queryO.matches) {
-
-    } else {
-     
-    }
-    question.innerHTML = "..fruit or veg ?";
+      question.innerHTML = "..fruit or veg ?";
           
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -1343,12 +1355,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[14].style.border = '25px solid lime';
         box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
@@ -1368,14 +1382,18 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginBottom = "50px";
         question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         nextButton.style.display = 'inline';
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -1385,15 +1403,9 @@ let randFruit = Math.floor(Math.random() * count);
     break;
      
     case 15:
-    groceries.src = fruitImage16.src;
-    let queryP = window.matchMedia("(max-width: 600px)");
+      groceries.src = fruitImage16.src;
 
-    if (queryP.matches) {
-
-    } else {
-      
-    }
-    question.innerHTML = "..fruit or veg ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
           
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -1423,12 +1435,14 @@ let randFruit = Math.floor(Math.random() * count);
         gameOver();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         fruitList[15].style.border = '25px solid lime';
         box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
@@ -1447,6 +1461,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginBottom = "50px";
         question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
@@ -1454,7 +1469,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -1464,15 +1482,9 @@ let randFruit = Math.floor(Math.random() * count);
     break;
 //                               vegetables start here...
     case 16: 
-    groceries.src = fruitImage17.src;
-    let queryQ = window.matchMedia("(max-width: 600px)");
-
-    if (queryQ.matches) {
-
-    } else {
-     
-    }
-    question.innerHTML = "..fruit or veg ?"; 
+      groceries.src = fruitImage17.src;
+          
+      question.innerHTML = "..fruit or veg ?"; 
           
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -1499,12 +1511,14 @@ let randFruit = Math.floor(Math.random() * count);
       bumblebee.play();
     } else {
       groceries.src = 'bee.gif';
-      kids.style.color = "lightgreen";
+      kids.style.color = 'lime';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
+      groceries.style.marginTop = '50px';
+      groceries.style.marginBottom ="-33px";
       question.innerHTML = 'RIGHT !!';
-      question.style.color = 'lightgreen';
-      vegetableList[0].style.border = '25px solid lightgreen';
+      question.style.color = 'lime';
+      vegetableList[0].style.border = '25px solid lime';
       container.style.border = '180px ridge lime';
       item1.src = fruitImage17.src;
       bumblebee.play();
@@ -1527,7 +1541,10 @@ let randFruit = Math.floor(Math.random() * count);
       groceries.src = 'angry_bee.gif';
       guessButton.style.display = 'none';
       nextButton.style.display = 'inline';
+      groceries.style.marginTop = '50px';
+      groceries.style.marginBottom ="-33px";
       question.innerHTML = 'WRONG !!';
+      question.style.color = '#ff0000';
       kids.style.color = "#ff0000";
       container.style.border = '180px groove #ff0000';
      }
@@ -1537,15 +1554,9 @@ let randFruit = Math.floor(Math.random() * count);
      break;
       
      case 17: 
-     groceries.src = fruitImage18.src;
-     let queryR = window.matchMedia("(max-width: 600px)");
+      groceries.src = fruitImage18.src;
 
-     if (queryR.matches) {
-
-     } else {
-       
-     }
-     question.innerHTML = "..fruit or veg ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
@@ -1571,12 +1582,14 @@ let randFruit = Math.floor(Math.random() * count);
        bumblebee.play();
      } else {
        groceries.src = 'bee.gif';
-       kids.style.color = "lightgreen";
+       kids.style.color = 'lime';
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
+       groceries.style.marginTop = '50px';
+       groceries.style.marginBottom ="-33px";
        question.innerHTML = 'RIGHT !!';
-       question.style.color = 'lightgreen';
-       container.style.border = '180px ridge lightgreen';
+       question.style.color = 'lime';
+       container.style.border = '180px ridge lime';
        vegetableList[1].style.border = '25px ridge lime';
        item2.src = fruitImage18.src;
        bumblebee.play();
@@ -1599,7 +1612,10 @@ let randFruit = Math.floor(Math.random() * count);
        groceries.src = 'angry_bee.gif';
        guessButton.style.display = 'none';
        nextButton.style.display = 'inline';
+       groceries.style.marginTop = '50px';
+       groceries.style.marginBottom ="-33px";
        question.innerHTML = 'WRONG !!';
+       question.style.color = '#ff0000';
        kids.style.color = "#ff0000";
        container.style.border = '180px groove #ff0000';
       }
@@ -1610,13 +1626,7 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 18: 
      groceries.src = fruitImage19.src;
-     let queryS = window.matchMedia("(max-width: 600px)");
-
-     if (queryS.matches) {
-
-     } else {
-       
-     }
+     
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1643,12 +1653,14 @@ let randFruit = Math.floor(Math.random() * count);
        bumblebee.play();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         vegetableList[2].style.border = '25px ridge lime';
         item3.src = fruitImage19.src;
         bumblebee.play();
@@ -1671,7 +1683,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -1682,13 +1697,7 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 19: 
      groceries.src = fruitImage20.src;
-     let queryT = window.matchMedia("(max-width: 600px)");
 
-     if (queryT.matches) {
-
-     } else {
-       
-     }
        question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -1717,12 +1726,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
         } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         item4.src = fruitImage20.src;
         bumblebee.play();
         }
@@ -1744,7 +1755,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -1755,14 +1769,8 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 20: 
      groceries.src = fruitImage21.src;
-     let queryU = window.matchMedia("(max-width: 600px)");
 
-     if (queryU.matches) {
-
-     } else {
-       
-     }
-     question.innerHTML = "..fruit or veg ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
@@ -1788,12 +1796,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         item5.src = fruitImage21.src;
         bumblebee.play();
         }
@@ -1815,7 +1825,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -1826,14 +1839,8 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 21: 
      groceries.src = fruitImage22.src;
-     let queryV = window.matchMedia("(max-width: 600px)");
 
-     if (queryV.matches) {
-
-     } else {
-       
-     }
-     question.innerHTML = "..fruit or veg ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
@@ -1860,12 +1867,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         item6.src = fruitImage22.src;
         bumblebee.play();
         }
@@ -1887,7 +1896,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
        }
@@ -1898,14 +1910,8 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 22: 
      groceries.src = fruitImage23.src;
-     let queryW = window.matchMedia("(max-width: 600px)");
-
-     if (queryW.matches) {
-
-     } else {
        
-     }
-     question.innerHTML = "..fruit or veg ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
@@ -1931,12 +1937,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        question.style.color = 'lightgreen';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
+        question.style.color = 'lime';
         question.innerHTML = 'RIGHT !!';
-        container.style.border = '180px ridge lightgreen';
+        container.style.border = '180px ridge lime';
         item7.src = fruitImage23.src;
         bumblebee.play();
         }
@@ -1958,7 +1966,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -1969,14 +1980,8 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 23: 
      groceries.src = fruitImage24.src;
-     let queryX = window.matchMedia("(max-width: 600px)");
 
-     if (queryX.matches) {
-
-     } else {
-       
-     }
-     question.innerHTML = "..fruit or veg ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
@@ -2002,12 +2007,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         item8.src = fruitImage24.src;
         bumblebee.play();
         }
@@ -2029,7 +2036,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -2040,14 +2050,8 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 24: 
      groceries.src = fruitImage25.src;
-     let queryY = window.matchMedia("(max-width: 600px)");
 
-     if (queryY.matches) {
-
-     } else {
-       
-     }
-     question.innerHTML = "..fruit or veg ?"; 
+      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
@@ -2073,12 +2077,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         item9.src = fruitImage25.src;
         bumblebee.play();
         }
@@ -2100,7 +2106,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -2111,13 +2120,7 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 25: 
      groceries.src = fruitImage26.src;
-     let queryZ = window.matchMedia("(max-width: 600px)");
-
-     if (queryZ.matches) {
-
-     } else {
        
-     }
      question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -2144,12 +2147,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         item10.src = fruitImage26.src;
         bumblebee.play();
         }
@@ -2171,7 +2176,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -2182,14 +2190,8 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 26: 
      groceries.src = fruitImage27.src;
-     let query1 = window.matchMedia("(max-width: 600px)");
 
-     if (query1.matches) {
-
-     } else {
-      
-     }
-       question.innerHTML = "..fruit or veg ?"; 
+        question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
        guessButton.onclick = false;
@@ -2215,12 +2217,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
         } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         item11.src = fruitImage27.src;
         bumblebee.play();
         }
@@ -2242,7 +2246,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -2253,13 +2260,7 @@ let randFruit = Math.floor(Math.random() * count);
           
      case 27: 
      groceries.src = fruitImage28.src;
-     let query2 = window.matchMedia("(max-width: 600px)");
-
-     if (query2.matches) {
-
-     } else {
        
-     }
        question.innerHTML = "..fruit or veg ?"; 
           
      if (currentlyPlaying && isClicked(guessButton)) {
@@ -2286,12 +2287,14 @@ let randFruit = Math.floor(Math.random() * count);
         bumblebee.play();
       } else {
         groceries.src = 'bee.gif';
-        kids.style.color = "lightgreen";
+        kids.style.color = 'lime';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'RIGHT !!';
-        question.style.color = 'lightgreen';
-        container.style.border = '180px ridge lightgreen';
+        question.style.color = 'lime';
+        container.style.border = '180px ridge lime';
         item12.src = fruitImage28.src;
         bumblebee.play();
         }
@@ -2313,7 +2316,10 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
+        groceries.style.marginTop = '50px';
+        groceries.style.marginBottom ="-33px";
         question.innerHTML = 'WRONG !!';
+        question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         container.style.border = '180px groove #ff0000';
         }
@@ -2332,14 +2338,15 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
         } else {
-          container.style.height = "4880px";
+          question.style.color ='lightpink'
+          container.style.height = "5200px";
           guessButton.style.border = 'none';
+          groceries.style.marginTop = '50px';
+          groceries.style.marginBottom ="-43px";
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none';
-          groceries.style.marginTop = "50px";
-          groceries.style.marginBottom = "-33px";
-          nextButton.style.marginBottom = "0px";
-          options.style.marginBottom = "0px";
+          nextButton.style.marginBottom = "10px";
+          //guessButton.style.marginBottom = "10px";
         }
  
         currentlyPlaying = true;
@@ -2348,11 +2355,10 @@ let randFruit = Math.floor(Math.random() * count);
 
 
   nextButton.onclick = function() {
-
+      
     let query = window.matchMedia("(max-width: 600px)");
     
     if (query.matches) {
-        
       click.play();
       currentlyPlaying = true;
       question.style.color = 'white';
@@ -2371,18 +2377,19 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       currentlyPlaying = true;
       question.innerHTML = "..ready ?";
-      question.style.color = 'white';
+      question.style.color = 'lightpink';
       groceries.src = 'bee.gif';
-      groceries.style.marginBottom = "-33px";
+      groceries.style.marginTop = '50px';
+      groceries.style.marginBottom ="-33px";
       container.style.border = "180px ridge whitesmoke";  
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
       guessButton.innerHTML = 'guess';
-      guessButton.style.marginBottom = "0px";
+      guessButton.style.marginBottom = "10px";
       guessButton.style.border = '10px solid black';
       guessButton.style.boxShadow = "12px 12px 7px black";
-      kids.style.color = "lightgreen";
+      kids.style.color = 'lightpink';
     }
       
       
@@ -2411,7 +2418,7 @@ let randFruit = Math.floor(Math.random() * count);
 function gameOver() {
  isPlaying();
 
-    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
         
     currentlyPlaying = false;
         
@@ -2444,9 +2451,11 @@ function gameOver() {
     } else {
       youWin();
       currentlyPlaying = false;
-      container.style.border = "180px ridge lime";  
+      kids.style.color = 'lightpink';
+      container.style.border = "180px ridge whitesmoke";  
       guessButton.style.display = 'none';
       nextButton.style.letterSpacing = "8px";
+      nextButton.style.lineHeight = "1.5";
       nextButton.style.fontSize = "60px";
       nextButton.style.backgroundColor = 'transparent';
       nextButton.style.boxShadow = 'none';
@@ -2455,14 +2464,17 @@ function gameOver() {
       nextButton.style.cursor = 'auto';
       nextButton.onclick = false;
       nextButton.innerHTML = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
-      groceries.style.width = "20%";
       groceries.style.marginTop = "15px";
       groceries.src = 'banana_man_pc.gif';
       container.style.backgroundImage = 'url(test.gif)';
       question.style.fontFamily = 'Freckle Face', 'cursive';
-      question.style.fontSize = "8rem";
+      question.style.fontSize = "10rem";
       question.style.letterSpacing = "10px";
       question.innerHTML = 'AWESOME !!!';
+      home.style.color = 'black'; 
+      games.style.color = 'black';
+      help.style.color = 'black';
+      myAccount.style.color = 'black';
      }
     }
   };
