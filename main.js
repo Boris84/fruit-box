@@ -1461,7 +1461,6 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-        groceries.style.marginBottom = "50px";
         question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
