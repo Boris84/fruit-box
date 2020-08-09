@@ -2332,7 +2332,7 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
         } else {
-          container.style.height = "4880px";
+//          container.style.height = "4880px";
           guessButton.style.border = 'none';
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none';
