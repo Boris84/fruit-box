@@ -192,7 +192,6 @@ if (query.matches) {
 } else {
   deadText.style.color = 'lightpink';
   deadText.style.marginBottom = "20px";
-  deadText.style.letterSpacing = "6px";
   deadText.style.fontFamily = 'Freckle Face', 'cursive';
   deadText.innerHTML = '..flawless !!';
   flawless.play();
