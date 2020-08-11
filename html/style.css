@@ -319,7 +319,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(https://lh3.googleusercontent.com/proxy/uZMXXLOctPAHlM42Zq63A2TW8QRUK41RI4-z4tCnnSXO3O_nf3plhOOjPIVcH75YcJlB4fwAJKqCym5PVioifXng6w); 
+    background-image: url(https://media1.giphy.com/media/2ilGlSa5yjWhVnOpeU/source.gif); 
   }
     
   #kids {
@@ -431,9 +431,7 @@ section {
   }
  
  #butterflies {
-   top: 92%;
-   left: 19%;
-   width: 60%;
+   display: none;
  }
     
   #groceries {
