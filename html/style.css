@@ -319,13 +319,12 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(https://i.gifer.com/V9mg.gif); 
+    background-image: url(https://lh3.googleusercontent.com/proxy/uZMXXLOctPAHlM42Zq63A2TW8QRUK41RI4-z4tCnnSXO3O_nf3plhOOjPIVcH75YcJlB4fwAJKqCym5PVioifXng6w); 
   }
     
   #kids {
     width: 100%;
     height: auto;
-    /*line-height: 1;*/
     font-size: 2.5rem;
     text-align: center;
     letter-spacing: 4px; 
@@ -346,10 +345,6 @@ section {
     flex-wrap: wrap;
     font-family: cursive;
     margin-bottom: 15%;
-/*
-    background-color: lightgray;
-    border: 20px ridge whitesmoke;
-*/
     justify-content: space-evenly;
   }
     
