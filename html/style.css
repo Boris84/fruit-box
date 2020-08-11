@@ -129,6 +129,12 @@ section {
   display: inline;
   margin-bottom: -90px;
 }
+#butterflies {
+  left: 37%;
+  bottom: 20%;
+  width: 25%;
+  position: absolute;
+}
 #kids {
   height: 220px;
   color: lightpink;
@@ -409,7 +415,6 @@ section {
    font-family: 'Modak', cursive;
   }
     
-  
   #question span {
     color: lightgreen;
   }
@@ -430,6 +435,12 @@ section {
     width: 140px;
   }
  
+ #butterflies {
+   left: 26%;
+   bottom: 65%;
+   width: 45%;
+/*   position: absolute;*/
+ }
   #groceries {
     width: 38%;
     display: inline;
