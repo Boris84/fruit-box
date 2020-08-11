@@ -437,10 +437,10 @@ section {
  
  #butterflies {
    left: 38%;
-   bottom: 2%;
-   width: 25%;
-/*   position: absolute;*/
+   top: 93%;
+   width: 32%;
  }
+    
   #groceries {
     width: 38%;
     display: inline;
