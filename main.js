@@ -1412,7 +1412,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
-n        question.innerHTML = 'WRONG !!';   
+        question.innerHTML = 'WRONG !!';   
         question.style.color = '#ff0000';
         question.style.fontFamily =  'Luckiest Guy', 'cursive';
       } else {
