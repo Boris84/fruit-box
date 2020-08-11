@@ -2363,7 +2363,6 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.border = 'none';
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
-          butterflies.style.display = 'none';
         } else {
           question.style.color ='lightpink'
           container.style.height = "5200px";
@@ -2503,6 +2502,7 @@ function gameOver() {
       games.style.color = 'black';
       help.style.color = 'black';
       myAccount.style.color = 'black';
+      butterflies.style.display = 'none';
      }
     }
   };
