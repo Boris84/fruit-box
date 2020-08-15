@@ -235,7 +235,7 @@ if (query.matches) {
           
 
 guessButton.onclick = function(){ 
-//  sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -2412,7 +2412,7 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.background = 'none'; 
         } else {
           question.style.color ='lightpink'
-//          container.style.height = "4200px";
+          container.style.height = "2200px";
           guessButton.style.border = 'none';
           groceries.style.marginTop = '50px';
           groceries.style.marginBottom ="-43px";
