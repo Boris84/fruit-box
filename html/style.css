@@ -316,21 +316,20 @@ section {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
    body {
-     width: 100%;
-     margin: 0 auto;
-    /*border-image: url(../worm-border.png) 55 65 round;*/
-    /*background-image: url(https://i.gifer.com/V9mg.gif);*/
-    } 
-    
-    
-  #container {
     width: 100%;
     margin: 0 auto;
     border: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(https://media1.giphy.com/media/2ilGlSa5yjWhVnOpeU/source.gif); 
+    background-image: url(https://media1.giphy.com/media/2ilGlSa5yjWhVnOpeU/source.gif);
+    } 
+    
+    
+  #container {
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
   }
     
   #kids {
