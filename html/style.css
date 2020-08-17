@@ -5,8 +5,6 @@ html {
 body {
   width: 100%;
   margin: 0 auto;
-  height: auto;
-  text-align: center;
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
@@ -14,10 +12,9 @@ body {
 }
 
 #container {
-  top: 5em;
   width: 80em;
-  position: relative;
   margin: 0 auto;
+  text-align: center;
 /*  background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/giphy.gif);*/
   /*background-image: url(https://i.ya-webdesign.com/images/clouds-gif-png-4.gif);*/
   /*background-image: url(https://i.gifer.com/V9mg.gif);*/
@@ -144,15 +141,15 @@ section {
   position: absolute;
 }
 #kids {
-/*  height: 4%;*/
+/*height: 4%;*/
   color: lightpink;
   font-size: 2.7rem;
-/*  line-height: 1.7;*/
-/*  font-weight: bold;*/
+/*font-weight: bold;*/
+line-height: 1.4;
   letter-spacing: 2px;
   border-radius: 30px;
   background-color: white;
-  padding: 0.1em 0.3em 0em 0.3em;
+  padding: 0.2em 0.5em 0em 0.5em;
   border: 10px ridge whitesmoke;
   -webkit-text-stroke: 2px black;  
   font-family: 'Modak', cursive;
@@ -163,7 +160,6 @@ section {
 }
 
 #guess {
-  margin: 10px;
   color: black;
   display: inline;
   cursor: pointer;
@@ -177,7 +173,6 @@ section {
   font-family: 'Bubblegum Sans', cursive;  
 }
 #next {
-  margin: 10px;
   color: black;
   display: none;
   cursor: pointer;
@@ -196,7 +191,11 @@ section {
 
 /*gets rid of default button border */
 #guess:focus {outline:0;}
-
+ 
+#options {
+  margin: 0;
+  padding: 0;
+}
 
 /* container */
 .fruit-boxes {
@@ -237,9 +236,9 @@ section {
 #options {
   display: none;
 }
+
 #fruit-btn, #vegetable-btn {
   color: black;
-  margin: 3px;
   font-size: 13px;
   cursor: pointer;
   border-radius: 13px;
@@ -249,6 +248,10 @@ section {
   padding: 8px 10px 8px 10px;
   box-shadow: 3px 3px 3px black;
   font-family: 'Bubblegum Sans', cursive;
+}
+
+#fruit-btn {
+  margin-right: 1.5px;
 }
 #fruit-btn:hover {
   box-shadow: 12px 12px 5px black;
@@ -286,6 +289,10 @@ section {
   visibility: hidden;
   margin: 5px;
 }
+
+#vegetable-btn {
+  margin-left: 1.5px;
+}
 #vegetable-btn:hover {
   box-shadow: 12px 12px 5px black;
   transition: all 0.4s ease-in-out;
@@ -318,18 +325,16 @@ section {
    body {
     width: 100%;
     margin: 0 auto;
-    border: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(https://media1.giphy.com/media/2ilGlSa5yjWhVnOpeU/source.gif);
     } 
-    
-    
+        
   #container {
-    top: 0;
     width: 100%;
     margin: 0 auto;
+    border: none;
   }
     
   #kids {

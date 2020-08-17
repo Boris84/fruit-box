@@ -60,6 +60,7 @@ let life_a = document.getElementById('life_a');
 let life_b = document.getElementById('life_b');
 let life_c = document.getElementById('life_c');
 
+let body = document.querySelector('body');
 let home = document.getElementById('home');
 let games = document.getElementById('games');
 let help = document.getElementById('help');
@@ -162,12 +163,12 @@ function yourDead(){
     nextButton.onclick = false;
     kids.style.color = 'white';
     nextButton.style.background = 'transparent';
-    container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
+    body.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     deadText.innerText = 'GAME OVER !!!';
     looser.play();  
   } else {
     game_over_music.play();
-    container.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
+    body.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     question.style.display = 'none';
     nextButton.style.background = 'transparent';
     nextButton.innerText = 'click "home" to try again';
@@ -196,7 +197,7 @@ let query = window.matchMedia("(max-width: 600px)");
     
 if (query.matches) {
   deadText.style.color = 'lightpink';
-  deadText.style.marginBottom = "20px";
+  deadText.style.marginBottom = "10px";
   deadText.style.fontFamily = 'Freckle Face', 'cursive';
   deadText.innerText = '..flawless !!';
   flawless.play();
@@ -204,7 +205,7 @@ if (query.matches) {
   cheer.play();
 } else {
   deadText.style.color = 'lightpink';
-  deadText.style.marginBottom = "20px";
+//  deadText.style.marginBottom = "10px";
   deadText.style.fontFamily = 'Freckle Face', 'cursive';
   deadText.innerText = '..flawless !!';
   flawless.play();
@@ -2338,7 +2339,7 @@ let randFruit = Math.floor(Math.random() * count);
         groceries.style.marginBottom = "-33px";
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-//        butterflies.style.display = 'inline';
+//      butterflies.style.display = 'inline';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
         item12.src = fruitImage28.src;
@@ -2384,15 +2385,15 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.background = 'none'; 
         } else {
           question.style.color ='lightpink'
-          container.style.height = "2200px";
+//          container.style.height = "2200px";
           guessButton.style.border = 'none';
           groceries.style.marginTop = '30px';
           groceries.style.marginBottom ="-43px";
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none';
-          nextButton.style.marginBottom = "10px";
+//          nextButton.style.marginBottom = "10px";
           butterflies.style.display = 'none';
-          //guessButton.style.marginBottom = "10px";
+//          guessButton.style.marginBottom = "0px";
         }
  
         currentlyPlaying = true;
@@ -2431,7 +2432,7 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
       guessButton.innerText = 'guess';
-      guessButton.style.marginBottom = "10px";
+//      guessButton.style.marginBottom = "10px";
       guessButton.style.border = '2px solid black';
       guessButton.style.boxShadow = "3px 3px 3px black";
       kids.style.color = 'lightpink';
@@ -2464,7 +2465,7 @@ let randFruit = Math.floor(Math.random() * count);
 function gameOver() {
  isPlaying();
 
-    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+    if (box1.src === fruitImage1.src ) {
         
     currentlyPlaying = false;
         
@@ -2473,7 +2474,7 @@ function gameOver() {
     if (query.matches) {      
       youWin();
       currentlyPlaying = false;
-      container.style.backgroundImage = 'url(test.gif)';    
+      body.style.backgroundImage = 'url(test.gif)';    
       guessButton.style.display = 'none';
       nextButton.innerText = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
       nextButton.style.fontSize = "0.8rem";
@@ -2498,24 +2499,25 @@ function gameOver() {
       youWin();
       currentlyPlaying = false;
       kids.style.color = 'lightpink';
-      container.style.border = "180px ridge whitesmoke";  
       guessButton.style.display = 'none';
-      nextButton.style.letterSpacing = "8px";
+      nextButton.style.letterSpacing = "3px";
+      nextButton.style.width = "50em";
       nextButton.style.lineHeight = "1.5";
-      nextButton.style.fontSize = "60px";
+      nextButton.style.fontSize = "1rem";
       nextButton.style.backgroundColor = 'transparent';
       nextButton.style.boxShadow = 'none';
       nextButton.style.border = 'none';
       nextButton.style.color = 'black';
       nextButton.style.cursor = 'auto';
       nextButton.onclick = false;
-      nextButton.innerText = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
+      nextButton.innerText = 'To play more games you\'ll need to create an account. Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
       groceries.style.marginTop = "15px";
+      groceries.style.marginBottom = "-50px";
       groceries.src = 'banana_man_pc.gif';
-      container.style.backgroundImage = 'url(test.gif)';
+      body.style.backgroundImage = 'url(test.gif)';
       question.style.fontFamily = 'Freckle Face', 'cursive';
-      question.style.fontSize = "10rem";
-      question.style.letterSpacing = "10px";
+      question.style.fontSize = "2.5rem";
+      question.style.letterSpacing = "5px";
       question.innerText = 'AWESOME !!!';
       home.style.color = 'black'; 
       games.style.color = 'black';
