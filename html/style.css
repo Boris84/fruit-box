@@ -12,7 +12,8 @@ body {
 }
 
 #container {
-  width: 80em;
+  height: auto;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 /*  background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/giphy.gif);*/
@@ -131,6 +132,7 @@ section {
   position: relative;
   width: 10.5em;
   display: inline;
+  margin-top: -10px;
   margin-bottom: -70px;
 }
 #butterflies {
