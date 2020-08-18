@@ -373,7 +373,7 @@ section {
 
     
   #home, #games, #help, #myAccount {
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 3px;
     -webkit-text-stroke: 1px black;
     font-family: 'Modak', cursive;  
@@ -420,7 +420,7 @@ section {
     color: white;
     display: inline;
     line-height: 1.2;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     /*font-weight: bold;*/
     letter-spacing: 6px;
     -webkit-text-stroke: 1px black;  
