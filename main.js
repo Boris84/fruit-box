@@ -2219,6 +2219,7 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.background = 'none'; 
         } else {
           question.style.color ='ghostwhite';
+          question.style.letterSpacing ="4px";
           container.style.height = "1740px";
           guessButton.style.border = 'none';
           groceries.style.marginTop = '0.5em';
@@ -2257,6 +2258,7 @@ let randFruit = Math.floor(Math.random() * count);
       currentlyPlaying = true;
       question.innerText = "..ready ?";
       question.style.color = 'ghostwhite';
+      question.style.letterSpacing ="4px";
       groceries.src = 'bee.gif';
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
@@ -2265,7 +2267,7 @@ let randFruit = Math.floor(Math.random() * count);
 //    guessButton.style.marginBottom = "10px";
       guessButton.style.border = '2px solid black';
       guessButton.style.boxShadow = "0px 2px 2px black";
-      kids.style.color = 'yellow';
+      kids.style.color = 'lightpink';
     }
       
       
