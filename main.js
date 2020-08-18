@@ -236,7 +236,7 @@ if (query.matches) {
           
 
 guessButton.onclick = function(){ 
-//  sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -2218,7 +2218,7 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
         } else {
-          question.style.color ='lightpink'
+          question.style.color ='ghostwhite';
           container.style.height = "1740px";
           guessButton.style.border = 'none';
           groceries.style.marginTop = '0.5em';
@@ -2256,7 +2256,7 @@ let randFruit = Math.floor(Math.random() * count);
       click.play();
       currentlyPlaying = true;
       question.innerText = "..ready ?";
-      question.style.color = 'lightpink';
+      question.style.color = 'ghostwhite';
       groceries.src = 'bee.gif';
       nextButton.style.display = 'none';
       guessButton.style.background = 'white';
@@ -2264,8 +2264,8 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.innerText = 'guess';
 //    guessButton.style.marginBottom = "10px";
       guessButton.style.border = '2px solid black';
-      guessButton.style.boxShadow = "3px 3px 3px black";
-      kids.style.color = 'lightpink';
+      guessButton.style.boxShadow = "0px 2px 2px black";
+      kids.style.color = 'yellow';
     }
       
       
