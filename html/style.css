@@ -112,7 +112,6 @@ section {
   -webkit-text-stroke: 1px black;  
   font-family: 'Modak', cursive;
 }
-
 #question span {
   color: lightpink;
 }
@@ -127,6 +126,23 @@ section {
 }
 #death_icon {
   width: 140px;
+}
+#score {
+  width: 72%;
+  margin: auto;
+  display: flex;
+  font-size: 1.3rem;
+  visibility: hidden;
+  letter-spacing: 2px;
+  font-family: 'Bubblegum Sans', cursive;
+}
+#num {
+  color: lime;
+  line-height: 1.2;
+  font-size: 1.3rem;
+  margin-left: 0.5em;
+  -webkit-text-stroke: 1px black;  
+  font-family: 'Luckiest Guy', cursive;
 }
 #groceries {
   position: relative;
@@ -447,6 +463,14 @@ section {
     width: 140px;
   }
  
+  #score {
+    display: none;
+  }
+    
+  #num {
+    display: none;
+  }
+   
  #butterflies {
    display: none;
  }
