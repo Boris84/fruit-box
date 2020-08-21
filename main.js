@@ -74,7 +74,6 @@ let container = document.getElementById('container');
 let navItems = document.getElementsByClassName('nav-items');
 let navContainer = document.getElementById('nav-container');
 let fruitList = document.querySelectorAll('.fruit-box');
-let grayBox = document.getElementsByClassName('fruit-box');
 let vegetableList = document.querySelectorAll('.vegetable-box');
 let butterflies = document.getElementById('butterflies');
 
@@ -94,6 +93,7 @@ let deadText = document.getElementById('dead-text');
 let life_icons = document.getElementById('life_icons');
 let number = document.getElementById('num');
 let score = document.getElementById('score');
+let scoreAlert = document.getElementById('score_alert');
 let lives = 2;
 
 let points = 0;
@@ -101,12 +101,11 @@ let points = 0;
 function checkPoints() {
 isPlaying();
 currentlyPlaying = true;
-  
-  if (currentlyPlaying) {
+
+    if (currentlyPlaying) {
     number.innerHTML = points +=150;
   }        
 }
-
 
 let currentlyPlaying = true;
 
@@ -136,7 +135,6 @@ let isClicked = (button) => {
 //document.all[18].textContent = "hotpink"; /* not reccommended 
 //console.log(document.links)
 //console.log(document.images) 
-
 
 function checkLives(src){
   isPlaying();
@@ -290,9 +288,9 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[0].style.border = '0.3em ridge lime';
-        box1.style.visibility = 'visible';
-        box1.src = fruitImage1.src;
+//      fruitList[0].style.border = '0.3em ridge lime';
+//      box1.style.visibility = 'visible';
+//      box1.src = fruitImage1.src;
         bumblebee.play();
         gameOver();
       } else { 
@@ -306,6 +304,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[0].style.border = '25px solid lime';
         fruitList[0].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box1.style.visibility = 'visible';
         box1.src = fruitImage1.src;
         checkPoints();
@@ -378,6 +377,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[1].style.border = '25px solid lime';
         fruitList[1].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
         checkPoints();
@@ -450,6 +450,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[2].style.border = '25px solid lime';
         fruitList[2].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
         checkPoints();
@@ -522,6 +523,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px groove lime';
 //      fruitList[3].style.border = '25px solid lime';
         fruitList[3].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box4.style.visibility = 'visible';
         box4.src = fruitImage4.src; 
         checkPoints();
@@ -596,6 +598,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px groove lime';
 //      fruitList[4].style.border = '25px solid lime';
         fruitList[4].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
         checkPoints();
@@ -670,6 +673,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[5].style.border = '25px solid lime';
         fruitList[5].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
         checkPoints();
@@ -744,6 +748,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[6].style.border = '25px solid lime';
         fruitList[6].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
         checkPoints();
@@ -820,9 +825,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[7].style.border = '25px solid lime';
         fruitList[7].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box8.style.visibility = 'visible';
-        checkPoints();
         box8.src = fruitImage8.src;
+        checkPoints();
         bumblebee.play();
         right.play();
         gameOver();
@@ -895,6 +901,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[8].style.border = '25px solid lime';
         fruitList[8].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
         checkPoints();
@@ -970,6 +977,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[9].style.border = '25px solid lime';
         fruitList[9].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;
         checkPoints();
@@ -1042,6 +1050,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[10].style.border = '25px solid lime';
         fruitList[10].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
         checkPoints();
@@ -1117,6 +1126,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[11].style.border = '25px solid lime';
         fruitList[11].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;
         checkPoints();
@@ -1192,6 +1202,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[12].style.border = '25px solid lime';
         fruitList[12].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;
         checkPoints();
@@ -1267,6 +1278,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[13].style.border = '25px solid lime';
         fruitList[13].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
         checkPoints();
@@ -1342,6 +1354,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[14].style.border = '25px solid lime';
         fruitList[14].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
         checkPoints();
@@ -1418,6 +1431,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      container.style.border = '180px ridge lime';
 //      fruitList[15].style.border = '25px solid lime';
         fruitList[15].style.backgroundColor = 'lime';
+        scoreAlert.style.display = 'block';
         box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
         checkPoints();
@@ -1488,9 +1502,10 @@ let randFruit = Math.floor(Math.random() * count);
 //    butterflies.style.display = 'inline';
 //    vegetableList[0].style.border = '25px solid lime';
 //    container.style.border = '180px ridge lime';
+//    scoreAlert.style.display = 'block';
       item1.src = fruitImage17.src;
-      checkPoints();
       bumblebee.play();
+//    checkPoints();
      }
     }; 
       option[1].onclick = function() {
@@ -1554,9 +1569,10 @@ let randFruit = Math.floor(Math.random() * count);
 //     butterflies.style.display = 'inline';
 //     container.style.border = '180px ridge lime';
 //     vegetableList[1].style.border = '25px ridge lime';
+//     scoreAlert.style.display = 'block';
        item2.src = fruitImage18.src;
-       checkPoints();
        bumblebee.play();
+//     checkPoints();
       }
      }; 
        option[1].onclick = function() {
@@ -1620,9 +1636,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
 //      vegetableList[2].style.border = '25px ridge lime';
+//      scoreAlert.style.display = 'block';
         item3.src = fruitImage19.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       };
         option[1].onclick = function() {
@@ -1688,9 +1705,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
 //      vegetableList[2].style.border = '25px ridge lime';
+//      scoreAlert.style.display = 'block';
         item4.src = fruitImage20.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
         };
         option[1].onclick = function() {
@@ -1754,9 +1772,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
+//      scoreAlert.style.display = 'block';
         item5.src = fruitImage21.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       };
         option[1].onclick = function() {
@@ -1823,9 +1842,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
+//      scoreAlert.style.display = 'block';
         item6.src = fruitImage22.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       }; 
         option[1].onclick = function() {
@@ -1891,9 +1911,10 @@ let randFruit = Math.floor(Math.random() * count);
         question.innerText = 'RIGHT !!';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
+//      scoreAlert.style.display = 'block';
         item7.src = fruitImage23.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       }; 
         option[1].onclick = function() {
@@ -1957,9 +1978,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
+//      scoreAlert.style.display = 'block';
         item8.src = fruitImage24.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       }; 
         option[1].onclick = function() {
@@ -2023,9 +2045,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
+//      scoreAlert.style.display = 'block';
         item9.src = fruitImage25.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       };
         option[1].onclick = function() {
@@ -2089,9 +2112,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
+//        scoreAlert.style.display = 'block';
         item10.src = fruitImage26.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       }; 
         option[1].onclick = function() {
@@ -2155,9 +2179,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
+//      scoreAlert.style.display = 'block';
         item11.src = fruitImage27.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       }; 
         option[1].onclick = function() {
@@ -2221,9 +2246,10 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      vegetableList[2].style.border = '25px ridge lime';
 //      container.style.border = '180px ridge lime';
+//      scoreAlert.style.display = 'block';
         item12.src = fruitImage28.src;
-        checkPoints();
         bumblebee.play();
+//      checkPoints();
         }
       }; 
         option[1].onclick = function() {
@@ -2270,10 +2296,7 @@ let randFruit = Math.floor(Math.random() * count);
           groceries.style.marginBottom ="-3.3em";
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none';
-          butterflies.style.display = 'none';
           score.style.visibility = 'visible';
-
-          
         }
         
         currentlyPlaying = true;
@@ -2315,25 +2338,13 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.border = '2px solid black';
       guessButton.style.boxShadow = "0px 2px 2px black";
       kids.style.color = 'lightpink';
-    }
-      
-      
-      
-      
-      if (query.matches) {
-        fruitList.forEach(function(fruit) {
-          fruit.style.border = '0.3em ridge whitesmoke';  
-        });
-      } else {
-        fruitList.forEach(function(fruit) {
-//          fruit.style.border = '25px ridge whitesmoke'; 
-            fruit.style.backgroundColor = 'lightgray';
-        });
-      }
-//      vegetableList.forEach(function(vegetable) {
-//        vegetable.style.border = '0.3em ridge white';
-//      });
+      scoreAlert.style.display = 'none';
+    }      
   
+      fruitList.forEach(function(fruit) {
+        fruit.style.backgroundColor = 'lightgray';
+      })
+      
       guessButton.onclick = function() {
         click.play();
         guessFruit();

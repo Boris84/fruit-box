@@ -129,12 +129,22 @@ section {
 }
 #score {
   width: 72%;
+  padding: 0;
   margin: auto;
   display: flex;
   font-size: 1.3rem;
   visibility: hidden;
   letter-spacing: 2px;
   font-family: 'Bubblegum Sans', cursive;
+}
+#score_alert {
+  top: 180px; 
+  left: 38%;
+  margin: 0;
+  padding: 0;
+  width: 3rem;
+  display: none;
+  position: absolute;
 }
 #num {
   color: lime;
@@ -467,6 +477,9 @@ section {
     display: none;
   }
     
+  #score_alert {
+    display: none;
+  } 
   #num {
     display: none;
   }
@@ -494,10 +507,8 @@ section {
     padding: 0.4em 1em 0.4em 1.1em;
     font-family: 'Bubblegum Sans', cursive;  
     }
- 
   #guess:focus {outline:0;}
 
-    
   #next {
     margin: 0px;
     display: none;
@@ -510,7 +521,7 @@ section {
     padding: 0.4em 1em 0.4em 1.1em;
     font-family: 'Bubblegum Sans', cursive;  
   }
-    #next:focus {outline:0;}
+  #next:focus {outline:0;}
 
     /*container */
   .fruit-boxes {
