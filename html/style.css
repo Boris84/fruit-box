@@ -8,7 +8,7 @@ body {
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(https://i.pinimg.com/originals/ed/34/bb/ed34bb430f616890f2404959f374933e.jpg);
+  background-image: url(https://media2.giphy.com/media/3HAYjflm75oOs23Eh8s/source.gif);
   /*https://i.pinimg.com/originals/d0/3c/80/d03c80302605a251c9685cc3a80695e2.jpg*/
 }
 #container {
@@ -16,7 +16,7 @@ body {
   width: 80%;
   margin: 0 auto;
   text-align: center;
-/*  background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/giphy.gif);*/
+  /*background-image: url(https://media2.giphy.com/media/gw3woz6oWXK48iE8/giphy.gif);*/
   /*background-image: url(https://i.ya-webdesign.com/images/clouds-gif-png-4.gif);*/
   /*background-image: url(https://i.gifer.com/V9mg.gif);*/
 }
@@ -40,7 +40,7 @@ body {
   letter-spacing: 2px;
   position: relative;
   font-size: 1rem;
-/*  font-weight: bold;*/
+/*font-weight: bold;*/
   cursor: pointer;
   margin: 20px;
   color: black;
@@ -169,7 +169,7 @@ section {
   position: absolute;
 }
 #kids {
-/*height: 4%;*/
+ /*height: 4%;*/
   color: lightpink;
   font-size: 2.7rem;
 /*font-weight: bold;*/

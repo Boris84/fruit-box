@@ -2355,7 +2355,7 @@ let randFruit = Math.floor(Math.random() * count);
 function gameOver() {
    isPlaying();
 
-    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src ===       fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
+    if (box1.src === fruitImage1.src && box2.src === fruitImage2.src && box3.src === fruitImage3.src && box4.src === fruitImage4.src && box5.src === fruitImage5.src && box6.src === fruitImage6.src && box7.src === fruitImage7.src && box8.src === fruitImage8.src && box9.src === fruitImage9.src && box10.src === fruitImage10.src && box11.src === fruitImage11.src && box12.src === fruitImage12.src && box13.src === fruitImage13.src && box14.src === fruitImage14.src && box15.src === fruitImage15.src && box16.src === fruitImage16.src) {
         
     currentlyPlaying = false;
         
@@ -2364,7 +2364,7 @@ function gameOver() {
     if (query.matches) {      
       youWin();
       currentlyPlaying = false;
-      body.style.backgroundImage = 'url(test.gif)';    
+      body.style.backgroundImage = 'url(stars.gif)';    
       guessButton.style.display = 'none';
       nextButton.innerText = 'To play more games you\'ll need to create an account.<br> Go to "my account" in the navigation menu. Once logged in, click on the "games" tab';
       nextButton.style.fontSize = "0.8rem";
@@ -2404,7 +2404,7 @@ function gameOver() {
       groceries.style.marginTop = "15px";
       groceries.style.marginBottom = "-50px";
       groceries.src = 'banana_man_pc.gif';
-      body.style.backgroundImage = 'url(test.gif)';
+      body.style.backgroundImage = 'url(stars.gif)';
       question.style.fontFamily = 'Freckle Face', 'cursive';
       question.style.fontSize = "2.5rem";
       question.style.letterSpacing = "5px";
