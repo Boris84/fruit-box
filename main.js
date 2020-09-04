@@ -60,6 +60,7 @@ let life_a = document.getElementById('life_a');
 let life_b = document.getElementById('life_b');
 let life_c = document.getElementById('life_c');
 
+let kids = document.getElementById('kids');
 let body = document.querySelector('body');
 let home = document.getElementById('home');
 let games = document.getElementById('games');
@@ -105,7 +106,7 @@ currentlyPlaying = true;
     if (currentlyPlaying) {
     number.innerHTML = points +=150;
   }        
-}
+};
 
 let currentlyPlaying = true;
 
@@ -115,7 +116,7 @@ function isPlaying(currentlyPlaying){
   } else {
     return false;
   }
-}
+};
 
 let isClicked = (button) => {
   if (isPlaying(currentlyPlaying) && button) {
@@ -123,18 +124,21 @@ let isClicked = (button) => {
   } else {
     return false;
   }
-}
+};
 
-//console.dir(document)
+
+
+//console.dir(document.all);
 //console.log(document.URL);
 //console.log(document.title)
 //document.title = 4444444449;
 //console.log(document.doctype)
-//console.log(document.body)
+//console.log(document.body);
 //console.log(document.all[10])
 //document.all[18].textContent = "hotpink"; /* not reccommended 
 //console.log(document.links)
 //console.log(document.images) 
+//console.log(navItems.children);
 
 function checkLives(src){
   isPlaying();
@@ -149,7 +153,7 @@ function checkLives(src){
     number.innerHTML = points -=250;
     currentlyPlaying = false;
   }
-  else if (currentlyPlaying && lives === 0) {
+  else if (currentlyPlaying && lives === 0){
     life_a.src = 'death_icon_a.png';
     number.innerHTML = points -=250;
     yourDead();
@@ -196,7 +200,7 @@ function yourDead(){
     deadText.innerText = 'GAME OVER !!!';
     looser.play();
   }
-}
+};
 
 
 function youWin() {
@@ -241,19 +245,19 @@ if (query.matches) {
   }, 500);
     
 } else if (!currentlyPlaying) {
-      sound.pause();
-      cheer.play();
-      win.play();
-    } 
-  };
+    sound.pause();
+    cheer.play();
+    win.play();
+  } 
+};
           
 
 guessButton.onclick = function(){ 
-  sound.play();
+//  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
-}
+};
 
 
 //switch function for Fruits
@@ -265,7 +269,7 @@ let randFruit = Math.floor(Math.random() * count);
 
  switch (randFruit) {
          
-    case 0:
+      case 0:
       groceries.src = fruitImage1.src;
       question.innerText = "..fruit or veg ?";
             
@@ -280,7 +284,8 @@ let randFruit = Math.floor(Math.random() * count);
         option[1].onclick = function() {
         click.play();
         correct.play();
-        let query = window.matchMedia("(max-width: 600px)");
+    
+      let query = window.matchMedia("(max-width: 600px)");
           
       if (query.matches) {
         groceries.src = 'bee.gif';
@@ -288,9 +293,8 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-//      fruitList[0].style.border = '0.3em ridge lime';
-//      box1.style.visibility = 'visible';
-//      box1.src = fruitImage1.src;
+        box1.style.visibility = 'visible';
+        box1.src = fruitImage1.src;
         bumblebee.play();
         gameOver();
       } else { 
@@ -318,7 +322,8 @@ let randFruit = Math.floor(Math.random() * count);
         wrong.play();
         checkLives();
         lives--;
-        let query = window.matchMedia("(max-width: 600px)");
+      let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
@@ -340,9 +345,8 @@ let randFruit = Math.floor(Math.random() * count);
  
     case 1:
     groceries.src = fruitImage2.src;
-      
-      question.innerHTML = "..fruit or veg ?";
-         
+    question.innerHTML = "..fruit or veg ?";
+       
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
@@ -2272,11 +2276,11 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = '#ff0000';
         kids.style.color = "#ff0000";
         }
-      }; 
-    }
-  }
+       }; 
+      }
+     }
       
-  }
+     }
         
         let query = window.matchMedia("(max-width: 600px)");
      
@@ -2290,7 +2294,7 @@ let randFruit = Math.floor(Math.random() * count);
         } else {
           question.style.color ='ghostwhite';
           question.style.letterSpacing ="4px";
-          container.style.height = "1740px";
+          container.style.height = "1840px";
           guessButton.style.border = 'none';
           groceries.style.marginTop = '0.5em';
           groceries.style.marginBottom ="-3.3em";
@@ -2300,7 +2304,7 @@ let randFruit = Math.floor(Math.random() * count);
         }
         
         currentlyPlaying = true;
-  }
+  };
 
 
 
@@ -2384,7 +2388,7 @@ function gameOver() {
       question.style.fontFamily = 'Freckle Face', 'cursive';
       question.style.fontSize = "2em";
       question.style.color = 'lime';
-        
+      container.style.height = "auto";
     } else {
       youWin();
       currentlyPlaying = false;
@@ -2412,6 +2416,7 @@ function gameOver() {
       home.style.color = 'black'; 
       games.style.color = 'black';
       help.style.color = 'black';
+      scoreAlert.style.display = 'none';
       myAccount.style.color = 'black';
       butterflies.style.display = 'none';
      }
