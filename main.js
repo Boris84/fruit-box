@@ -74,7 +74,7 @@ let groceries = document.getElementById('groceries');
 let container = document.getElementById('container');
 let navItems = document.getElementsByClassName('nav-items');
 let navContainer = document.getElementById('nav-container');
-let fruitList = document.querySelectorAll('.fruit-box');
+let fruitItem = document.querySelectorAll('.fruit-box');
 let vegetableList = document.querySelectorAll('.vegetable-box');
 let butterflies = document.getElementById('butterflies');
 
@@ -94,6 +94,7 @@ let deadText = document.getElementById('dead-text');
 let life_icons = document.getElementById('life_icons');
 let number = document.getElementById('num');
 let score = document.getElementById('score');
+let bonus = document.querySelector('.bonus');
 let scoreAlert = document.getElementById('score_alert');
 let lives = 2;
 
@@ -128,17 +129,9 @@ let isClicked = (button) => {
 
 
 
-//console.dir(document.all);
-//console.log(document.URL);
-//console.log(document.title)
-//document.title = 4444444449;
-//console.log(document.doctype)
-//console.log(document.body);
-//console.log(document.all[10])
-//document.all[18].textContent = "hotpink"; /* not reccommended 
-//console.log(document.links)
-//console.log(document.images) 
+  
 //console.log(navItems.children);
+
 
 function checkLives(src){
   isPlaying();
@@ -216,15 +209,16 @@ if (query.matches) {
   deadText.style.color = 'lightpink';
   deadText.style.marginBottom = "10px";
   deadText.style.fontFamily = 'Freckle Face', 'cursive';
-  deadText.innerText = '..flawless !!';
+  deadText.innerText = 'flawless';
   flawless.play();
   sound.pause();
   cheer.play();
 } else {
   deadText.style.color = 'lightpink';
-//deadText.style.marginBottom = "10px";
+  deadText.style.marginBottom = "10px";
   deadText.style.fontFamily = 'Freckle Face', 'cursive';
-  deadText.innerText = '..flawless !!';
+  deadText.style.letterSpacing = "5px";
+  deadText.innerText = 'flawless';
   flawless.play();
   sound.pause();
   cheer.play();
@@ -235,10 +229,12 @@ if (query.matches) {
   }, 3000);
 
   setInterval(function(){
-    if (deadText.style.color === 'lightpink') {
+    if (deadText.style.color === 'lightpink'){
       deadText.style.color = 'yellow';
-    } else if (deadText.style.color === 'yellow') {
+    } else if (deadText.style.color === 'yellow'){
       deadText.style.color = 'aqua';
+    } else if (deadText.style.color === 'aqua'){
+      deadText.style.color = 'ghostwhite';
     } else {
       deadText.style.color = 'lightpink';
     }
@@ -253,7 +249,7 @@ if (query.matches) {
           
 
 guessButton.onclick = function(){ 
-  sound.play();
+//sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -285,7 +281,7 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
     
-      let query = window.matchMedia("(max-width: 600px)");
+        let query = window.matchMedia("(max-width: 600px)");
           
       if (query.matches) {
         groceries.src = 'bee.gif';
@@ -293,7 +289,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        box1.style.visibility = 'visible';
         box1.src = fruitImage1.src;
         bumblebee.play();
         gameOver();
@@ -307,7 +302,7 @@ let randFruit = Math.floor(Math.random() * count);
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
 //      fruitList[0].style.border = '25px solid lime';
-        fruitList[0].style.backgroundColor = 'lime';
+        fruitItem[0].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box1.style.visibility = 'visible';
         box1.src = fruitImage1.src;
@@ -322,7 +317,8 @@ let randFruit = Math.floor(Math.random() * count);
         wrong.play();
         checkLives();
         lives--;
-      let query = window.matchMedia("(max-width: 600px)");
+            
+        let query = window.matchMedia("(max-width: 600px)");
             
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
@@ -341,13 +337,13 @@ let randFruit = Math.floor(Math.random() * count);
        };
       }
      }
-    break;
+      break;
  
-    case 1:
-    groceries.src = fruitImage2.src;
-    question.innerHTML = "..fruit or veg ?";
+      case 1:
+      groceries.src = fruitImage2.src;
+      question.innerHTML = "..fruit or veg ?";
        
-    if (currentlyPlaying && isClicked(guessButton)) {
+   if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
       guessButton.innerHTML = option_a.innerHTML;
@@ -358,15 +354,15 @@ let randFruit = Math.floor(Math.random() * count);
         option[1].onclick = function() {
         click.play();
         correct.play();
+            
         let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[1].style.border = '0.3em ridge lime';
-        box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
         bumblebee.play();
         gameOver();  
@@ -379,8 +375,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[1].style.border = '25px solid lime';
-        fruitList[1].style.backgroundColor = 'lime';
+        fruitItem[1].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box2.style.visibility = 'visible';
         box2.src = fruitImage2.src;
@@ -395,7 +390,9 @@ let randFruit = Math.floor(Math.random() * count);
         wrong.play();
         checkLives();
         lives--;
+            
         let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
@@ -415,12 +412,11 @@ let randFruit = Math.floor(Math.random() * count);
     }
     break;
        
-    case 2:
-    groceries.src = fruitImage3.src;
-     
+      case 2:
+      groceries.src = fruitImage3.src;
       question.innerHTML = "..fruit or veg ?";
             
-    if (currentlyPlaying && isClicked(guessButton)) {
+   if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
       document.getElementById('option_a');
       guessButton.innerHTML = option_a.innerHTML;
@@ -431,15 +427,15 @@ let randFruit = Math.floor(Math.random() * count);
         option[1].onclick = function() {
         click.play();
         correct.play();
+            
         let query = window.matchMedia("(max-width: 600px)");
-      if (query.matches) {
+            
+     if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[2].style.border = '0.3em ridge lime';
-        box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
         bumblebee.play();
         gameOver();
@@ -452,8 +448,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[2].style.border = '25px solid lime';
-        fruitList[2].style.backgroundColor = 'lime';
+        fruitItem[2].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box3.style.visibility = 'visible';
         box3.src = fruitImage3.src;
@@ -468,7 +463,9 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         checkLives();
         lives--;
+            
         let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
@@ -490,8 +487,7 @@ let randFruit = Math.floor(Math.random() * count);
         
     case 3:
     groceries.src= fruitImage4.src;
-          
-      question.innerHTML = "..fruit or veg ?";
+    question.innerHTML = "..fruit or veg ?";
 
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -511,8 +507,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[3].style.border = '0.3em ridge lime';
-        box4.style.visibility = 'visible';
         box4.src = fruitImage4.src;
         bumblebee.play();
         gameOver();
@@ -525,8 +519,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px groove lime';
-//      fruitList[3].style.border = '25px solid lime';
-        fruitList[3].style.backgroundColor = 'lime';
+        fruitItem[3].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box4.style.visibility = 'visible';
         box4.src = fruitImage4.src; 
@@ -563,7 +556,6 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 4:
     groceries.src = fruitImage5.src;
-
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -586,8 +578,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[4].style.border = '0.3em ridge lime';
-        box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
         bumblebee.play();
         gameOver();
@@ -600,8 +590,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px groove lime';
-//      fruitList[4].style.border = '25px solid lime';
-        fruitList[4].style.backgroundColor = 'lime';
+        fruitItem[4].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box5.style.visibility = 'visible';
         box5.src = fruitImage5.src;
@@ -616,7 +605,9 @@ let randFruit = Math.floor(Math.random() * count);
         wrong.play();
         checkLives();
         lives--;
+            
         let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
@@ -638,8 +629,7 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 5:
     groceries.src = fruitImage6.src;
-             
-      question.innerHTML = "..fruit or veg ?";
+    question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
       guessButton.onclick = false;
@@ -661,8 +651,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[5].style.border = '0.3em ridge lime';
-        box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
         bumblebee.play();
         gameOver();     
@@ -675,8 +663,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[5].style.border = '25px solid lime';
-        fruitList[5].style.backgroundColor = 'lime';
+        fruitItem[5].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box6.style.visibility = 'visible';
         box6.src = fruitImage6.src;
@@ -713,7 +700,6 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 6:
     groceries.src = fruitImage7.src;
-
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -736,8 +722,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[6].style.border = '0.3em ridge lime';
-        box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
         bumblebee.play();
         gameOver();
@@ -750,8 +734,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[6].style.border = '25px solid lime';
-        fruitList[6].style.backgroundColor = 'lime';
+        fruitItem[6].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box7.style.visibility = 'visible';
         box7.src = fruitImage7.src;
@@ -790,7 +773,6 @@ let randFruit = Math.floor(Math.random() * count);
       
     case 7:
       groceries.src = fruitImage8.src;
-
       question.innerHTML = "..fruit or veg ?";  
         
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -813,8 +795,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[7].style.border = '0.3em ridge lime';
-        box8.style.visibility = 'visible';
         box8.src = fruitImage8.src; 
         bumblebee.play();
         gameOver();
@@ -827,8 +807,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[7].style.border = '25px solid lime';
-        fruitList[7].style.backgroundColor = 'lime';
+        fruitItem[7].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box8.style.visibility = 'visible';
         box8.src = fruitImage8.src;
@@ -866,7 +845,6 @@ let randFruit = Math.floor(Math.random() * count);
          
     case 8:
       groceries.src= fruitImage9.src;
-     
       question.innerHTML = "..fruit or veg ?";      
           
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -889,8 +867,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[8].style.border = '0.3em ridge lime';
-        box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
         bumblebee.play();
         gameOver();
@@ -903,8 +879,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[8].style.border = '25px solid lime';
-        fruitList[8].style.backgroundColor = 'lime';
+        fruitItem[8].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box9.style.visibility = 'visible';
         box9.src = fruitImage9.src;
@@ -942,7 +917,6 @@ let randFruit = Math.floor(Math.random() * count);
         
     case 9:
       groceries.src= fruitImage10.src;
-
       question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -953,9 +927,9 @@ let randFruit = Math.floor(Math.random() * count);
       if (box10.src === fruitImage10.src) {
         guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      correct.play();
+        option[1].onclick = function() {
+        click.play();
+        correct.play();
           
       let query = window.matchMedia("(max-width: 600px)");
           
@@ -965,8 +939,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[9].style.border = '0.3em ridge lime';
-        box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;  
         bumblebee.play();
         gameOver();
@@ -979,8 +951,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[9].style.border = '25px solid lime';
-        fruitList[9].style.backgroundColor = 'lime';
+        fruitItem[9].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box10.style.visibility = 'visible';
         box10.src = fruitImage10.src;
@@ -995,7 +966,9 @@ let randFruit = Math.floor(Math.random() * count);
         wrong.play();
         checkLives();
         lives--;
+            
         let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
@@ -1017,7 +990,6 @@ let randFruit = Math.floor(Math.random() * count);
          
     case 10:
     groceries.src= fruitImage11.src;
-    
     question.innerHTML = "..fruit or veg ?";
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1028,18 +1000,18 @@ let randFruit = Math.floor(Math.random() * count);
       if (box11.src === fruitImage11.src) {
         guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      correct.play();
-      let query = window.matchMedia("(max-width: 600px)");
+        option[1].onclick = function() {
+        click.play();
+        correct.play();
+      
+        let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'bee.gif';
         guessButton.style.display = 'none';
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[10].style.border = '0.3em ridge lime';
-        box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
         bumblebee.play();
         gameOver();
@@ -1052,8 +1024,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[10].style.border = '25px solid lime';
-        fruitList[10].style.backgroundColor = 'lime';
+        fruitItem[10].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box11.style.visibility = 'visible';
         box11.src = fruitImage11.src;
@@ -1068,6 +1039,7 @@ let randFruit = Math.floor(Math.random() * count);
         wrong.play();
         checkLives();
         lives--;    
+            
         let query = window.matchMedia("(max-width: 600px)");
         
       if (query.matches) {
@@ -1090,8 +1062,7 @@ let randFruit = Math.floor(Math.random() * count);
     break;
           
     case 11:
-    groceries.src= fruitImage12.src;
-
+      groceries.src= fruitImage12.src;
       question.innerHTML = "..fruit or veg ?";
            
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1114,8 +1085,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[11].style.border = '0.3em ridge lime';
-        box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;  
         bumblebee.play();
         gameOver();
@@ -1128,8 +1097,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[11].style.border = '25px solid lime';
-        fruitList[11].style.backgroundColor = 'lime';
+        fruitItem[11].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box12.style.visibility = 'visible';
         box12.src = fruitImage12.src;
@@ -1167,7 +1135,6 @@ let randFruit = Math.floor(Math.random() * count);
             
     case 12:
     groceries.src = fruitImage13.src;
-
     question.innerHTML = "..fruit or veg ?";  
             
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1190,8 +1157,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[12].style.border = '0.3em ridge lime';
-        box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;  
         bumblebee.play();
         gameOver();
@@ -1204,8 +1169,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[12].style.border = '25px solid lime';
-        fruitList[12].style.backgroundColor = 'lime';
+        fruitItem[12].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box13.style.visibility = 'visible';
         box13.src = fruitImage13.src;
@@ -1243,7 +1207,6 @@ let randFruit = Math.floor(Math.random() * count);
         
     case 13:
       groceries.src = fruitImage14.src;
-
       question.innerHTML = "..fruit or veg ?"; 
         
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1254,9 +1217,9 @@ let randFruit = Math.floor(Math.random() * count);
       if (box14.src === fruitImage14.src) {
         guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      correct.play();
+        option[1].onclick = function() {
+        click.play();
+        correct.play();
           
       let query = window.matchMedia("(max-width: 600px)");
           
@@ -1266,8 +1229,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[13].style.border = '0.3em ridge lime'; 
-        box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
         bumblebee.play();
         gameOver();
@@ -1280,8 +1241,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[13].style.border = '25px solid lime';
-        fruitList[13].style.backgroundColor = 'lime';
+        fruitItem[13].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box14.style.visibility = 'visible';
         box14.src = fruitImage14.src;
@@ -1319,7 +1279,6 @@ let randFruit = Math.floor(Math.random() * count);
           
     case 14:
       groceries.src = fruitImage15.src;
-
       question.innerHTML = "..fruit or veg ?";
           
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1330,9 +1289,9 @@ let randFruit = Math.floor(Math.random() * count);
       if (box15.src === fruitImage15.src) {
         guessFruit();
       } else {
-      option[1].onclick = function() {
-      click.play();
-      correct.play();
+        option[1].onclick = function() {
+        click.play();
+        correct.play();
           
       let query = window.matchMedia("(max-width: 600px)");
           
@@ -1342,8 +1301,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[14].style.border = '0.3em ridge lime';
-        box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
         bumblebee.play();
         gameOver();
@@ -1356,8 +1313,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[14].style.border = '25px solid lime';
-        fruitList[14].style.backgroundColor = 'lime';
+        fruitItem[14].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box15.style.visibility = 'visible';
         box15.src = fruitImage15.src;
@@ -1396,7 +1352,6 @@ let randFruit = Math.floor(Math.random() * count);
      
     case 15:
       groceries.src = fruitImage16.src;
-
       question.innerHTML = "..fruit or veg ?"; 
           
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1411,7 +1366,7 @@ let randFruit = Math.floor(Math.random() * count);
         click.play();
         correct.play();
             
-      let query = window.matchMedia("(max-width: 600px)");
+        let query = window.matchMedia("(max-width: 600px)");
             
       if (query.matches) {
         groceries.src = 'bee.gif';
@@ -1419,8 +1374,6 @@ let randFruit = Math.floor(Math.random() * count);
         nextButton.style.display = 'inline';
         question.innerText = 'RIGHT !!';
         question.style.color = 'lime';
-        fruitList[15].style.border = '0.3em ridge lime';
-        box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
         bumblebee.play();
         gameOver();
@@ -1433,8 +1386,7 @@ let randFruit = Math.floor(Math.random() * count);
         question.style.color = 'lime';
 //      butterflies.style.display = 'inline';
 //      container.style.border = '180px ridge lime';
-//      fruitList[15].style.border = '25px solid lime';
-        fruitList[15].style.backgroundColor = 'lime';
+        fruitItem[15].style.backgroundColor = 'lime';
         scoreAlert.style.display = 'block';
         box16.style.visibility = 'visible';
         box16.src = fruitImage16.src;
@@ -1449,7 +1401,9 @@ let randFruit = Math.floor(Math.random() * count);
         wrong.play();
         checkLives();
         lives--;
+            
         let query = window.matchMedia("(max-width: 600px)");
+            
       if (query.matches) {
         groceries.src = 'angry_bee.gif';
         guessButton.style.display = 'none';
@@ -1471,7 +1425,6 @@ let randFruit = Math.floor(Math.random() * count);
 //                               vegetables start here...
     case 16: 
       groceries.src = fruitImage17.src;
-          
       question.innerHTML = "..fruit or veg ?"; 
           
     if (currentlyPlaying && isClicked(guessButton)) {
@@ -1485,6 +1438,7 @@ let randFruit = Math.floor(Math.random() * count);
       option[2].onclick = function() {
       click.play();
       correct.play();
+          
       let query = window.matchMedia("(max-width: 600px)");
             
     if (query.matches) {
@@ -1493,7 +1447,6 @@ let randFruit = Math.floor(Math.random() * count);
       nextButton.style.display = 'inline';
       question.innerText = 'RIGHT !!';
       question.style.color = 'lime';
-      vegetableList[0].style.border = '0.3em ridge lime';
       item1.src = fruitImage17.src; 
       bumblebee.play();
     } else {
@@ -1504,9 +1457,7 @@ let randFruit = Math.floor(Math.random() * count);
       question.innerText = 'RIGHT !!';
       question.style.color = 'lime';
 //    butterflies.style.display = 'inline';
-//    vegetableList[0].style.border = '25px solid lime';
 //    container.style.border = '180px ridge lime';
-//    scoreAlert.style.display = 'block';
       item1.src = fruitImage17.src;
       bumblebee.play();
 //    checkPoints();
@@ -2345,7 +2296,7 @@ let randFruit = Math.floor(Math.random() * count);
       scoreAlert.style.display = 'none';
     }      
   
-      fruitList.forEach(function(fruit) {
+      fruitItem.forEach(function(fruit) {
         fruit.style.backgroundColor = 'lightgray';
       })
       
@@ -2418,7 +2369,7 @@ function gameOver() {
       help.style.color = 'black';
       scoreAlert.style.display = 'none';
       myAccount.style.color = 'black';
-      butterflies.style.display = 'none';
+//    butterflies.style.display = 'none';
      }
     }
   };
