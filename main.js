@@ -78,7 +78,7 @@ function checkPoints() {
 isPlaying();
 currentlyPlaying = true;
 
-    if (currentlyPlaying) {
+  if (currentlyPlaying) {
     number.innerHTML = points +=150;
   }        
 };
@@ -221,7 +221,7 @@ if (query.matches) {
           
 
 guessButton.onclick = function(){ 
-  //sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
