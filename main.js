@@ -249,7 +249,7 @@ if (query.matches) {
           
 
 guessButton.onclick = function(){ 
-//sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -2236,7 +2236,7 @@ let randFruit = Math.floor(Math.random() * count);
         let query = window.matchMedia("(max-width: 600px)");
      
         if (query.matches) {
-          container.style.height = "840px";
+          container.style.height = "810px";
           groceries.style.marginTop = '40px';
           groceries.style.marginBottom ="-40px";
           guessButton.style.border = 'none';
