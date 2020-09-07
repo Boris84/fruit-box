@@ -331,6 +331,10 @@ section {
 }
 #vegetable-btn:focus {outline:0;}
 
+ .footer {
+      display: none;
+}
+  
 /*
 .flex-container {
   display: flex;
@@ -366,7 +370,7 @@ section {
     width: 100%;
     margin: 0 auto;
     border: none;
-    margin-top: 30px;
+    margin-top: 120px;
   }
     
   #kids {
@@ -391,7 +395,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
-/*    margin-top: 70px;*/
     margin-bottom: 25px;
     justify-content: space-evenly;
   }
@@ -553,7 +556,7 @@ section {
     box-shadow: 5px 5px 2px black;
     background-color: lightgray;
     border: 0.3em ridge white;
-    visibility: visible;
+    visibility: hidden;
     margin: 10px;
     width: 90px;
   }
@@ -615,6 +618,10 @@ section {
     margin: 10px;
     width: 90px;
   }
+    
+    .footer {
+      display: none;
+    }
   
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
