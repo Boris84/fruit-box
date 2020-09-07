@@ -5,6 +5,7 @@ html {
 body {
   width: 100%;
   margin: 0 auto;
+  min-height: 2200px;
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
@@ -13,7 +14,6 @@ body {
   /*https://thumbs.gfycat.com/FatPowerlessArcherfish-size_restricted.gif*/
 }
 #container {
-  height: auto;
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -117,12 +117,14 @@ section {
   color: lightpink;
 }
 #life_icons {
+  padding: 0px;
   display: flex;
   margin-left: 5%;
 }
 #life_a, #life_b, #life_c {
   width: 3.4em;
   padding: 1em;
+  margin-top: -20px;
 }
 #death_icon {
   width: 140px;
@@ -172,7 +174,7 @@ section {
 #kids {
   color: lightpink;
   font-size: 2.7rem;
-/*font-weight: bold;*/
+  /*font-weight: bold;*/
   line-height: 1.4;
   letter-spacing: 4px;
   border-radius: 30px;
@@ -229,13 +231,13 @@ section {
 .fruit-boxes {
   flex: 1;
   width: 50em;
-  padding: 0px;
+  padding: 10px;
   display: flex;
   margin: 0 auto;
   flex-wrap: wrap;
   visibility: visible;
   font-family: cursive;
-  justify-content: center;
+  margin-top: -5px;
 }
 
 /*lines inside gray boxes */
@@ -252,8 +254,8 @@ section {
 /* gray boxes */
 .fruit-box {
   box-shadow: 4px 4px 1px black;
-  background-color: lightgray;
-  border: 10px ridge white;
+  background-color: ghostwhite;
+  border: 10px ridge lightpink;
   border-radius: 10%;
   visibility: visible;
   margin: 5px;
@@ -353,6 +355,7 @@ section {
    body {
     width: 100%;
     margin: 0 auto;
+    min-height: 810px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -363,6 +366,7 @@ section {
     width: 100%;
     margin: 0 auto;
     border: none;
+    margin-top: 100px;
   }
     
   #kids {
@@ -387,6 +391,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     font-family: cursive;
+/*    margin-top: 70px;*/
     margin-bottom: 25px;
     justify-content: space-evenly;
   }
