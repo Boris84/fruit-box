@@ -67,9 +67,12 @@ let number = document.getElementById('num');
 let score = document.getElementById('score');
 let bonus = document.querySelector('.bonus');
 let scoreAlert = document.getElementById('score_alert');
-let lives = 2;
 
+let lives = 2;
 let points = 0;
+
+
+
 
 function checkPoints() {
 isPlaying();
@@ -213,7 +216,7 @@ if (query.matches) {
           
 
 guessButton.onclick = function(){ 
-//  sound.play();
+  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
