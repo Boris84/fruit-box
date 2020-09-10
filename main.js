@@ -36,11 +36,7 @@ let life_a = document.getElementById('life_a');
 let life_b = document.getElementById('life_b');
 let life_c = document.getElementById('life_c');
 
-let kids = document.getElementById('kids');
 let body = document.querySelector('body');
-let home = document.getElementById('home');
-let games = document.getElementById('games');
-let help = document.getElementById('help');
 let myAccount = document.getElementById('myAccount');
 let guessButton = document.getElementById('guess');
 let nextButton = document.getElementById('next');
@@ -141,7 +137,7 @@ function yourDead(){
     nextButton.style.boxShadow = 'none';
     nextButton.style.cursor = 'auto';
     nextButton.onclick = false;
-    kids.style.color = 'white';
+    kids.style.color = 'snow';
     nextButton.style.background = 'transparent';
     body.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     deadText.innerText = 'GAME OVER !!!';
@@ -150,17 +146,14 @@ function yourDead(){
     game_over_music.play();
     body.style.backgroundImage = "url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif)";
     question.style.display = 'none';
+    nextButton.style.fontSize = "1rem";
     nextButton.style.background = 'transparent';
     nextButton.innerText = 'click "home" to try again';
     nextButton.style.border = 'none';
     nextButton.style.boxShadow = 'none';
     nextButton.style.cursor = 'auto';
     nextButton.onclick = false;
-    home.style.color = 'black'; 
-    games.style.color = 'black';
-    help.style.color = 'black';
-    kids.style.color = "#ff0000";
-    myAccount.style.color = 'black';
+    kids.style.color = 'snow';
     deadText.innerText = 'GAME OVER !!!';
     looser.play();
   }
@@ -205,7 +198,7 @@ if (query.matches) {
     } else if (deadText.style.color === 'yellow'){
       deadText.style.color = 'aqua';
     } else if (deadText.style.color === 'aqua'){
-      deadText.style.color = 'ghostwhite';
+      deadText.style.color = 'snow';
     } else {
       deadText.style.color = 'lightpink';
     }
@@ -220,7 +213,7 @@ if (query.matches) {
           
 
 guessButton.onclick = function(){ 
-sound.play();
+//  sound.play();
   click.play();
   bumblebee.play();
   guessFruit()
@@ -2199,7 +2192,7 @@ let randFruit = Math.floor(Math.random() * count);
           guessButton.style.boxShadow = 'none';
           guessButton.style.background = 'none'; 
         } else {
-          question.style.color ='ghostwhite';
+          question.style.color ='snow';
           question.style.letterSpacing ="4px";
           guessButton.style.border = 'none';
           groceries.style.marginTop = '0.5em';
@@ -2222,23 +2215,23 @@ let randFruit = Math.floor(Math.random() * count);
     if (query.matches) {
       click.play();
       currentlyPlaying = true;
-      question.style.color = 'white';
+      question.style.color = 'snow';
       question.style.fontFamily = 'Modak', 'cursive';
       question.innerText = "..ready ?";
       groceries.src = 'bee.gif';
       groceries.style.marginBottom ="-40px";
       nextButton.style.display = 'none';
-      guessButton.style.background = 'white';
+      guessButton.style.background = 'snow';
       guessButton.style.display = 'inline';
       guessButton.innerHTML = 'guess';
       guessButton.style.marginBottom = "0px";
       guessButton.style.border = '2px solid black';
-      kids.style.color = 'ghostwhite'; 
+      kids.style.color = 'snow'; 
     } else {
       click.play();
       currentlyPlaying = true;
       question.innerText = "..ready ?";
-      question.style.color = 'ghostwhite';
+      question.style.color = 'snow';
       question.style.letterSpacing ="4px";
       groceries.src = 'bee.gif';
       nextButton.style.display = 'none';
@@ -2253,10 +2246,11 @@ let randFruit = Math.floor(Math.random() * count);
     }      
   
       fruitItem.forEach(function(fruit) {
-        fruit.style.backgroundColor = 'ghostwhite';
+        fruit.style.backgroundImage = 'linear-gradient(yellow, ghostwhite, ghostwhite)';
       })
       
-      guessButton.onclick = function() {
+      guessButton.onclick = function(e) {
+        console.log(e.target.style.border);
         click.play();
         guessFruit();
       };
@@ -2290,7 +2284,6 @@ function gameOver() {
       groceries.style.marginTop = "40px";
       groceries.src = 'you_win.gif';
       groceries.style.width = "50%";
-      question.style.letterSpacing = "4px";
       question.innerText = 'AWESOME !!!';   
       question.style.fontFamily = 'Freckle Face', 'cursive';
       question.style.fontSize = "2em";
@@ -2299,7 +2292,7 @@ function gameOver() {
     } else {
       youWin();
       currentlyPlaying = false;
-      kids.style.color = 'lightpink';
+      kids.style.color = 'snow';
       guessButton.style.display = 'none';
       nextButton.style.letterSpacing = "3px";
       nextButton.style.width = "50em";
@@ -2320,11 +2313,7 @@ function gameOver() {
       question.style.fontSize = "2.5rem";
       question.style.letterSpacing = "5px";
       question.innerText = 'AWESOME !!!';
-      home.style.color = 'black'; 
-      games.style.color = 'black';
-      help.style.color = 'black';
       scoreAlert.style.display = 'none';
-      myAccount.style.color = 'black';
 //    butterflies.style.display = 'none';
      }
     }
@@ -2335,14 +2324,10 @@ function gameOver() {
 
 
 
-
-
-
-
-
-
-
-
+let thirdBox = document.getElementsByClassName('fruit-box');
+for (var i = 0; i < thirdBox.length; i++) {
+  thirdBox[i]
+}
 
 
 

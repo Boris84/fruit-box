@@ -105,16 +105,16 @@ section {
   text-align: center;
 }
 #question {
-  color: ghostwhite;
+  color: snow;
   display: inline;
   font-size: 1.5rem;
   letter-spacing: 3px;
-  /*font-weight: bold;*/
-  -webkit-text-stroke: 2px black;  
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;  
   font-family: 'Modak', cursive;
 }
 #question span {
-  color: lightpink;
+  color: yellow;
 }
 #life_icons {
   padding: 0px;
@@ -172,15 +172,11 @@ section {
   position: absolute;
 }
 #kids {
-  color: lightpink;
+  color: snow;
   font-size: 2.7rem;
-  /*font-weight: bold;*/
   line-height: 1.4;
-  letter-spacing: 4px;
-  border-radius: 30px;
-  background-color: ghostwhite;
+  /*font-weight: bold;*/
   padding: 0.2em 0.5em 0em 0.5em;
-  border: 10px ridge ghostwhite;
   -webkit-text-stroke: 2px black;  
   font-family: 'Modak', cursive;
 }
@@ -198,7 +194,7 @@ section {
   letter-spacing: 2px;
   border: 2px ridge black;
   padding: 0.6em 1em 0.6em 1.1em;
-  background-color: ghostwhite;
+  background-color: snow;
   box-shadow: 0px 2px 2px black;
   font-family: 'Bubblegum Sans', cursive;  
 }
@@ -212,7 +208,7 @@ section {
   letter-spacing: 2px;
   border: 2px solid black;
   padding: 7px 10px 7px 10px;
-  background-color: ghostwhite;
+  background-color: snow;
   box-shadow: 0px 2px 2px black;
   font-family: 'Bubblegum Sans', cursive;  
 }
@@ -252,9 +248,9 @@ section {
 
 /* gray boxes */
 .fruit-box {
+  background-image: linear-gradient(yellow, ghostwhite, snow);
   box-shadow: 4px 4px 1px black;
-  background-color: ghostwhite;
-  border: 10px ridge lightpink;
+  border: 10px ridge snow;
   border-radius: 10%;
   visibility: visible;
   margin: 5px;
@@ -272,7 +268,7 @@ section {
   cursor: pointer;
   border-radius: 13px;
   letter-spacing: 2px;
-  background-color: ghostwhite;
+  background-color: snow;
   border: 2px solid black;
   padding: 8px 10px 8px 10px;
   box-shadow: 0px 2px 2px black;
@@ -286,7 +282,7 @@ section {
 /*  box-shadow: 12px 12px 5px black;*/
   transition: all 0.4s ease-in-out;
   background-color: lightseagreen;
-  color: white;
+  color: snow;
 }
 
 #fruit-btn:focus {outline:0;}
@@ -313,7 +309,7 @@ section {
 .vegetable-box {
   box-shadow: 4px 4px 1px black;
   background-color: lightgray;
-  border: 10px ridge white;
+  border: 10px ridge snow;
   border-radius: 10%;
   visibility: hidden;
   margin: 5px;
@@ -330,8 +326,8 @@ section {
 }
 #vegetable-btn:focus {outline:0;}
 
- .footer {
-      display: none;
+.footer {
+ display: none;
 }
   
 /*
@@ -380,7 +376,7 @@ section {
     -webkit-text-stroke: 1px black;  
     background-color: transparent;
     padding: 0em 0.1em 0em 0.1em;
-    color: ghostwhite;
+    color: snow;
     border: none;
   }
     
@@ -403,7 +399,6 @@ section {
     align-items: center;
   }
 
-    
   #home, #games, #help, #myAccount {
     font-size: 1rem;
     letter-spacing: 3px;
@@ -412,10 +407,10 @@ section {
     transition: top ease-in-out 0.3s;
     text-decoration: none;
     position: relative;
-/*    font-weight: bold;*/
+    /*font-weight: bold;*/
     cursor: pointer;
     margin: 10px;
-    color: white;
+    color: snow;
     top: -40px;
   }
     
@@ -449,7 +444,7 @@ section {
   }
     
   #question {
-    color: white;
+    color: snow;
     display: inline;
     line-height: 1.2;
     font-size: 1.2rem;
@@ -460,7 +455,7 @@ section {
   }
     
   #question span {
-    color: ghostwhite;
+    color: snow;
   }
     
   #life_icons {
@@ -553,7 +548,7 @@ section {
   .fruit-box {
     box-shadow: 5px 5px 2px black;
     background-color: lightgray;
-    border: 0.3em ridge white;
+    border: 0.3em ridge snow;
     visibility: hidden;
     margin: 10px;
     width: 90px;
@@ -581,7 +576,7 @@ section {
     color: black;
     box-shadow: none;
     transition: none;
-    background-color: white;
+    background-color: snow;
   }
 
   #fruit-btn:focus {outline:0;}
@@ -590,7 +585,7 @@ section {
     color: black;
     box-shadow: none;
     transition: none;
-    background-color: white;
+    background-color: snow;
   }
     
   #vegetable-btn:focus {outline:0;}
@@ -611,16 +606,15 @@ section {
   .vegetable-box {
     box-shadow: 5px 5px 2px black;
     background-color: lightgray;
-    border: 0.3em ridge white;
+    border: 0.3em ridge snow;
     visibility: visible;
     margin: 10px;
     width: 90px;
   }
     
-    .footer {
-      display: none;
-    }
-  
+ .footer {
+   display: none;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*@media only screen and (min-width: 600px) {...}*/
