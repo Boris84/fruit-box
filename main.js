@@ -73,7 +73,6 @@ let points = 0;
 
 
 
-
 function checkPoints() {
 isPlaying();
 currentlyPlaying = true;
@@ -219,14 +218,14 @@ guessButton.onclick = function(){
   sound.play();
   click.play();
   bumblebee.play();
-  guessFruit()
+  guessFruit();
+    
 };
-
 
 // switch function for Fruits
 function guessFruit() {
 isPlaying();       
-    
+
 const count = 28;
 let randFruit = Math.floor(Math.random() * count);    
 
@@ -2241,7 +2240,6 @@ let randFruit = Math.floor(Math.random() * count);
       guessButton.style.background = 'white';
       guessButton.style.display = 'inline';
       guessButton.innerText = 'guess';
-//    guessButton.style.marginBottom = "10px";
       guessButton.style.border = '2px solid black';
       guessButton.style.boxShadow = "0px 2px 2px black";
       fruitBoxes.style.marginTop = "3px";
@@ -2252,8 +2250,7 @@ let randFruit = Math.floor(Math.random() * count);
         fruit.style.backgroundImage = 'linear-gradient(yellow, ghostwhite, ghostwhite)';
       })
       
-      guessButton.onclick = function(e) {
-        console.log(e.target.style.border);
+      guessButton.onclick = function() {
         click.play();
         guessFruit();
       };
@@ -2321,18 +2318,6 @@ function gameOver() {
      }
     }
   };
-
-
-
-
-
-
-let thirdBox = document.getElementsByClassName('fruit-box');
-for (var i = 0; i < thirdBox.length; i++) {
-  thirdBox[i]
-}
-
-
 
 
 
