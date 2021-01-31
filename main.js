@@ -2314,30 +2314,10 @@ function gameOver() {
       question.style.letterSpacing = "5px";
       question.innerText = 'AWESOME !!!';
       scoreAlert.style.display = 'none';
-//    butterflies.style.display = 'none';
+     //butterflies.style.display = 'none';
      }
     }
   };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

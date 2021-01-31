@@ -34,7 +34,7 @@ body {
 }
 
 #home, #games, #help, #myAccount {
-  transition: top ease-in-out 0.3s;
+/*transition: top ease-in-out 0.3s;*/
   font-family: 'Bubblegum Sans', cursive;  
 /*-webkit-text-stroke: 3px black;  */
   text-decoration: none;
@@ -45,7 +45,7 @@ body {
   cursor: pointer;
   margin: 20px;
   color: black;
-  top: 0;
+/*top: 0;*/
 }
 #dead-text {
   color: #ff0000;
@@ -54,6 +54,7 @@ body {
   -webkit-text-stroke: 2px black;
   font-family: 'Luckiest Guy', cursive;  
 }
+/*
 #home:hover {
   top: -20px;
 }
@@ -66,6 +67,7 @@ body {
 #myAccount:hover {
   top: -20px;
 }
+*/
 h1 {
   color: red;
   font-size: 10rem;
